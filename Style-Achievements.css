@@ -1,0 +1,288 @@
+body{
+	background-color: rgb(71, 73, 72);
+	font-family: "noto sans jp";
+}
+
+
+
+
+
+/* HOMEBAR AND HOMEBAR ITEMS*/
+
+
+
+
+
+#homebar{
+	position: relative;
+	z-index: 5;
+	animation: fade 1s ease-in-out;
+	display: flex;
+	height: 95px;
+	width: 100%;
+	min-width: 1000px;
+	background-color: rgb(39, 45, 45);
+	border-bottom: 10px solid rgb(35, 206, 107);
+}
+
+#logo{
+	line-height: 115%;
+	width: 130px;
+	color: rgb(184, 197, 214);
+	font-size: 2em;
+	text-align: center;
+	justify-content: center;
+	border-right: 2px dashed rgb(184, 197, 214);
+	padding: 7px;
+	margin-right: 20px;
+
+}
+
+.homebar-items{
+	z-index: 4;
+	font-family: 'Rubik', sans-serif;
+	padding-top: 7px;
+	border-radius: 2%;
+	width: 170px;
+	background: rgba(237, 245, 252, 1);
+	margin: 0 20px 0 20px;
+	padding-right: 6px;
+	padding-left: 2px;
+	font-size: 2em;
+	line-height: 100%;
+
+}
+
+.homebar-items:hover{
+	background-color: rgb(197,205,210);
+}
+
+.homebar-items:hover #arrow{
+	margin-top: 5px;
+	height: 30px;
+}
+
+.homebar-items:hover #arrow:before{
+	top: 30px;
+}
+
+.homebar-items:hover .dropdown{
+	position: relative;
+	z-index: 2;
+	background-color: rgba(237, 245, 252, 0.8);
+	display: block;
+}
+
+#in-bord{
+	height: 100%;
+	width: 100%;
+	border-left: 2px dashed rgb(39, 45, 45);
+	border-right: 2px dashed rgb(39, 45, 45);
+	text-align: center;
+}
+
+
+.dropdown{
+	padding-top: 10px;
+	text-align: center;
+	font-size: 0.8em;
+	position: relative;
+	z-index: 2;
+	display: none;
+	border-left: 2px dashed black;
+	border-right: 2px dashed black;
+	border-bottom: 2px dashed black;
+	width: 170px;
+	height: ;
+	background-color: red;
+}
+
+#dropdown-item{
+	word-wrap: break-word;
+	line-height: 115%;
+}
+
+#dropdown-item:hover{
+	background-color: rgba(109, 115, 115, 0.4);
+
+}
+
+#arrow{
+	background: rgb(163, 155, 168);
+    display: inline-block;
+    height: 15px;
+    margin-left: 55px;
+    margin-right: 55px;
+    position: relative;
+    width: 60px;
+}
+
+#arrow:before {
+	transform: rotate(180deg);
+    border-bottom: 15px solid rgb(163, 155, 168);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 15px;
+	width: 0;
+}
+
+
+
+
+
+/* SELETION AND SELECTION ITEMS */
+
+
+.selection{
+	position: relative;
+	z-index: 0;
+	font-family: 'Rubik', sans-serif;
+	width: 98%;
+	height: auto;
+	margin: 10px auto 10px auto;
+	
+	display: flex;
+	flex-wrap: wrap;
+
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 1%;
+	padding: 5px;
+
+}
+
+.selection-items{
+	position: relative;
+	z-index: 1;
+	height: 480px;
+	min-width: 250px;
+	max-width: 400px;
+	border-radius: 2%;
+	text-align: center;
+	padding-top: 25px;
+	justify-content: center;
+	flex: 1;
+
+	margin: 5px;
+	background-color: black;
+
+	font-size: 3em;
+	color: rgb(237, 245, 252);
+	transition: 0.3s;
+}
+
+.selection-items:hover{
+	transition: 0.3s;
+	transform: scale(1.03);
+	box-shadow: white;
+}
+
+#highlight-bar{
+	margin-top: 350px;
+	height: auto;
+	width: 100%;
+	background-color: rgba(39, 45, 45, 0.9);
+}
+
+
+
+
+
+
+/* SELF DESCRIPTION PARAGRAPH AND FLUID CONTAINER*/
+
+
+
+.About-me{
+	height: auto;
+	width: 98%;
+	margin: 10px auto 10px auto;
+	
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 5%;
+
+}
+
+.fluid-container{
+	border-radius: 2%;
+	width: 100%;
+	height: auto;
+	background-color: rgba(0,0,0,0.3); 
+	padding: 5px
+}
+
+.fluid-container-division{
+	background-color: rgb(163, 155, 168);
+	font-family: 'Rubik', sans-serif;
+	font-size: 1.45em;
+}
+
+
+
+
+
+
+/* VARIABLES IMAGES AND ANIMATIONS*/
+
+
+
+
+.cssp-img{
+	background: rgb(163, 155, 168);
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png);
+	background-size: 230px 370px;
+	background-position: center 70px;
+	background-repeat: no-repeat;
+}
+
+#HTMlp-img{
+	background: rgb(163, 155, 168);
+	background-image: url(http://assets.stickpng.com/images/5847f5bdcef1014c0b5e489c.png);
+	background-size: 385px 440px;
+	background-position: center 37px;
+	background-repeat: no-repeat;
+
+}
+
+#JSuntagged{
+	background: rgb(163, 155, 168);
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png);
+	background-size: 220px 230px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#PYRL-img{
+	background: rgb(163, 155, 168);
+	background-image: url(https://brandslogos.com/wp-content/uploads/images/large/python-logo.png);
+	background-size: 250px 270px;
+	background-position: center 100px;
+	background-repeat: no-repeat;
+}
+
+#Unity-img{
+	background: rgb(163, 155, 168);
+	background-image: url(https://brandslogos.com/wp-content/uploads/images/large/unity-logo.png);
+	background-size: 250px 270px;
+	background-position: 59px 30px;
+	background-repeat: no-repeat;
+}
+
+
+
+
+@keyframes fade{
+	
+	0%{opacity: 0}
+
+	100%{opacity: 1}
+}
+
+
+* {
+	margin:0;
+	padding:0;
+}
