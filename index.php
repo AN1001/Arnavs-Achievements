@@ -1,1 +1,1 @@
-<?php inclue_once("Achievements.html"); ?>
+<?php inclue_once("home.html"); ?>
