@@ -19,7 +19,7 @@ body{
 	animation: fade 1s ease-in-out;
 	display: flex;
 	height: 95px;
-	width: 100%;
+	width: 10%;
 	min-width: 1000px;
 	background-color: rgb(39, 45, 45);
 	border-bottom: 10px solid rgb(35, 206, 107);
@@ -58,7 +58,7 @@ body{
 }
 
 .homebar-items:hover #arrow{
-  margin-top: 5px;
+  	margin-top: 5px;
 	height: 30px;
 }
 
@@ -109,24 +109,24 @@ body{
 
 #arrow{
 	background: rgb(163, 155, 168);
-    display: inline-block;
-    height: 15px;
-    margin-left: 55px;
-    margin-right: 55px;
-    position: relative;
-    width: 60px;
+    	display: inline-block;
+    	height: 15px;
+    	margin-left: 55px;
+    	margin-right: 55px;
+    	position: relative;
+    	width: 60px;
 }
 
 #arrow:before {
 	transform: rotate(180deg);
-    border-bottom: 15px solid rgb(163, 155, 168);
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    content: "";
-    height: 0;
-    left: 0;
-    position: absolute;
-    top: 15px;
+   	border-bottom: 15px solid rgb(163, 155, 168);
+    	border-left: 30px solid transparent;
+    	border-right: 30px solid transparent;
+    	content: "";
+    	height: 0;
+    	left: 0;
+    	position: absolute;
+    	top: 15px;
 	width: 0;
 }
 
