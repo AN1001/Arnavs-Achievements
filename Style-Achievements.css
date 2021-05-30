@@ -53,16 +53,16 @@ body{
 
 }
 
-.homebar-items:active{
+.homebar-items:hover{
 	background-color: rgb(197,205,210);
 }
 
-.homebar-items:active #arrow{
+.homebar-items:hover #arrow{
   	margin-top: 5px;
 	height: 30px;
 }
 
-.homebar-items:active #arrow:before{
+.homebar-items:hover #arrow:before{
 	top: 30px;
 }
 
