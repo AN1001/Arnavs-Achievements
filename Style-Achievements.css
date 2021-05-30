@@ -310,6 +310,9 @@ a:link{
 	100%{opacity: 1}
 }
 
+@keyframes makeVis {
+	to{ visibility: visible; }
+}
 
 * {
 	margin:0;
