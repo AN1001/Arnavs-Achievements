@@ -221,6 +221,7 @@ a:link{
 }
 
 .fluid-container{
+	animation: fade 1s ease-in-out;
 	border-radius: 2%;
 	width: 100%;
 	height: auto;
@@ -229,6 +230,7 @@ a:link{
 }
 
 .fluid-container-division{
+	animation: fade 1s ease-in-out;
 	background-color: rgb(163, 155, 168);
 	font-family: 'Rubik', sans-serif;
 	font-size: 1.45em;
