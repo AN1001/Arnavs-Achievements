@@ -289,7 +289,7 @@ a:link{
 }
 
 #Unity-img{
-	animation-delay: 1s;
+	animation-delay: 5s;
 	animation: fade 1s ease-in-out;
 	min-width: 300px;
 	background: rgb(163, 155, 168);
