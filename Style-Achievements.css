@@ -251,6 +251,8 @@ a:link{
 .cssp-img{
 	animation-delay: 0.2s;
 	animation: fade 1s ease-in-out;
+	animation-fill-mode: forwards;
+	
 	background: rgb(163, 155, 168);
 	background-image: url(CSS3-11.png);
 	background-size: 230px 370px;
@@ -261,6 +263,8 @@ a:link{
 #HTMlp-img{
 	animation-delay: 0.4s;
 	animation: fade 1s ease-in-out;
+	animation-fill-mode: forwards;
+	
 	background: rgb(163, 155, 168);
 	background-image: url(HTML11.png);
 	background-size: 385px 440px;
@@ -272,6 +276,8 @@ a:link{
 #JSuntagged{
 	animation-delay: 0.6s;
 	animation: fade 1s ease-in-out;
+	animation-fill-mode: forwards;
+	
 	background: rgb(163, 155, 168);
 	background-image: url(JavaScript-logo11.png);
 	background-size: 220px 230px;
@@ -282,6 +288,8 @@ a:link{
 #PYRL-img{
 	animation-delay: 0.8s;
 	animation: fade 1s ease-in-out;
+	animation-fill-mode: forwards;
+	
 	background: rgb(163, 155, 168);
 	background-image: url(python-logo22.png);
 	background-size: 250px 270px;
@@ -292,6 +300,8 @@ a:link{
 #Unity-img{
 	animation-delay: 5s;
 	animation: fade 1s ease-in-out;
+	animation-fill-mode: forwards;
+	
 	min-width: 300px;
 	background: rgb(163, 155, 168);
 	background-image: url(unity-logo11.png);
