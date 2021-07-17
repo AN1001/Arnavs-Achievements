@@ -4,10 +4,12 @@ body{
  }
 
 .backbar{
-  height: 90px;
+  display:flex;
+  height: 95px;
   width: 100%;
   
   background-color: rgb(39, 45, 45);
+  border-bottom: 10px solid rgb(35, 206, 107);
 }
 
 * {margin:0;padding:0;}
