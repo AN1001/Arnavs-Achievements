@@ -6,6 +6,8 @@ body{
 .backbar{
   height: 90px;
   width: 100%;
+  
+  background-color: rgb(39, 45, 45);
 }
 
 * {margin:0;padding:0;}
