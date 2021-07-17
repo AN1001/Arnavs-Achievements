@@ -2,5 +2,10 @@ body{
   background-color: rgb(71, 73, 72);
   font-family: "noto sans jp";
  }
-    
+
+.backbar{
+  height: 90px;
+  width: 100%;
+}
+
 * {margin:0;padding:0;}
