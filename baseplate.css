@@ -19,9 +19,9 @@ body{
 	font-size: 2em;
 	text-align: center;
 	justify-content: center;
-	border-right: 2px dashed rgb(184, 197, 214);
+	border-left: 2px dashed rgb(184, 197, 214);
 	padding: 7px;
-	margin-right: 20px;
+	margin-left: 20px;
 }
 
 * {margin:0;padding:0;}
