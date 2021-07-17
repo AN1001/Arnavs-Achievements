@@ -21,11 +21,12 @@ body{
 	justify-content: center;
 	border-left: 2px dashed rgb(184, 197, 214);
 	padding: 7px;
+	padding-left:50%;
 	margin-left: 20px;
 }
 
 #returnbutton{
-padding-right: 50%;
+
 }
 
 * {margin:0;padding:0;}
