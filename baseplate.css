@@ -25,6 +25,7 @@ body{
 }
 
 #returnbutton{
+	display:flex;
 	height: 89%;
 	width:200px;
     
@@ -39,22 +40,18 @@ body{
 
 #arrow{
 	background: rgb(163, 155, 168);
-    	display: inline-block;
-    	height: 15px;
-    	margin-left: 55px;
-    	margin-right: 55px;
-    	position: relative;
-    	width: 60px;
+    	margin-right: 50px;
+    	
 }
 
 #arrow:before {
-	transform: rotate(180deg);
+	transform: rotate(-90deg);
    	border-bottom: 15px solid rgb(163, 155, 168);
     	border-left: 30px solid transparent;
     	border-right: 30px solid transparent;
     	content: "";
     	position: absolute;
-    	top: 15px;
+    	top: 37px;
 }
 
 * {margin:0;padding:0;}
