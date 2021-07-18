@@ -21,7 +21,7 @@ body{
 	justify-content: center;
 	border-left: 2px dashed rgb(184, 197, 214);
 	padding: 7px;
-	margin-left: 20px;
+	margin-left: auto;
 }
 
 #returnbutton{
