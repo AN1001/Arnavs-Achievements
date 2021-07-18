@@ -59,6 +59,13 @@ body{
 
 }
 
+#demo{
+	width:150px;
+	height:50px;
+	font-size:1em;
+	background-color:red;
+}
+
 a:link{
   text-decoration: none;
   display: inline-block;
