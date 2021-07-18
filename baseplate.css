@@ -55,4 +55,11 @@ body{
     	top: 37px;
 }
 
+a:link{
+  padding-left: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
 * {margin:0;padding:0;}
