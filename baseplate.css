@@ -25,8 +25,16 @@ body{
 }
 
 #returnbutton{
-	height: 95%;
+	height: 89%;
 	width:200px;
+    
+    	margin: 5px 5px 5px 5px;
+    	word-wrap: break-word;
+	line-height: 115%;
+    	font-size: 2.1em;
+    	background: rgba(237, 245, 252, 1);
+    	border-radius: 2%;
+    
 }
 
 * {margin:0;padding:0;}
