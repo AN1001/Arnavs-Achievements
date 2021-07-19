@@ -73,7 +73,7 @@ body{
 	display: block;
 }
 
-#in-bord{
+.in-bord{
 	height: 100%;
 	width: 100%;
 	border-left: 2px dashed rgb(39, 45, 45);
