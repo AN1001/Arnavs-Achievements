@@ -10,6 +10,6 @@ function redirect(name) {
 }
 
 /*Dropdown menu buttons*/
-document.getElementById("ba").onclick = function() {redirect('htmlsite.html')};
-document.getElementById("bb").onclick = function() {redirect('htmlsite.html')};
-document.getElementById("bc").onclick = function() {redirect('htmlsite.html')};
+document.getElementById("buttonA").onclick = function() {redirect('htmlsite.html')};
+document.getElementById("buttonB").onclick = function() {redirect('htmlsite.html')};
+document.getElementById("buttonC").onclick = function() {redirect('htmlsite.html')};
