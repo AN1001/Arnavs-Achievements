@@ -1,6 +1,5 @@
-document.getElementById("cssimg").onclick = function() {myFunction()};
+document.getElementById("cssimg").onclick = function() {myFunction('csssite.html')};
 
-function myFunction() {
-  document.getElementById("cssimg").innerHTML = "YOU CLICKED ME!- Edited";
-  window.location.href = 'csssite.html';
+function myFunction(name) {
+  window.location.href = name;
 }
