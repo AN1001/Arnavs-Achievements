@@ -10,4 +10,4 @@ function myFunction(name) {
 }
 
 /*Dropdown menu buttons*/
-document.getElementById("dd1").onclick = function() {myFunction('htmlsite.html')};
+document.getElementById("in-bord").onclick = function() {myFunction('htmlsite.html')};
