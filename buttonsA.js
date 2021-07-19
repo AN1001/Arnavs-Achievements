@@ -1,3 +1,4 @@
+/*Picture buttons*/
 document.getElementById("cssimg").onclick = function() {myFunction('csssite.html')};
 document.getElementById("PYRL-img").onclick = function() {myFunction('pysite.html')};
 document.getElementById("JSuntagged").onclick = function() {myFunction('javasite.html')};
@@ -7,3 +8,6 @@ document.getElementById("HTMlp-img").onclick = function() {myFunction('htmlsite.
 function myFunction(name) {
   window.location.href = name;
 }
+
+/*Dropdown menu buttons*/
+document.getElementById("dd").onclick = function() {myFunction('htmlsite.html')};
