@@ -6,9 +6,9 @@ document.getElementById("Unity-img").onclick = function() {redirect('unity.html'
 document.getElementById("HTMlp-img").onclick = function() {redirect('htmlsite.html')};
 
 /*Dropdown menu buttons*/
-document.getElementById("buttonA").onclick;
-document.getElementById("buttonB").onclick;
-document.getElementById("buttonC").onclick;
+document.getElementById("buttonA").onclick = true;
+document.getElementById("buttonB").onclick = true;
+document.getElementById("buttonC").onclick = true;
 
 
 
