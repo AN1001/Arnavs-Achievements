@@ -6,9 +6,9 @@ document.getElementById("Unity-img").onclick = function() {redirect('unity.html'
 document.getElementById("HTMlp-img").onclick = function() {redirect('htmlsite.html')};
 
 /*Dropdown menu buttons*/
-document.getElementById("buttonA").onclick = function() {redirect('None')};
-document.getElementById("buttonB").onclick = function() {redirect('None')};
-document.getElementById("buttonC").onclick = function() {redirect('None')};
+document.getElementById("buttonA").onclick;
+document.getElementById("buttonB").onclick;
+document.getElementById("buttonC").onclick;
 
 
 
