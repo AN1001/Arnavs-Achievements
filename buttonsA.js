@@ -16,6 +16,6 @@ function redirect(name) {
   window.location.href = name;
 }
 
-function donothing{
+function donothing() {
 }
 
