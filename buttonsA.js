@@ -6,9 +6,9 @@ document.getElementById("Unity-img").onclick = function() {redirect('unity.html'
 document.getElementById("HTMlp-img").onclick = function() {redirect('htmlsite.html')};
 
 /*Dropdown menu buttons*/
-document.getElementById("buttonA").onclick = true;
-document.getElementById("buttonB").onclick = true;
-document.getElementById("buttonC").onclick = true;
+document.getElementById("buttonA").onclick = function() {donothing()};
+document.getElementById("buttonB").onclick = function() {donothing()};
+document.getElementById("buttonC").onclick = function() {donothing()};
 
 
 
@@ -16,4 +16,6 @@ function redirect(name) {
   window.location.href = name;
 }
 
+function donothing{
+}
 
