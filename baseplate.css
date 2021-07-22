@@ -1,15 +1,15 @@
 body{
-  background-color: rgb(71, 73, 72);
-  font-family: "noto sans jp";
+  	background-color: rgb(71, 73, 72);
+  	font-family: "noto sans jp";
  }
 
 .backbar{
-  display:flex;
-  height: 95px;
-  width: 100%;
+  	display:flex;
+  	height: 95px;
+  	width: 100%;
   
-  background-color: rgb(39, 45, 45);
-  border-bottom: 10px solid rgb(35, 206, 107);
+  	background-color: rgb(39, 45, 45);
+  	border-bottom: 10px solid rgb(35, 206, 107);
 }
 
 #logo{
@@ -22,6 +22,16 @@ body{
 	border-left: 2px dashed rgb(184, 197, 214);
 	padding: 7px;
 	margin-left: auto;
+}
+
+#title{
+    	text-align: center;
+    	margin-left: auto;
+   	font-size: 2.5em;
+  	padding-top: 7px;
+  	color: rgb(184, 197, 214);
+    	white-space: wrap; 
+    	line-height: 90%;
 }
 
 #returnbutton{
@@ -53,17 +63,6 @@ body{
     	content: "";
     	position: absolute;
     	top: 37px;
-}
-
-.button{
-
-}
-
-#demo{
-	width:150px;
-	height:50px;
-	font-size:1em;
-	background-color:red;
 }
 
 a:link{
