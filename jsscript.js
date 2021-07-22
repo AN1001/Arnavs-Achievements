@@ -35,7 +35,17 @@ const btns = document.querySelectorAll('.btn');
 
 btns.forEach(function(item){
   item.addEventListener("click", function(e){
-    console.log(e.currentTarget.classList);
+    const styles = e.currentTarget.classList;
+    if(styles.contains('inc')){
+      count++;
+    }
+    if(styles.contains('dec')){
+      count--;
+    }
+    if(styles.contains('reset')){
+      count = 0;
+    }
+    value.textContent = count;
   });
 });
 
