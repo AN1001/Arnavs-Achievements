@@ -28,6 +28,7 @@ function getRandomNumber(max){
 Project 2, Counter
 ==================
 */
+
 Const increase = document.getElementById('btn3');
 Const decrease = document.getElementById('btn1');
 Const reset = document.getElementById('btn2');
