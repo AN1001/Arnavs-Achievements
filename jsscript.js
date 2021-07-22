@@ -30,10 +30,10 @@ Project 2, Counter
 */
 
 let count = 0;
-const value = document.querySelector('#span')
-const btns = document.querySelector('.btn')
+const value = document.querySelector('#span');
+const btns = document.querySelector('.btn');
 
 btns.forEach(function(item){
   console.log(item);
-})
+});
 
