@@ -29,22 +29,11 @@ Project 2, Counter
 ==================
 */
 
-const increaseBtn = document.querySelector('#btn3');
-const resetBtn = document.querySelector('#btn1');
-const decreaseBtn = document.querySelector('#btn2');
-var currentValue = document.querySelector('#span');
+let count = 0;
+const value = document.querySelector('#span')
+const btns = document.querySelector('.btn')
 
-increaseBtn.addEventListener('click',function(){
-  currentValue = document.querySelector('#span');
-  currentValue.innerText = 
+btns.forEach(function(item){
+  console.log(item);
 })
 
-decreaseBtn.addEventListener('click',function(){
-  currentValue = document.querySelector('#span');
-  currentValue.innerText = '0';
-})
-
-resetBtn.addEventListener('click',function(){
-  currentValue = document.querySelector('#span');
-  console.log(-1);
-})
