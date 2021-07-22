@@ -4,8 +4,8 @@ project 1, colour switcher
 ===========================
 */
 const hexElements = ["1","2","3","4","5","6","A","B","C","D","E","F"];
-const btn = document.getElementById('btn')
-const colour = document.getElementById('colour-name')
+const btn = document.getElementById('btn');
+const colour = document.getElementById('colour-name');
 
 btn.addEventListener('click',function(){
   var hexColour = []
@@ -21,3 +21,26 @@ btn.addEventListener('click',function(){
 function getRandomNumber(max){
   return Math.floor(Math.random() * max);
 }
+
+
+/*
+==================
+Project 2, Counter
+==================
+*/
+Const increaseBtn = document.getElementById('btn3');
+Const decreaseBtn = document.getElementById('btn1');
+Const resetBtn = document.getElementById('btn2');
+var currentValue = document.getElementById('span');
+
+increaseBtn.addEventListener('click',function(){
+  console.log(1)
+})
+
+decreaseBtn.addEventListener('click',function(){
+  console.log(0)
+})
+
+resetBtn.addEventListener('click',function(){
+  console.log(-1)
+})
