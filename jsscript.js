@@ -8,9 +8,10 @@ btn.addEventListener('click',function(){
     hexColour.push( hexElements[getRandomNumber(hexElements.length)] )
   }
   
-  console.log( "#"+hexColour.join("") )
-  document.getElementById("target1").style.backgroundColor = white;
-  colour.textContent = white;
+  var joinedHex = console.log( "#"+hexColour.join("") )
+  
+  document.getElementById("target1").style.backgroundColor = joinedHex;
+  colour.textContent = joinedHex;
 })
 
 function getRandomNumber(max){
