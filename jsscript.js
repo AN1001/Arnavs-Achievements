@@ -3,7 +3,7 @@ const btn = document.getElementById('btn')
 const colour = document.getElementById('colour-name')
 
 btn.addEventListener('click',function(){
-  var hexColour = array(6).fill(getRandomNumber(hexElements.length))
+  var hexColour = Array(6).fill(getRandomNumber(hexElements.length))
   console.log(hexColour)
   
   document.getElementById("target1").style.backgroundColor = white;
