@@ -1,3 +1,8 @@
+/*
+===========================
+project 1, colour switcher
+===========================
+*/
 const hexElements = ["1","2","3","4","5","6","A","B","C","D","E","F"];
 const btn = document.getElementById('btn')
 const colour = document.getElementById('colour-name')
@@ -9,7 +14,6 @@ btn.addEventListener('click',function(){
   }
   
   var joinedHex = console.log( "#"+hexColour.join("") )
-  
   document.getElementById("target1").style.backgroundColor = joinedHex;
   colour.textContent = joinedHex;
 })
