@@ -13,7 +13,7 @@
 }
 
 .project-container{
- 	background-color: White;
+ 	background-color: white;
  	min-width: 400px;
  	max-width: 700px;
  	height: 250px;
@@ -32,6 +32,10 @@
 Project 1
 ==========
 */
+
+#target1{
+	background-color:#B565FA;
+}
 
 .btn{
     	width: 110px;
@@ -56,3 +60,11 @@ Project 1
     	background-color: rgba(15,15,15,0.35);
 	padding: 5px;
 }
+
+/*
+==================
+Project 2, Counter
+==================
+*/
+
+
