@@ -35,13 +35,16 @@ const decreaseBtn = document.querySelector('#btn2');
 var currentValue = document.querySelector('#span');
 
 increaseBtn.addEventListener('click',function(){
-  currentValue.innerText = 'test';
+  currentValue = document.querySelector('#span');
+  currentValue.innerText = 
 })
 
 decreaseBtn.addEventListener('click',function(){
-  console.log(0);
+  currentValue = document.querySelector('#span');
+  currentValue.innerText = '0';
 })
 
 resetBtn.addEventListener('click',function(){
+  currentValue = document.querySelector('#span');
   console.log(-1);
 })
