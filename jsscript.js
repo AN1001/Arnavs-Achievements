@@ -36,6 +36,7 @@ const btns = document.querySelectorAll('.btn');
 btns.forEach(function(item){
   item.addEventListener("click", function(e){
     const styles = e.currentTarget.classList;
+    
     if(styles.contains('inc')){
       count++;
     }
@@ -46,6 +47,15 @@ btns.forEach(function(item){
       count = 0;
     }
     value.textContent = count;
-  });
-});
+  })
+    
+    if(count>0){
+      document.querySelector("#span").style.color = 'green';
+    } else if(count<0){
+      document.querySelector("#span").style.color = 'red';
+    } else {
+      document.querySelector("#span").style.color = 'black';
+    }
+    
+})
 
