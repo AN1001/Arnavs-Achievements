@@ -7,8 +7,8 @@ btn.addEventListener('click',function(){
   for(let i = 0;i<6;i++){
     hexColour.push( hexElements[getRandomNumber(hexElements.length)] )
   }
-  console.log(hexColour)
   
+  console.log( "#"+hexColour.join("") )
   document.getElementById("target1").style.backgroundColor = white;
   colour.textContent = white;
 })
