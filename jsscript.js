@@ -4,6 +4,6 @@ const color = document.getElementById('colour-name')
 
 btn.addEventListener('click',function(){
   const randomNum = 2;
-  document.getElementById("target1").style.backgroundColor = colours[randomNum]);
+  document.getElementById("target1").style.backgroundColor = colours[randomNum];
   colour.textContent = colours[randomNum]
 })
