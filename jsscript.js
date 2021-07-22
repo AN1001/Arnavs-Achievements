@@ -29,19 +29,19 @@ Project 2, Counter
 ==================
 */
 
-Const increase = document.getElementById('btn3');
-Const decrease = document.getElementById('btn1');
-Const reset = document.getElementById('btn2');
-var currentValue = document.getElementById('span');
+const increaseBtn = document.querySelector('#btn3');
+const decreaseBtn = document.querySelector('#btn1');
+const resetBtn = document.querySelector('#btn2');
+var currentValue = document.querySelector('span');
 
-increase.addEventListener('click',function(){
+increaseBtn.addEventListener('click',function(){
   console.log(1)
 })
 
-decrease.addEventListener('click',function(){
+decreaseBtn.addEventListener('click',function(){
   console.log(0)
 })
 
-reset.addEventListener('click',function(){
+resetBtn.addEventListener('click',function(){
   console.log(-1)
 })
