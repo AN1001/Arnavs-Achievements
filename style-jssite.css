@@ -1,23 +1,23 @@
 .container{
-  position: relative;
-	width: 98%;
+  	position: relative;
+  	width: 98%;
 	height: auto;
 	margin: 10px auto 10px auto;
     
-  background-color: rgba(0,0,0,0.3);
+  	background-color: rgba(0,0,0,0.3);
 	border-radius: 1%;
 	padding: 5px;
     
-  display: flex;
+  	display: flex;
 	flex-wrap: wrap;
 }
 
 .project-container{
- background-color: red;
- min-width: 400px;
- max-width: 700px;
- height: 100px;
+ 	background-color: red;
+ 	min-width: 400px;
+ 	max-width: 700px;
+ 	height: 100px;
     
- margin: 5px;
- flex: 1;
+ 	margin: 5px;
+ 	flex: 1;
 }
