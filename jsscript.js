@@ -35,7 +35,7 @@ const decreaseBtn = document.querySelector('#btn2');
 var currentValue = document.querySelector('span');
 
 increaseBtn.addEventListener('click',function(){
-  currentValue.textContent = test;
+  currentValue.textContent = 'test';
 })
 
 decreaseBtn.addEventListener('click',function(){
