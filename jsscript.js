@@ -1,12 +1,13 @@
-const colours = ["red", "whitesmoke", "steelblue", "rgb(133,125,205)","#f35025"];
+const hexElements = ["1","2","3","4","5","6","A","B","C","D","E","F"];
 const btn = document.getElementById('btn')
 const colour = document.getElementById('colour-name')
 
 btn.addEventListener('click',function(){
-  const randomNum = getRandomNumber(colours.length);
+  var hexColour = array(6).fill(getRandomNumber(hexElements.length))
+  console.log(hexColour)
   
-  document.getElementById("target1").style.backgroundColor = colours[randomNum];
-  colour.textContent = colours[randomNum]
+  document.getElementById("target1").style.backgroundColor = white;
+  colour.textContent = white;
 })
 
 function getRandomNumber(max){
