@@ -30,18 +30,18 @@ Project 2, Counter
 */
 
 const increaseBtn = document.querySelector('#btn3');
-const decreaseBtn = document.querySelector('#btn1');
-const resetBtn = document.querySelector('#btn2');
+const resetBtn = document.querySelector('#btn1');
+const decreaseBtn = document.querySelector('#btn2');
 var currentValue = document.querySelector('span');
 
 increaseBtn.addEventListener('click',function(){
-  console.log(1)
+  currentValue.textContent = test;
 })
 
 decreaseBtn.addEventListener('click',function(){
-  console.log(0)
+  console.log(0);
 })
 
 resetBtn.addEventListener('click',function(){
-  console.log(-1)
+  console.log(-1);
 })
