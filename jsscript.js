@@ -34,6 +34,8 @@ const value = document.querySelector('#span');
 const btns = document.querySelectorAll('.btn');
 
 btns.forEach(function(item){
-  console.log(item);
+  item.addEventListener("click", function(e){
+    console.log(e.currentTarget.classList);
+  });
 });
 
