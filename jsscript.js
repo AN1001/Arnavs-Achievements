@@ -1,4 +1,4 @@
-const colours = ["red", "whitesmoke", "rgb(133,115,45)","#f15025"];
+const colours = ["red", "whitesmoke", "steelblue", "rgb(133,125,205)","#f35025"];
 const btn = document.getElementById('btn')
 const colour = document.getElementById('colour-name')
 
