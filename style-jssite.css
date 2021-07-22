@@ -13,7 +13,7 @@
 }
 
 .project-container{
- 	background-color: white;
+ 	background-color: rgb(205, 210, 204);
  	min-width: 400px;
  	max-width: 700px;
  	height: 250px;
@@ -66,5 +66,6 @@ Project 1
 Project 2, Counter
 ==================
 */
+
 
 
