@@ -46,16 +46,17 @@ btns.forEach(function(item){
     if(styles.contains('reset')){
       count = 0;
     }
-    value.textContent = count;
-  })
+    
     
     if(count>0){
-      document.querySelector("#span").style.color = 'green';
+      value.style.color = 'green';
     } else if(count<0){
-      document.querySelector("#span").style.color = 'red';
+      value.style.color = 'red';
     } else {
-      document.querySelector("#span").style.color = 'black';
+      value.style.color = 'black';
     }
+    value.textContent = count;
+  })
     
 })
 
