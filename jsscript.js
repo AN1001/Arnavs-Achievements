@@ -32,7 +32,7 @@ Project 2, Counter
 const increaseBtn = document.querySelector('#btn3');
 const resetBtn = document.querySelector('#btn1');
 const decreaseBtn = document.querySelector('#btn2');
-var currentValue = document.querySelector('span');
+var currentValue = document.querySelector('#span');
 
 increaseBtn.addEventListener('click',function(){
   currentValue.innerText = 'test';
