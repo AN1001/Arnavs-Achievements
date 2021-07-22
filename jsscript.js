@@ -28,19 +28,19 @@ function getRandomNumber(max){
 Project 2, Counter
 ==================
 */
-Const increaseBtn = document.getElementById('btn3');
-Const decreaseBtn = document.getElementById('btn1');
-Const resetBtn = document.getElementById('btn2');
+Const increase = document.getElementById('btn3');
+Const decrease = document.getElementById('btn1');
+Const reset = document.getElementById('btn2');
 var currentValue = document.getElementById('span');
 
-increaseBtn.addEventListener('click',function(){
+increase.addEventListener('click',function(){
   console.log(1)
 })
 
-decreaseBtn.addEventListener('click',function(){
+decrease.addEventListener('click',function(){
   console.log(0)
 })
 
-resetBtn.addEventListener('click',function(){
+reset.addEventListener('click',function(){
   console.log(-1)
 })
