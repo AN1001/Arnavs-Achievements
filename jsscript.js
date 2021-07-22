@@ -31,7 +31,7 @@ Project 2, Counter
 
 let count = 0;
 const value = document.querySelector('#span');
-const btns = document.querySelector('.btn');
+const btns = document.querySelectorAll('.btn');
 
 btns.forEach(function(item){
   console.log(item);
