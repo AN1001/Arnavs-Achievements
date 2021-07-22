@@ -13,7 +13,7 @@ btn.addEventListener('click',function(){
     hexColour.push( hexElements[getRandomNumber(hexElements.length)] )
   }
   
-  var joinedHex = console.log( "#"+hexColour.join("") )
+  var joinedHex = "#"+hexColour.join("")
   document.getElementById("target1").style.backgroundColor = joinedHex;
   colour.textContent = joinedHex;
 })
