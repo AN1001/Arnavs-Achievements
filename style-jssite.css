@@ -112,8 +112,9 @@ Project 3, Complex Polygons
    	margin-right: 25px;
 }
 
-.shapeName{
-    
+#shapeName{
+    font-size: 2rem;
+    color: hsl(205, 72%, 37%);
 }
 
 #prev,
@@ -132,7 +133,14 @@ Project 3, Complex Polygons
 }
 
 .shape-info{
-    background-color: ;
+    
+}
+
+.shape-line{
+    display: inline-block;
+    width: 170px;
+    vertical-align: top ;
+    
 }
 
 h5{
