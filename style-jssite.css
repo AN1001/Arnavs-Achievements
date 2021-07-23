@@ -116,7 +116,7 @@ Project 3, Complex Polygons
 #prev,
 #next{
   color: hsl(205, 90%, 76%);
-  font-size: 1.25rem;
+  font-size: 2rem;
   background: transparent;
   border-color: transparent;
   margin: 0 0.5rem;
@@ -127,4 +127,5 @@ Project 3, Complex Polygons
 #next:hover {
   color: hsl(205, 78%, 60%);;
 }
+
 
