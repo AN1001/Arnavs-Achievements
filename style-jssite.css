@@ -97,20 +97,23 @@ Project 3, Complex Polygons
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
   text-align: center;
+  width: 300px; 
 }
 .info:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);;
 }
 
 .shape{
+    display: inline-block;
     width: 80px;
     height: 80px;
     background-color: hsl(210, 22%, 49%);
     -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   	margin-right: 25px;
 }
 
 .shapeName{
-    background-color: red;
+    
 }
 
 #prev,
@@ -128,4 +131,12 @@ Project 3, Complex Polygons
   color: hsl(205, 78%, 60%);;
 }
 
+.shape-info{
+    background-color: ;
+}
+
+h5{
+    display: inline-block;
+    vertical-align: top;
+}
 
