@@ -102,4 +102,13 @@ Project 3, Complex Polygons
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);;
 }
 
+.shape{
+    width: 80px;
+    height: 80px;
+    background-color: hsl(210, 22%, 49%);
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
 
+.shapeName{
+    
+}
