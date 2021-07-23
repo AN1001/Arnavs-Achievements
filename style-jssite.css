@@ -110,5 +110,21 @@ Project 3, Complex Polygons
 }
 
 .shapeName{
-    
+    background-color: red;
 }
+
+#prev,
+#next{
+  color: hsl(205, 90%, 76%);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+#prev:hover,
+#next:hover {
+  color: hsl(205, 78%, 60%);;
+}
+
