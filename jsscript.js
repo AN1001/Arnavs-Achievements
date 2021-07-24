@@ -74,9 +74,11 @@ const shape = document.querySelector(".shape");
 const shapeName = document.getElementById("shapeName");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-let current = 0;
+let current = 1;
 
-window.addEventListener("DOMContentLoaded", function() {updateShapeStyle(1)};);
+window.addEventListener("DOMContentLoaded", function() {
+  updateShapeStyle(current);
+});
 
 function updateShapeStyle(showNum){
   shape.style['-webkit-clip-path'] = shapes[showNum].func;
