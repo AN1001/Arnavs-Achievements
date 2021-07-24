@@ -65,10 +65,17 @@ btns.forEach(function(item) {
 Project 3, Complex Polygon Maker
 =================================
 */
-
+                                                                                                                                
 const shapes = [
-  {id:1, name:"Octogon",func:"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"},
-  {id:2, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"}
+  {id:1, name: "Hexagon",func:"polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"},
+  {id:2, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"},
+  {id:3, name:"Octogon",func:"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"},
+  {id:4, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"},
+  {id:5, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"},
+  {id:6, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"},
+  {id:7, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"},
+  {id:8, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"},
+  {id:9, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"}
 ];
 const shape = document.querySelector(".shape");
 const shapeName = document.getElementById("shapeName");
