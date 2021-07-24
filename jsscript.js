@@ -67,8 +67,8 @@ Project 3, Complex Polygon Maker
 */
 
 const shapes = [
-  {name:"Octogon",func:"clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);"},
-  {name: "Heptagon",func:"clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);"}
+  {id:1, name:"Octogon",func:"clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);"},
+  {id:1, name: "Heptagon",func:"clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);"}
 ];
 const shape = document.querySelector(".shape");
 const shapeName = document.getElementById("shapeName");
@@ -77,7 +77,6 @@ const nextBtn = document.getElementById("next");
 let current = 1;
 
 window.addEventListener("DOMContentLoaded", function(){
-  shape.style['-webkit-clip-path'] = item.func;
-  shapeName.textContent = item.name;
-  const item = shapes[item];
+  shape.style['-webkit-clip-path'] = shapes[item].func;
+  shapeName.textContent = shapes[item].name;
 });
