@@ -67,7 +67,7 @@ Project 3, Complex Polygon Maker
 */
                                                                                                                                 
 const shapes = [
-  {id:1, name: "Hexagon",func:"polygon(25% 10%, 75% 10%, 100% 50%, 75% 90%, 25% 90%, 0% 50%)"},
+  {id:1, name: "Hexagon",func:"polygon(25% 7%, 75% 7%, 100% 50%, 75% 93%, 25% 93%, 0% 50%)"},
   {id:2, name: "Heptagon",func:"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"},
   {id:3, name:"Octogon",func:"polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"},
   {id:4, name: "Nonagon",func:"polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)"},
