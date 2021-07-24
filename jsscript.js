@@ -76,5 +76,5 @@ const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 var current = 0;
 
-shape.style.backgroundColor = "red";
+document.getElementById("test").style['-webkit-clip-path'] = "polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)";
 
