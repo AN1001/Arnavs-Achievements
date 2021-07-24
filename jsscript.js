@@ -77,7 +77,7 @@ const nextBtn = document.getElementById("next");
 let current = 1;
 
 window.addEventListener("DOMContentLoaded", function(){
-  const item = shapes[item];
   shape.style['-webkit-clip-path'] = item.func;
   shapeName.textContent = item.name;
+  const item = shapes[item];
 });
