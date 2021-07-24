@@ -94,6 +94,7 @@ prevBtn.addEventListener("click", function(){
 function updateShapeStyle(showNum){
   if(showNum < 0){
     showNum = shapes.length - 1;
+    current = shapes.length - 1;
   }
   let showSafeNum = showNum % shapes.length;
   shape.style['-webkit-clip-path'] = shapes[showSafeNum].func;
