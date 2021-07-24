@@ -74,9 +74,11 @@ const shape = document.querySelector(".shape");
 const shapeName = document.getElementById("shapeName");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-let current = 1;
+let current = 0;
 
-window.addEventListener("DOMContentLoaded", function(){
-  shape.style['-webkit-clip-path'] = shapes[current].func;
-  shapeName.textContent = shapes[current].name;
-});
+window.addEventListener("DOMContentLoaded", function() {updateShapeStyle(1)};);
+
+function updateShapeStyle(showNum){
+  shape.style['-webkit-clip-path'] = shapes[showNum].func;
+  shapeName.textContent = shapes[showNum].name;
+}
