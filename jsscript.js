@@ -56,7 +56,7 @@ btns.forEach(function(item) {
       value.style.color = 'black';
     }
     value.textContent = count;
-  })
+  });
 
 })
 
@@ -74,7 +74,10 @@ const shape = document.querySelector(".shape");
 const shapeName = document.getElementById("shapeName");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-var current = 0;
+let current = 1;
 
-shape.style['-webkit-clip-path'] = "polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)";
-
+window.addEventListener("DOMContentLoaded", function(){
+  const item = shapes[item];
+  shape.style['-webkit-clip-path'] = item.func;
+  shapeName.textContent = item.name;
+});
