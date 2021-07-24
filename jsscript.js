@@ -74,7 +74,7 @@ const shape = document.querySelector(".shape");
 const shapeName = document.getElementById("shapeName");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-let current = 11;
+let current = 10;
 
 window.addEventListener("DOMContentLoaded", function() {
   updateShapeStyle(current);
