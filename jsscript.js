@@ -81,6 +81,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 function updateShapeStyle(showNum){
-  shape.style['-webkit-clip-path'] = shapes[showNum].func;
-  shapeName.textContent = shapes[showNum].name;
+  let showSafeNum = showNum % shapes.length;
+  shape.style['-webkit-clip-path'] = shapes[showSafeNum].func;
+  shapeName.textContent = shapes[showSafeNum].name;
 }
