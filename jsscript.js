@@ -74,12 +74,23 @@ const shape = document.querySelector(".shape");
 const shapeName = document.getElementById("shapeName");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-let current = 10;
+let current = 0;
 
 window.addEventListener("DOMContentLoaded", function() {
   updateShapeStyle(current);
 });
 
+nextBtn.addEventListener("click", function(){
+  current++
+  updateShapeStyle(current)
+});
+
+prevBtn.addEventListener("click", function(){
+  current--
+  updateShapeStyle(current)
+});
+
+//==== Update styleSheet ====
 function updateShapeStyle(showNum){
   let showSafeNum = showNum % shapes.length;
   shape.style['-webkit-clip-path'] = shapes[showSafeNum].func;
