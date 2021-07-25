@@ -172,7 +172,7 @@ Project 4, project info
   border-top-right-radius: 0.25rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .tab-btn.active {
@@ -186,13 +186,21 @@ Project 4, project info
 
 #text-container{
     width: 95%;
-    height: 180px;
+    height: 150px;
     border-radius: 0.25rem;
     border: 2px solid #222;
     
+}
+
+#projects-title{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #222;
+    border-bottom: 2px solid hsl(205, 78%, 60%);
 }
 
 #target4{
     height: 245px;
     padding: 0 0 15px 0;
 }
+
