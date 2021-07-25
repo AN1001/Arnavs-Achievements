@@ -148,3 +148,42 @@ h5{
     vertical-align: top;
 }
 
+/*
+=======================
+Project 4, project info
+=======================
+*/
+
+.tab-btn {
+  padding: 1rem 0;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  display: block;
+  background: hsl(212, 33%, 89%);;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  letter-spacing: 0.25rem;
+}
+
+.btn-container {
+  width: 100%;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tab-btn.active {
+  background: #fff;
+}
+
+.tab-btn:hover:not(.active) {
+  background: hsl(205, 100%, 96%);
+  color: #49a6e9;
+}
+
+#target4{
+    padding-left: 0;
+    padding-right: 0;
+}
