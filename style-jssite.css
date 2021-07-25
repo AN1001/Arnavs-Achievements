@@ -172,6 +172,7 @@ Project 4, project info
   border-top-right-radius: 0.25rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 10px;
 }
 
 .tab-btn.active {
@@ -183,7 +184,15 @@ Project 4, project info
   color: #49a6e9;
 }
 
+#text-container{
+    width: 95%;
+    height: 180px;
+    border-radius: 0.25rem;
+    border: 2px solid #222;
+    
+}
+
 #target4{
-    padding-left: 0;
-    padding-right: 0;
+    height: 245px;
+    padding: 0 0 15px 0;
 }
