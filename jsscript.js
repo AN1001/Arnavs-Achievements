@@ -104,3 +104,17 @@ function updateShapeStyle(showNum){
   shape.style['-webkit-clip-path'] = shapes[showSafeNum].func;
   shapeName.textContent = shapes[showSafeNum].name;
 }
+
+/*
+===========================
+project 4, Project Details
+===========================
+*/
+
+const btns = document.querySelectorAll('.tab-btn');
+const all = document.getElementById('target4');
+const articles = document.querySelectorAll('.content');
+
+all.addEventListener('click',function(e){
+  console.log(e.target.dataset.id);
+});
