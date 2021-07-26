@@ -120,21 +120,21 @@ all.addEventListener('click',function(e){
   if(id){
     aboutBtns.forEach(function(btn){
       btn.classList.remove("active");
-      e.target.classList.add("active")
+      e.target.classList.add("active");
     });
     
     articles.forEach(function(art){
       art.classList.remove("active");
       const element = document.getElementById(id);
-      element.classList.add('active')
+      element.classList.add('active');
     });
     
     if(id == 'p1'){
-      console.log('p1change')
+      document.getElementById("Projects-title").style.textContent = 'Colour Flipper';
     }else if(id == 'p2'){
-      console.log('p2change')
+      document.getElementById("Projects-title").style.textContent = 'Counter';
     }else{
-      console.log('p3change')
+      document.getElementById("Projects-title").style.textContent = 'Polygon Maker';
     }
       
   }
