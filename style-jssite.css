@@ -176,12 +176,12 @@ Project 4, project info
 }
 
 .tab-btn.active {
-  background: #fff;
+  	background: #fff;
 }
 
 .tab-btn:hover:not(.active) {
-  background: hsl(205, 100%, 96%);
-  color: #49a6e9;
+  	background: hsl(205, 100%, 96%);
+  	color: #49a6e9;
 }
 
 #text-container{
@@ -189,6 +189,8 @@ Project 4, project info
     height: 150px;
     border-radius: 0.25rem;
     border: 2px solid #222;
+	padding-left:5px;
+	padding-right:5px;
     
 }
 
@@ -200,11 +202,13 @@ Project 4, project info
 }
 
 .content {
-  display: none;
+	display: none;
+	text-align:left;
 }
 
 .content.active {
-  display: block;
+  	display: block;
+  
 }
 
 #target4{
