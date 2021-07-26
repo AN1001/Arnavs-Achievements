@@ -199,6 +199,14 @@ Project 4, project info
     border-bottom: 2px solid hsl(205, 78%, 60%);
 }
 
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
 #target4{
     height: 245px;
     padding: 0 0 15px 0;
