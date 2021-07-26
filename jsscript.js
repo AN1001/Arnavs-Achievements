@@ -122,5 +122,20 @@ all.addEventListener('click',function(e){
       btn.classList.remove("active");
       e.target.classList.add("active")
     });
+    
+    articles.forEach(function(art){
+      art.classList.remove("active");
+      const element = document.getElementById(id);
+      element.classList.add('active')
+    });
+    
+    if(id == 'p1'){
+      console.log('p1change')
+    }else if(id == 'p2'){
+      console.log('p2change')
+    }else{
+      console.log('p3change')
+    }
+      
   }
 });
