@@ -116,5 +116,11 @@ const all = document.getElementById('target4');
 const articles = document.querySelectorAll('.content');
 
 all.addEventListener('click',function(e){
-  console.log(e.target.dataset.id);
+  const id = e.target.dataset.id;
+  if(id){
+    aboutBtns.forEach(function(btn){
+      btn.classList.remove("active");
+      e.target.classList.add("active")
+    });
+  }
 });
