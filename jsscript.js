@@ -130,11 +130,11 @@ all.addEventListener('click',function(e){
     });
     
     if(id == 'p1'){
-      document.getElementById("projects-title").style.textContent = 'Colour Flipper';
+      document.getElementById("projects-title").textContent = 'Colour Flipper';
     }else if(id == 'p2'){
-      document.getElementById("projects-title").style.textContent = 'Counter';
+      document.getElementById("projects-title").textContent = 'Counter';
     }else{
-      document.getElementById("projects-title").style.textContent = 'Polygon Maker';
+      document.getElementById("projects-title").textContent = 'Polygon Maker';
     }
       
   }
