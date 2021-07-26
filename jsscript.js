@@ -111,7 +111,7 @@ project 4, Project Details
 ===========================
 */
 
-const btns = document.querySelectorAll('.tab-btn');
+const aboutBtns = document.querySelectorAll('.tab-btn');
 const all = document.getElementById('target4');
 const articles = document.querySelectorAll('.content');
 
