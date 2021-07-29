@@ -1,5 +1,7 @@
 :root{
-    --cool-white: hsla(0, 0%, 98%, 1);
+    --soft-white: hsla(0, 0%, 98%, 1);
+	--soft-black: #222;
+    --border-rad: 0.25rem;
 }
 
 .container{
@@ -225,8 +227,8 @@ Project 4, project info
     margin: 0 auto 0 auto;
     padding: 5px;
     
-    background-color: var(--cool-white);
+    background-color: var(--soft-white);
     
-    border: 2px solid black;
-    border-radius:0.25rem;
+    border: 2px solid var(--soft-black);
+    border-radius:var(--border-rad);
 }
