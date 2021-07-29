@@ -147,7 +147,7 @@ Games, Game selector script, Game scripts
 */
 
 const gameSelectorBtns = document.querySelectorAll('.game-btn');
-const masterContainer = document.querySelector('games-master-container');
+const masterContainer = document.querySelector('.games-master-container');
 const games = document.querySelectorAll('.game-container');
 
 masterContainer.addEventListener('click',function(e){
