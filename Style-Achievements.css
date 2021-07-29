@@ -1,5 +1,8 @@
 :root{
-    --cool-grey: rgb(125, 125, 125);
+    	--soft-white: hsla(0, 0%, 98%, 1);
+	--soft-black: #222;
+    	--border-rad: 0.25rem;
+	--border-rad-extra: 0.45rem;
 }
 
 body{
@@ -46,7 +49,7 @@ body{
 	z-index: 4;
 	font-family: 'Rubik', sans-serif;
 	padding-top: 7px;
-	border-radius: 2%;
+	border-radius: var(--border-rad-extra);
 	width: 170px;
 	background: rgba(237, 245, 252, 1);
 	margin: 0 20px 0 20px;
@@ -153,7 +156,7 @@ body{
 	flex-wrap: wrap;
 
 	background-color: rgba(0,0,0,0.3);
-	border-radius: 1%;
+	border-radius: var(--border-rad);
 	padding: 5px;
 
 }
@@ -193,10 +196,10 @@ body{
 }
 
 a:link{
-  padding-left: 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  	padding-left: 5px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
 }
 
 
@@ -221,7 +224,7 @@ a:link{
 	
 	
 	background-color: rgba(0,0,0,0.3);
-	border-radius: 1%;
+	border-radius: var(--border-rad);
 
 }
 
@@ -236,7 +239,7 @@ a:link{
 
 .fluid-container-division{
 	animation: fade 1s ease-in-out;
-	background-color: var(--cool-grey);
+	background-color: var(--soft-white);
 	font-family: 'Rubik', sans-serif;
 	font-size: 1.45em;
 	padding: 3px 20px 20px 20px;
@@ -257,7 +260,7 @@ a:link{
 	animation: fade 1s ease-in-out;
 	animation-fill-mode: forwards;
 	
-	background: var(--cool-grey);
+	background: var(--soft-white);
 	background-image: url(CSS3-11.png);
 	background-size: 230px 370px;
 	background-position: center 70px;
@@ -269,7 +272,7 @@ a:link{
 	animation: fade 1s ease-in-out;
 	animation-fill-mode: forwards;
 	
-	background: var(--cool-grey);
+	background: var(--soft-white);
 	background-image: url(HTML11.png);
 	background-size: 385px 440px;
 	background-position: center 37px;
@@ -282,7 +285,7 @@ a:link{
 	animation: fade 1s ease-in-out;
 	animation-fill-mode: forwards;
 	
-	background: var(--cool-grey);
+	background: var(--soft-white);
 	background-image: url(JavaScript-logo11.png);
 	background-size: 220px 230px;
 	background-position: center center;
@@ -294,7 +297,7 @@ a:link{
 	animation: fade 1s ease-in-out;
 	animation-fill-mode: forwards;
 	
-	background: var(--cool-grey);
+	background: var(--soft-white);
 	background-image: url(python-logo22.png);
 	background-size: 250px 270px;
 	background-position: center 100px;
@@ -307,7 +310,7 @@ a:link{
 	animation-fill-mode: forwards;
 	
 	min-width: 300px;
-	background: var(--cool-grey);
+	background: var(--soft-white);
 	background-image: url(unity-logo11.png);
 	background-size: 250px 270px;
 	background-position: center  30px;
