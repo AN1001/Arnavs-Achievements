@@ -275,3 +275,11 @@ Games, container and styles
   	color: #49a6e9;
 }
 
+.game-container {
+	display: none;
+}
+
+.game-container.active {
+  	display: block;
+  
+}
