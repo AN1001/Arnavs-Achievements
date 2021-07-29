@@ -153,6 +153,7 @@ const games = document.querySelectorAll('.game-container');
 masterContainer.addEventListener('click',function(e){
   const id = e.target.dataset.id;
   if(id){
+    
     gameSelectorBtns.forEach(function(btn){
       btn.classList.remove("active");
       e.target.classList.add("active");
@@ -163,4 +164,6 @@ masterContainer.addEventListener('click',function(e){
       const element = document.getElementById(id);
       element.classList.add('active');
     });
+    
   }
+)};
