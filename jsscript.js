@@ -139,3 +139,28 @@ all.addEventListener('click',function(e){
       
   }
 });
+
+/*
+==========================================
+Games, Game selector script, Game scripts
+==========================================
+*/
+
+const gameSelectorBtns = document.querySelectorAll('.game-btn');
+const all = document.querySelector('games-master-container');
+const games = document.querySelectorAll('.game-container');
+
+all.addEventListener('click',function(e){
+  const id = e.target.dataset.id;
+  if(id){
+    gameSelectorBtns.forEach(function(btn){
+      btn.classList.remove("active");
+      e.target.classList.add("active");
+    });
+    
+    games.forEach(function(game){
+      game.classList.remove("active");
+      const element = document.getElementById(id);
+      element.classList.add('active');
+    });
+  }
