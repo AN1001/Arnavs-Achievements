@@ -222,6 +222,12 @@ Project 4, project info
     padding: 0 0 15px 0;
 }
 
+/*
+============================
+Games, container and styles
+============================
+*/
+
 .games-master-container{
     width:98%;
     margin: 0 auto 0 auto;
@@ -232,3 +238,40 @@ Project 4, project info
     border: 2px solid var(--soft-black);
     border-radius:var(--border-rad);
 }
+
+.legend-games{
+    background-color: ;
+    margin-right: 10px;
+    border: 2px solid black;
+    padding-right: 3px;
+}
+
+.game-btn {
+  padding: 1rem 0;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  display: block;
+  background: hsl(212, 33%, 89%);;
+  cursor: pointer;
+  letter-spacing: 0.25rem;
+}
+
+.game-btn-container{
+  width: 100%;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr 1fr;
+  margin-bottom: 5px;
+}
+
+.game-btn.active {
+  	background: #fff;
+}
+
+.game-btn:hover:not(.active) {
+  	background: hsl(205, 100%, 96%);
+  	color: #49a6e9;
+}
+
