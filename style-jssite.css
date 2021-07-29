@@ -1,3 +1,7 @@
+:root{
+    --cool-white: hsla(0, 0%, 98%, 1);
+}
+
 .container{
   	position: relative;
   	width: 98%;
@@ -216,3 +220,13 @@ Project 4, project info
     padding: 0 0 15px 0;
 }
 
+.games-master-container{
+    width:98%;
+    margin: 0 auto 0 auto;
+    padding: 5px;
+    
+    background-color: var(--cool-white);
+    
+    border: 2px solid black;
+    border-radius:0.25rem;
+}
