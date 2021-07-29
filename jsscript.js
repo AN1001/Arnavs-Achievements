@@ -147,10 +147,10 @@ Games, Game selector script, Game scripts
 */
 
 const gameSelectorBtns = document.querySelectorAll('.game-btn');
-const all = document.querySelector('games-master-container');
+const masterContainer = document.querySelector('games-master-container');
 const games = document.querySelectorAll('.game-container');
 
-all.addEventListener('click',function(e){
+masterContainer.addEventListener('click',function(e){
   const id = e.target.dataset.id;
   if(id){
     gameSelectorBtns.forEach(function(btn){
