@@ -183,6 +183,7 @@ game1Container.addEventListener('click',function(){
 const deathCheck = setInterval(function(){
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+  console.log("test")
   if(blockLeft > 110 && blockLeft < 60 && playerTop > 110){
     alert("Loss")
     block.style.animation = "none";
