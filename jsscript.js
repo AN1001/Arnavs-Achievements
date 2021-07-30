@@ -173,8 +173,11 @@ const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
 
+
 game1Container.addEventListener('click',function(){
+  block.style.animation = "boxmove 3s infinite linear";
   game1Player.classList.add("player-jump");
+  
   setTimeout(function(){
     game1Player.classList.remove("player-jump")
    },500);
