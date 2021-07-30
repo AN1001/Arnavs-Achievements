@@ -184,6 +184,7 @@ const deathCheck = setInterval(function(){
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
   if(blockLeft > 110 && blockLeft < 60 && playerTop > 110){
+    console.log("Player died at ---> Game 1")
     alert("Loss")
     block.style.animation = "none";
   }
