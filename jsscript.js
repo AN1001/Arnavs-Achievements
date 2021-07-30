@@ -167,3 +167,13 @@ masterContainer.addEventListener('click',function(e){
     
   }
 });
+
+const game1Container = document.querySelector(".game1");
+const game1Player = document.querySelector(".player");
+
+game1Container.addEventListener('click',function(){
+  game1Player.classList.add("player-jump");
+  setTimeout(function(){
+    game1Player.classList.remove("player-jump")
+   },500);
+ });
