@@ -311,4 +311,10 @@ Games, container and styles
     left: calc(100% - 40px);
     
     background: red;
+    animation: boxmove 3s infinite linear;
+}
+
+@keyframes boxmove{
+    0% {left: calc(100% - 40px);}
+    100% {left: 0;}
 }
