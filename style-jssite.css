@@ -290,6 +290,8 @@ Games, container and styles
     
     border: 2px solid var(--soft-black); 
     border-radius: var(--border-rad);
+    background: lightgrey url(https://lh3.googleusercontent.com/proxy/McNigMYWUbl-6JDJuBpqZQyr6gj44VQHJoIXP52jgm8veMbZaUO43wCMxXaoFyRHWtIgdD5z0mT5u9kl9QrdpIxS9o6Igt8O) no-repeat -10px -7px;
+    background-size: 1100px;
 }
 
 .player{
