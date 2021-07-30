@@ -283,3 +283,32 @@ Games, container and styles
   	display: block;
   
 }
+
+.game1{
+    height:250px;
+    width: auto;
+    
+    border: 2px solid var(--soft-black); 
+    border-radius: var(--border-rad);
+}
+
+.player{
+    position: relative;
+    height: 110px;
+    width: 50px;
+    left: 60px;
+    top: 140px;
+    
+    background: blue;
+}
+
+.box{
+    width: 30px;
+    height: 30px;
+    
+    position: relative;
+    top:110px;
+    left: calc(100% - 40px);
+    
+    background: red;
+}
