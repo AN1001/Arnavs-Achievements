@@ -296,9 +296,11 @@ Games, container and styles
     position: relative;
     height: 110px;
     width: 50px;
+    
     left: 60px;
     top: 140px;
     
+    animation: jump 0.5s linear;
     background: blue;
 }
 
@@ -317,4 +319,10 @@ Games, container and styles
 @keyframes boxmove{
     0% {left: calc(100% - 40px);}
     100% {left: 0;}
+}
+
+@keyframes jump{
+    0%{top: 140px;}
+    50%{top: 70px;}
+    100%{top: 140px;}
 }
