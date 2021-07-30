@@ -170,6 +170,7 @@ masterContainer.addEventListener('click',function(e){
 
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
+const block = document.querySelector(".box");
 
 game1Container.addEventListener('click',function(){
   game1Player.classList.add("player-jump");
@@ -177,3 +178,13 @@ game1Container.addEventListener('click',function(){
     game1Player.classList.remove("player-jump")
    },500);
  });
+
+const deathCheck = setInterval(function(){
+  const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
+  const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+  if(blockLeft > 110 && blockLeft < 60 %% playerTop > 110){
+    alert("Loss")
+    block.style.animation = "none";
+  }
+  
+},10);
