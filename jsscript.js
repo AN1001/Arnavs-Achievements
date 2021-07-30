@@ -168,6 +168,7 @@ masterContainer.addEventListener('click',function(e){
   }
 });
 
+//========== Game 1 ===========
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
