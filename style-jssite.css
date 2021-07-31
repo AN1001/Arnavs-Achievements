@@ -283,7 +283,9 @@ Games, container and styles
   	display: block;
   
 }
-
+/* 
+============game 1============ 
+*/
 .game1{
     height:250px;
     width: auto;
@@ -304,13 +306,18 @@ Games, container and styles
     top: 150px;
     
     background: blue;
-    background: url("pixelDino.png") no-repeat ;
+}
+
+.playerState2{
+    background: url("pixelDino2.png") no-repeat;
     background-size: 85px;
     background-position: -14px 30px;
 }
 
-.playerState2{
-	background: url("pixelDino2.png") no-repeat ;
+.playerState1{
+    background: url("pixelDino.png") no-repeat ;
+    background-size: 85px;
+    background-position: -14px 30px;
 }
 
 .player-jump{
