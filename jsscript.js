@@ -175,23 +175,30 @@ const block = document.querySelector(".box");
 var hiScore = 0;
 var score = 0;
 var playing = true;
+var shouldAnimate = true;
 
+//restart game function
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
   game1Player.classList.add("player-jump");
   playing = true;
+  shouldAnimate = true;
   
+  //jump
+  shouldAnimate = false;
   setTimeout(function(){
     game1Player.classList.remove("player-jump")
+    shouldAnimate = true;
    },500);
  });
 
 const animatePlayer = setInterval(function(){
+  if(shouldAnimate){
     setTimeout(function(){
       game1Player.classList.remove("playerState1")
     },150)
     game1Player.classList.add("playerState1")
-    
+  }
 },300)
 
 const deathCheck = setInterval(function(){
@@ -210,6 +217,7 @@ const deathCheck = setInterval(function(){
     block.style.animation = "none";
     score = 0;
     playing = false;
+    shouldAnimate = false;
   }
   
 },10);
