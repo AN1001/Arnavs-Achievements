@@ -220,7 +220,7 @@ const deathCheck = setInterval(function(){
     score = 0;
     playing = false;
     shouldAnimate = false;
-    document.getElementById("game1HiScore").textcontent = "current Score: "+hiScore;
+    document.getElementById("game1HiScore").textcontent = "Hi Score: "+hiScore;
   }
   
 },10);
