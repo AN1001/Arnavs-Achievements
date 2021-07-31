@@ -305,13 +305,13 @@ Games, container and styles
     left: 50px;
     top: 150px;
     
-    background: url("pixelDino2.png") no-repeat;
+    background: url("pixelDino3.png") no-repeat;
     background-size: 85px;
     background-position: -14px 30px;
 }
 
 .playerState1{
-    background: url("pixelDino.png") no-repeat ;
+    background: url("pixelDino0.png") no-repeat ;
     background-size: 85px;
     background-position: -14px 30px;
 }
