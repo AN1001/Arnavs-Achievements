@@ -1,6 +1,6 @@
 :root{
     --soft-white: hsla(0, 0%, 98%, 1);
-	--soft-black: #222;
+    --soft-black: #222;
     --border-rad: 0.25rem;
 }
 
@@ -305,10 +305,12 @@ Games, container and styles
     
     background: blue;
     background: url("pixelDino.png") no-repeat ;
-    background: url("pixelDino2.png") no-repeat ;
     background-size: 85px;
     background-position: -14px 30px;
+}
 
+.playerState2{
+	background: url("pixelDino2.png") no-repeat ;
 }
 
 .player-jump{
