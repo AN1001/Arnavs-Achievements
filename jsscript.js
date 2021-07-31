@@ -182,7 +182,7 @@ var shouldAnimate = false;
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
   game1Player.classList.add("player-jump");
-  playing = true;
+  playing = false;
   shouldAnimate = true;
   
   //jump
@@ -221,6 +221,7 @@ const deathCheck = setInterval(function(){
     playing = false;
     shouldAnimate = false;
     document.getElementById("game1HiScore").textContent = "Hi Score: "+hiScore;
+    document.getElementById("game1Score").textContent = "current Score: "+score;
   }
   
 },10);
