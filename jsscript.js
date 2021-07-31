@@ -172,6 +172,7 @@ masterContainer.addEventListener('click',function(e){
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
+const animationSpeed = 100;
 var hiScore = 0;
 var score = 0;
 var playing = true;
@@ -196,10 +197,10 @@ const animatePlayer = setInterval(function(){
   if(shouldAnimate){
     setTimeout(function(){
       game1Player.classList.remove("playerState1")
-    },150)
+    },animationSpeed)
     game1Player.classList.add("playerState1")
   }
-},300)
+},animationSpeed*2)
 
 const deathCheck = setInterval(function(){
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
