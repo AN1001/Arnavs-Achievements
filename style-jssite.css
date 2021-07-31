@@ -297,6 +297,26 @@ Games, container and styles
     background-repeat: repeat-x;
 }
 
+#game1Hud{
+    position: relative;
+    top: -120px;
+    left: calc(100% - 201px);
+    
+    border: 2px solid var(--soft-black);
+    border-right: none;
+    
+    height: 40px;
+    width: 200px;
+}
+
+#game1Score{
+    
+}
+
+#game1HiScore{
+    
+}
+
 .player{
     position: relative;
     height: 104px;
