@@ -169,6 +169,5 @@ masterContainer.addEventListener('click',function(e){
 });
 
 if(document.querySelector(".game1Btn").classList.contains("active")){
-//========== Game 1 ===========
-
-}//End of Game 1
+  console.log("1")
+}
