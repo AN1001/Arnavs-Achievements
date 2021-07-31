@@ -1,4 +1,3 @@
-const root = document.documentElement;
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
@@ -39,8 +38,6 @@ const deathCheck = setInterval(function(){
   if(playing){
     score++;
     document.getElementById("game1Score").textContent = "current Score: "+score;
-    root.style.setProperty('--game-perc-1', score/100 + "%");
-    root.style.setProperty('--game-perc-2', score/50 + "%");
   }
   //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
