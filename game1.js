@@ -1,3 +1,4 @@
+const root = document.documentElement;
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
