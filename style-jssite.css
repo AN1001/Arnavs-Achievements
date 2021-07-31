@@ -299,15 +299,15 @@ Games, container and styles
 
 .player{
     position: relative;
-    height: 100px;
+    height: 104px;
     width: 60px;
     
     left: 50px;
-    top: 150px;
+    top: 147px;
     
     background: url("pixelDino3.png") no-repeat;
     background-size: 85px;
-    background-position: -14px 30px;
+    background-position: -14px 31px;
 }
 
 .playerState1{
@@ -325,7 +325,7 @@ Games, container and styles
     height: 31px;
     
     position: relative;
-    top:120px;
+    top:115px;
     left: calc(100% - 40px);
     
     background: url("pixelSpike.png");
@@ -346,4 +346,5 @@ Games, container and styles
     70%{top: 40px;}
     100%{top: 140px;}
 }
+
 
