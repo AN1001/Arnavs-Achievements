@@ -103,7 +103,7 @@ function updateShapeStyle(showNum){
   let showSafeNum = showNum % shapes.length;
   shape.style['-webkit-clip-path'] = shapes[showSafeNum].func;
   shapeName.textContent = shapes[showSafeNum].name;
-}
+};
 
 /*
 ===========================
@@ -168,6 +168,29 @@ masterContainer.addEventListener('click',function(e){
   }
 });
 
-if(document.querySelector(".game1Btn").classList.contains("active")){
-  console.log("1")
-}
+var currentActiveGame = 'g1';
+function setScript(){
+  //Check which button is pressed and if it has changed
+  
+  //Check for btn 1
+  if(document.querySelector(".game1Btn").classList.contains("active") && currentActiveGame != 'g1'){
+    currentActiveGame = 'g1';
+    console.log("1");
+  
+  //Check for btn 2
+  } else if(document.querySelector(".game2Btn").classList.contains("active") && currentActiveGame != 'g2'){
+    currentActiveGame = 'g1';
+    console.log("2");
+    
+  //Check for btn 3 
+  } else if(document.querySelector(".game3Btn").classList.contains("active") && currentActiveGame != 'g3'){
+    currentActiveGame = 'g1';
+    console.log("3");
+    
+  //Check for btn 4
+  } else if(document.querySelector(".game1Btn").classList.contains("active") && currentActiveGame != 'g4'){
+    currentActiveGame = 'g1';
+    console.log("4");
+  }
+  
+};
