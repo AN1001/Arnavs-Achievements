@@ -207,7 +207,7 @@ const deathCheck = setInterval(function(){
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
   if(playing){
   score++;
-  document.getElementById("game1Score").textcontent = "current Score: "+score;
+  document.getElementById("game1Score").textContent = "current Score: "+score;
   }
   //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
@@ -220,7 +220,7 @@ const deathCheck = setInterval(function(){
     score = 0;
     playing = false;
     shouldAnimate = false;
-    document.getElementById("game1HiScore").textcontent = "Hi Score: "+hiScore;
+    document.getElementById("game1HiScore").textContent = "Hi Score: "+hiScore;
   }
   
 },10);
