@@ -290,8 +290,9 @@ Games, container and styles
     
     border: 2px solid var(--soft-black); 
     border-radius: var(--border-rad);
-    background: lightgrey url(pixelMountain.png) no-repeat -10px -7px;
+    background: lightgrey url(pixelMountain.png) no-repeat -500px -7px;
     background-size: 1100px;
+    background-repeat: repeat-x;
 }
 
 .player{
