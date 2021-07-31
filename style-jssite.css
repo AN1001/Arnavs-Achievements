@@ -305,10 +305,6 @@ Games, container and styles
     left: 50px;
     top: 150px;
     
-    background: blue;
-}
-
-.playerState2{
     background: url("pixelDino2.png") no-repeat;
     background-size: 85px;
     background-position: -14px 30px;
