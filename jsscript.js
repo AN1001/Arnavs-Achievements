@@ -168,7 +168,7 @@ masterContainer.addEventListener('click',function(e){
   }
 });
 
-if(document.querySelector("game1Btn").classList.contains("active")){
+if(document.querySelector(".game1Btn").classList.contains("active")){
 //========== Game 1 ===========
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
