@@ -174,41 +174,33 @@ const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
 var hiScore = 0;
 var score = 0;
+var playing = true;
 
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
   game1Player.classList.add("player-jump");
+  playing = true;
   
   setTimeout(function(){
     game1Player.classList.remove("player-jump")
    },500);
  });
 
-function doSetTimeoutRemove(i){
-  game1Player.classList.remove(i);
-}
-
-function doSetTimeoutAdd(i){
-  game1Player.classList.add(i);
-}
-
 const animatePlayer = setInterval(function(){
     setTimeout(function(){
-      doSetTimeoutRemove("playerState1");
-      doSetTimeoutAdd("playerState2");
-    },400)
-  
-    setTimeout(function(){
-      doSetTimeoutRemove("playerState2");
-      doSetTimeoutAdd("playerState1");
-    },400)
+      game1Player.classList.remove("playerState1")
+    },800)
+    game1Player.classList.add("playerState1")
     
 },801)
 
 const deathCheck = setInterval(function(){
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+  if(playing){
   score++;
+  }
+  //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
     if(score > hiScore){
       hiScore = score;
@@ -217,6 +209,7 @@ const deathCheck = setInterval(function(){
     alert(`You died, your score was: ${score}, high score: ${hiScore}`);
     block.style.animation = "none";
     score = 0;
+    playing = false;
   }
   
 },10);
