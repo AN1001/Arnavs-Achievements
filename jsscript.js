@@ -188,7 +188,7 @@ const setScript = setInterval(function(){
     console.log("3");
     
   //Check for btn 4
-  } else if(document.querySelector(".game1Btn").classList.contains("active") && currentActiveGame != 'g4'){
+  } else if(document.querySelector(".game4Btn").classList.contains("active") && currentActiveGame != 'g4'){
     currentActiveGame = 'g4';
     console.log("4");
   }
