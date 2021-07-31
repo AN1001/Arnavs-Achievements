@@ -3,7 +3,7 @@ const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
 const animationSpeed = 100;
 var hiScore = 0;
-var score = 10000;
+var score = 0;
 var playing = false;
 var shouldAnimate = false;
 
@@ -38,7 +38,7 @@ const deathCheck = setInterval(function(){
   if(playing){
   score++;
   document.getElementById("game1Score").textContent = "current Score: "+score;
-  game1Container.style.backgroundImage = `url(pixelMountain.png), linear-gradient(to top, rgb(56, 56, 56), rgb(87, 87, 90) $(score/200)%, rgb(122, 120, 127) $(score/100)%, rgb(179, 172, 177))`
+  game1Container.style.backgroundImage = `url(pixelMopuntain.png), linear-gradient(to top, rgb(56, 56, 56), rgb(87, 87, 90) $(score/200)%, rgb(122, 120, 127) $(score/100)%, rgb(179, 172, 177))`
   }
   //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
