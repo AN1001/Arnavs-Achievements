@@ -168,6 +168,7 @@ masterContainer.addEventListener('click',function(e){
   }
 });
 
+if(document.querySelector("game1Btn").classList.contains("active")){
 //========== Game 1 ===========
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
@@ -203,6 +204,7 @@ const animatePlayer = setInterval(function(){
 },animationSpeed*2)
 
 const deathCheck = setInterval(function(){
+  console.log("Game 1 Script Active Currently")
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
   if(playing){
@@ -225,3 +227,5 @@ const deathCheck = setInterval(function(){
   }
   
 },10);
+
+}//End of Game 1
