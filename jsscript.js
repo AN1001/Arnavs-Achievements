@@ -185,9 +185,9 @@ game1Container.addEventListener('click',function(){
  });
 
 const animatePlayer = setInterval(function(){
-  game1Player.style.background = "url("pixeldino2.png")"
+  game1Player.style.background = "url("pixelDino2.png")"
   setTimeout(function(){
-    game1Player.style.background = "url("pixeldino.png")"
+    game1Player.style.background = "url("pixelDino.png")"
   },500);
 },1000)
 
