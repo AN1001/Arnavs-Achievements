@@ -15,6 +15,9 @@ game1Container.addEventListener('click',function(){
   playing = true;
   shouldAnimate = true;
   
+  //Change background-- not in main loop due to lag; [main loop run 100 times per second], [jump loop run once every 5 seconds(on avg)]
+  root.style.setProperty('--game-perc-1', score/100 + "%");
+  root.style.setProperty('--game-perc-2', score/50 + "%");
   //jump
   shouldAnimate = false;
   setTimeout(function(){
@@ -32,6 +35,7 @@ const animatePlayer = setInterval(function(){
   }
 },animationSpeed*2)
 
+//Main loop and death check
 const deathCheck = setInterval(function(){
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
@@ -40,8 +44,6 @@ const deathCheck = setInterval(function(){
     score++;
     document.getElementById("game1Score").textContent = "current Score: "+score;
     game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
-    root.style.setProperty('--game-perc-1', score/100 + "%");
-    root.style.setProperty('--game-perc-2', score/50 + "%");
   }
   //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
