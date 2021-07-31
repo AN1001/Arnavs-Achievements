@@ -1,3 +1,4 @@
+const root = document.documentElement;
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
@@ -19,7 +20,7 @@ game1Container.addEventListener('click',function(){
   setTimeout(function(){
     game1Player.classList.remove("player-jump")
     shouldAnimate = true;
-   },500);
+  },500);
  });
 
 const animatePlayer = setInterval(function(){
@@ -39,6 +40,8 @@ const deathCheck = setInterval(function(){
     score++;
     document.getElementById("game1Score").textContent = "current Score: "+score;
     game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
+    root.style.setProperty('--game-perc-1', score/100 + "%");
+    root.style.setProperty('--game-perc-2', score/50 + "%");
   }
   //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
