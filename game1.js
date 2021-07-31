@@ -38,8 +38,7 @@ const deathCheck = setInterval(function(){
   if(playing){
     score++;
     document.getElementById("game1Score").textContent = "current Score: "+score;
-    game1Container.style.backgroundPosition = "-"+score/10+" -7px, -10px 0px";
-    console.log("-"+score/10+" -7px, -10px 0px")
+    game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
   }
   //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
