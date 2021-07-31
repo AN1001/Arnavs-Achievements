@@ -189,10 +189,10 @@ game1Container.addEventListener('click',function(){
 const animatePlayer = setInterval(function(){
     setTimeout(function(){
       game1Player.classList.remove("playerState1")
-    },400)
+    },200)
     game1Player.classList.add("playerState1")
     
-},801)
+},401)
 
 const deathCheck = setInterval(function(){
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
