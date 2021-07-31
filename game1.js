@@ -3,7 +3,7 @@ const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
 const animationSpeed = 100;
 var hiScore = 0;
-var score = 0;
+var score = 10000;
 var playing = false;
 var shouldAnimate = false;
 
