@@ -36,9 +36,10 @@ const deathCheck = setInterval(function(){
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
   
   if(playing){
-  score++;
-  document.getElementById("game1Score").textContent = "current Score: "+score;
-  game1Container.style.backgroundImage = "url(pixelMountain.png), linear-gradient(to top, rgb(56, 56, 56), rgb(87, 87, 90) " + score/20 + "%, rgb(122, 120, 127) " + score/10 + "%, rgb(179, 172, 177))";
+    score++;
+    document.getElementById("game1Score").textContent = "current Score: "+score;
+    root.style.setProperty('--game-perc-1', score/100 + "%");
+    root.style.setProperty('--game-perc-2', score/50 + "%");
   }
   //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
