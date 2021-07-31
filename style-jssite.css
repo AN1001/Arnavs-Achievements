@@ -305,7 +305,8 @@ Games, container and styles
     
     background: blue;
     background: url("pixelDino.png") no-repeat ;
-	background-size: 85px;
+    background: url("pixelDino2.png") no-repeat ;
+    background-size: 85px;
     background-position: -14px 30px;
 
 }
