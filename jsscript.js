@@ -175,22 +175,34 @@ const setScript = setInterval(function(){
   //Check for btn 1
   if(document.querySelector(".game1Btn").classList.contains("active") && currentActiveGame != 'g1'){
     currentActiveGame = 'g1';
-    console.log("1");
+    document.getElementById("game1Script").src = "game1.js";
+    document.getElementById("game2Script").src = "";
+    document.getElementById("game3Script").src = "";
+    document.getElementById("game3Script").src = "";
   
   //Check for btn 2
   } else if(document.querySelector(".game2Btn").classList.contains("active") && currentActiveGame != 'g2'){
     currentActiveGame = 'g2';
-    console.log("2");
+    document.getElementById("game1Script").src = "";
+    document.getElementById("game2Script").src = "game2.js";
+    document.getElementById("game3Script").src = "";
+    document.getElementById("game3Script").src = "";
     
   //Check for btn 3 
   } else if(document.querySelector(".game3Btn").classList.contains("active") && currentActiveGame != 'g3'){
     currentActiveGame = 'g3';
-    console.log("3");
+    document.getElementById("game1Script").src = "";
+    document.getElementById("game2Script").src = "";
+    document.getElementById("game3Script").src = "game3.js";
+    document.getElementById("game3Script").src = "";
     
   //Check for btn 4
   } else if(document.querySelector(".game4Btn").classList.contains("active") && currentActiveGame != 'g4'){
     currentActiveGame = 'g4';
-    console.log("4");
+    document.getElementById("game1Script").src = "";
+    document.getElementById("game2Script").src = "";
+    document.getElementById("game3Script").src = "";
+    document.getElementById("game3Script").src = "game4.js";
   }
   
 },100);
