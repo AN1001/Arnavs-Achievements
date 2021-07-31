@@ -300,7 +300,7 @@ Games, container and styles
 #game1Hud{
     position: relative;
     top: -120px;
-    left: calc(100% - 201px);
+    left: calc(100% - 206px);
     
     border: 2px solid var(--soft-black);
     border-right: none;
