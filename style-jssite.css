@@ -301,11 +301,10 @@ Games, container and styles
     width: 60px;
     
     left: 50px;
-    top: 140px;
+    top: 150px;
     
-    border: 4px dotted gold;
     background: blue;
-    background: url("https://art.pixilart.com/d8a5d6f1f1f432a.png") no-repeat ;
+    background: url("pixelDino") no-repeat ;
 	background-size: 85px;
     background-position: -14px 30px;
 
@@ -320,7 +319,7 @@ Games, container and styles
     height: 31px;
     
     position: relative;
-    top:110px;
+    top:120px;
     left: calc(100% - 40px);
     
     background: url("pixelSpike.png");
@@ -341,3 +340,4 @@ Games, container and styles
     70%{top: 40px;}
     100%{top: 140px;}
 }
+
