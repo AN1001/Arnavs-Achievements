@@ -186,16 +186,6 @@ game1Container.addEventListener('click',function(){
  });
 
 const animatePlayer = setInterval(function(){
-  game1Player.classList.add("playerState1")
-  setTimeout(function(){
-    game1Player.classList.remove("playerState1")
-    game1Player.classList.add("playerState2")
-  },500);
-  setTimeout(function(){
-    game1Player.classList.add("playerState1")
-    game1Player.classList.remove("playerState2")
-  },500);
-  game1Player.classList.remove("playerState1")
   
 },2000)
 
@@ -208,8 +198,9 @@ const deathCheck = setInterval(function(){
       hiScore = score;
     }
     console.log("Player died at ---> Game 1");
-    alert(`You died, your score was:${score}, high score:${hiScore}`);
+    alert(`You died, your score was: ${score}, high score: ${hiScore}`);
     block.style.animation = "none";
+    score = 0;
   }
   
 },10);
