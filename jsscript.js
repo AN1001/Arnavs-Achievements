@@ -176,7 +176,7 @@ const animationSpeed = 100;
 var hiScore = 0;
 var score = 0;
 var playing = true;
-var shouldAnimate = true;
+var shouldAnimate = false;
 
 //restart game function
 game1Container.addEventListener('click',function(){
@@ -189,7 +189,7 @@ game1Container.addEventListener('click',function(){
   shouldAnimate = false;
   setTimeout(function(){
     game1Player.classList.remove("player-jump")
-    shouldAnimate = false;
+    shouldAnimate = true;
    },500);
  });
 
