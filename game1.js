@@ -32,7 +32,6 @@ const animatePlayer = setInterval(function(){
 },animationSpeed*2)
 
 const deathCheck = setInterval(function(){
-  console.log("Game 1 Script Active Currently")
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
   if(playing){
