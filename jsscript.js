@@ -169,7 +169,7 @@ masterContainer.addEventListener('click',function(e){
 });
 
 var currentActiveGame = 'g1';
-function setScript(){
+const setScript = setInterval(function(){
   //Check which button is pressed and if it has changed
   
   //Check for btn 1
@@ -179,18 +179,18 @@ function setScript(){
   
   //Check for btn 2
   } else if(document.querySelector(".game2Btn").classList.contains("active") && currentActiveGame != 'g2'){
-    currentActiveGame = 'g1';
+    currentActiveGame = 'g2';
     console.log("2");
     
   //Check for btn 3 
   } else if(document.querySelector(".game3Btn").classList.contains("active") && currentActiveGame != 'g3'){
-    currentActiveGame = 'g1';
+    currentActiveGame = 'g3';
     console.log("3");
     
   //Check for btn 4
   } else if(document.querySelector(".game1Btn").classList.contains("active") && currentActiveGame != 'g4'){
-    currentActiveGame = 'g1';
+    currentActiveGame = 'g4';
     console.log("4");
   }
   
-};
+},100);
