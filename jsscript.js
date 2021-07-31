@@ -189,7 +189,7 @@ game1Container.addEventListener('click',function(){
   shouldAnimate = false;
   setTimeout(function(){
     game1Player.classList.remove("player-jump")
-    shouldAnimate = true;
+    shouldAnimate = false;
    },500);
  });
 
