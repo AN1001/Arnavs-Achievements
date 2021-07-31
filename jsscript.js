@@ -172,7 +172,8 @@ masterContainer.addEventListener('click',function(e){
 const game1Container = document.querySelector(".game1");
 const game1Player = document.querySelector(".player");
 const block = document.querySelector(".box");
-
+var hiScore = 0;
+var score = 0;
 
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
@@ -183,12 +184,23 @@ game1Container.addEventListener('click',function(){
    },500);
  });
 
+const animatePlayer = setInterval(function(){
+  game1Player.style.background = "url("pixeldino2.png")"
+  setTimeout(function(){
+    game1Player.style.background = "url("pixeldino.png")"
+  },500);
+},1000)
+
 const deathCheck = setInterval(function(){
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-  if(blockLeft > 29 && blockLeft < 111 && playerTop > 110){
-    console.log("Player died at ---> Game 1")
-    alert("Loss")
+  score++;
+  if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
+    if(score > hiScore){
+      hiScore = score;
+    }
+    console.log("Player died at ---> Game 1");
+    alert(`You died, your score was:${score}, high score:${hiScore}`);
     block.style.animation = "none";
   }
   
