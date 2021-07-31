@@ -189,7 +189,7 @@ game1Container.addEventListener('click',function(){
 const animatePlayer = setInterval(function(){
     setTimeout(function(){
       game1Player.classList.remove("playerState1")
-    },800)
+    },400)
     game1Player.classList.add("playerState1")
     
 },801)
