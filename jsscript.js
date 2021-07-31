@@ -175,14 +175,14 @@ const block = document.querySelector(".box");
 const animationSpeed = 100;
 var hiScore = 0;
 var score = 0;
-var playing = true;
+var playing = false;
 var shouldAnimate = false;
 
 //restart game function
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
   game1Player.classList.add("player-jump");
-  playing = false;
+  playing = true;
   shouldAnimate = true;
   
   //jump
