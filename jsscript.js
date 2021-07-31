@@ -184,15 +184,23 @@ game1Container.addEventListener('click',function(){
    },500);
  });
 
+function doSetTimeoutRemove(i){
+  game1Player.classList.remove(i);
+}
+
+function doSetTimeoutAdd(i){
+  game1Player.classList.add(i);
+}
+
 const animatePlayer = setInterval(function(){
     setTimeout(function(){
-      game1Player.classList.remove("playerState1");
-      game1Player.classList.add("playerState2");
+      doSetTimeoutRemove("playerState1");
+      doSetTimeoutAdd("playerState2");
     },400)
   
     setTimeout(function(){
-      game1Player.classList.remove("playerState2");
-      game1Player.classList.add("playerState1");
+      doSetTimeoutRemove("playerState2");
+      doSetTimeoutAdd("playerState1");
     },400)
     
 },801)
