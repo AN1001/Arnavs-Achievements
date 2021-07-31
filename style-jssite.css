@@ -2,6 +2,9 @@
     --soft-white: hsla(0, 0%, 98%, 1);
     --soft-black: #222;
     --border-rad: 0.25rem;
+	
+    --game-perc-1: 4%;
+	--game-perc-2: 9%;
 }
 
 .container{
@@ -293,7 +296,7 @@ Games, container and styles
     border: 2px solid var(--soft-black); 
     border-radius: var(--border-rad);
     
-    background-image:url(pixelMountain.png), linear-gradient(to top, rgb(56, 56, 56), rgb(87, 87, 90) 5.46%, rgb(122, 120, 127) 9.66%, rgb(179, 172, 177));
+    background-image:url(pixelMountain.png), linear-gradient(to top, rgb(56, 56, 56), rgb(87, 87, 90) var(--game-perc-1), rgb(122, 120, 127) var(--game-perc-2), rgb(179, 172, 177));
     background-position: -500px -7px, -10px 0px;
     background-size: 1100px, 1300px;
     background-repeat: repeat-x;
