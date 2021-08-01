@@ -32,7 +32,8 @@ const animatePlayer = setInterval(function(){
     //Animate player
     setTimeout(function(){game1Player.classList.remove("playerState1")},animationSpeed);
     game1Player.classList.add("playerState1");
-  
+  }
+  if(playing){
     //change background/sky
     root.style.setProperty('--game-perc-1', score/100 + "%");
     root.style.setProperty('--game-perc-2', score/50 + "%");
