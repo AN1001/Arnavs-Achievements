@@ -7,10 +7,11 @@ var hiScore = 0;
 var score = 0;
 var playing = false;
 var shouldAnimate = false;
-var SHOULDRUN = false;
+var SHOULDRUN = true;
 
 const checkForActiveGame1Btn = setInterval(function(){
    if(document.querySelector(".game1Btn").classList.contains("active")){
+     console.log("true")
      SHOULDRUN = true;
    }else{
      SHOULDRUN = false;
