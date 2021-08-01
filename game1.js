@@ -8,6 +8,7 @@ var score = 0;
 var playing = false;
 var shouldAnimate = false;
 
+if(false){
 //restart game function
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
@@ -72,3 +73,4 @@ const deathCheck = setInterval(function(){
   }
   
 },10);
+}
