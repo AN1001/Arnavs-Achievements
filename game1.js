@@ -7,20 +7,10 @@ var hiScore = 0;
 var score = 0;
 var playing = false;
 var shouldAnimate = false;
-var SHOULDRUN = true;
-
-const checkForActiveGame1Btn = setInterval(function(){
-   if(document.querySelector(".game1Btn").classList.contains("active")){
-     console.log("true")
-     SHOULDRUN = true;
-   }else{
-     SHOULDRUN = false;
-   }
- },500);
 
 
 //[CULLS GAME SCRIPT]-Checks if game 1 button is active/selected and decides whether or not to run the game script
-if(SHOULDRUN){
+if(document.querySelector(".game1Btn").classList.contains("active")){
 //restart game function
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
