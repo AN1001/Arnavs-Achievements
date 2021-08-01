@@ -39,7 +39,11 @@ const animatePlayer = setInterval(function(){
     root.style.setProperty('--game-perc-2', score/50 + "%");
     //pan mountains to make player look like its moving
     game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
+  }else{
+    game1Player.classList.remove("player-jump")
   }
+  
+  
 },animationSpeed*2)
 
 
