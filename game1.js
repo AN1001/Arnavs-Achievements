@@ -10,7 +10,7 @@ var shouldAnimate = false;
 var SHOULDRUN = false;
 
 const checkForActiveGame1Btn = setInterval(function(){
-   if(document.querySelector("game1Btn").classList.contains("active")){
+   if(document.querySelector(".game1Btn").classList.contains("active")){
      SHOULDRUN = true;
    }else{
      SHOULDRUN = false;
