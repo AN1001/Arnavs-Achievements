@@ -11,14 +11,12 @@ var shouldAnimate = false;
 //restart game function
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
+  //Add jump class
   game1Player.classList.add("player-jump");
   playing = true;
   shouldAnimate = true;
   
-  //Change background-- not in main loop due to lag; [main loop run 100 times per second], [jump loop run once every 5 seconds(on avg)]
-  root.style.setProperty('--game-perc-1', score/100 + "%");
-  root.style.setProperty('--game-perc-2', score/50 + "%");
-  //jump
+  //Remove jump class
   shouldAnimate = false;
   setTimeout(function(){
     game1Player.classList.remove("player-jump")
@@ -26,14 +24,23 @@ game1Container.addEventListener('click',function(){
   },500);
  });
 
+
+//Gives players running animation and changes background in accordance with score
 const animatePlayer = setInterval(function(){
   if(shouldAnimate){
-    setTimeout(function(){
-      game1Player.classList.remove("playerState1")
-    },animationSpeed)
-    game1Player.classList.add("playerState1")
+    
+    //Animate player
+    setTimeout(function(){game1Player.classList.remove("playerState1")},animationSpeed);
+    game1Player.classList.add("playerState1");
+  
+    //change background/sky
+    root.style.setProperty('--game-perc-1', score/100 + "%");
+    root.style.setProperty('--game-perc-2', score/50 + "%");
+    //pan mountains to make player look like its moving
+    game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
   }
 },animationSpeed*2)
+
 
 //Main loop and death check
 const deathCheck = setInterval(function(){
@@ -43,7 +50,6 @@ const deathCheck = setInterval(function(){
   if(playing){
     score++;
     document.getElementById("game1Score").textContent = "current Score: "+score;
-    game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
   }
   //check for collision
   if(blockLeft > 37 && blockLeft < 85 && playerTop > 115){
