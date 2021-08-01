@@ -49,7 +49,6 @@ const animatePlayer = setInterval(function(){
 
 //Main loop and death check
 const deathCheck = setInterval(function(){
-  console.log("main loop runnning")
   const playerTop = parseInt(window.getComputedStyle(game1Player).getPropertyValue("top"));
   const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
   
