@@ -38,7 +38,7 @@ const animatePlayer = setInterval(function(){
     root.style.setProperty('--game-perc-1', score/100 + "%");
     root.style.setProperty('--game-perc-2', score/50 + "%");
     //pan mountains to make player look like its moving
-    game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
+    //game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
   }else{
     shouldAnimate = false;
   }
