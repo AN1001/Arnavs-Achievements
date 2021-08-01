@@ -7,20 +7,30 @@ var hiScore = 0;
 var score = 0;
 var playing = false;
 var shouldAnimate = false;
+var SHOULDRUN = false;
 
+const checkForActiveGame1Btn = setInterval(function(){
+  if(document.querySelector("game1Btn").classList.contains("active")){
+    SHOULDRUN = true;
+  }else{
+    SHOULDRUN = false;
+  }
+},500);
+
+//[CULLS GAME SCRIPT]-Checks if game 1 button is active/selected and decides whether or not to run the game script
 if(false){
 //restart game function
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
-  //Add jump class
+  //Add jump class when jump is called
   game1Player.classList.add("player-jump");
   playing = true;
   shouldAnimate = true;
   
-  //Remove jump class
+  //Remove jump class when jump ends
   shouldAnimate = false;
   setTimeout(function(){
-    game1Player.classList.remove("player-jump")
+    game1Player.classList.remove("player-jump");
     shouldAnimate = true;
   },500);
  });
@@ -38,7 +48,7 @@ const animatePlayer = setInterval(function(){
     //change background/sky
     root.style.setProperty('--game-perc-1', score/100 + "%");
     root.style.setProperty('--game-perc-2', score/50 + "%");
-    //pan mountains to make player look like its moving
+    //[REMOVED]pan mountains to make player look like its moving
     //game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
   }else{
     shouldAnimate = false;
