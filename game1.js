@@ -40,7 +40,7 @@ const animatePlayer = setInterval(function(){
     //pan mountains to make player look like its moving
     game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
   }else{
-    game1Player.classList.remove("player-jump")
+    shouldAnimate = false;
   }
   
   
