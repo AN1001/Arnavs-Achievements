@@ -8,9 +8,6 @@ var score = 0;
 var playing = false;
 var shouldAnimate = false;
 
-
-//[CULLS GAME SCRIPT]-Checks if game 1 button is active/selected and decides whether or not to run the game script
-if(document.querySelector(".game1Btn").classList.contains("active")){
 //restart game function
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
@@ -76,4 +73,4 @@ const deathCheck = setInterval(function(){
   }
   
 },10);
-}
+
