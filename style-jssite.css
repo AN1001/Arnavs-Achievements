@@ -376,6 +376,11 @@ Games, container and styles
     color: white;
     height: 60px;
     border-radius: var(--border-rad);
+    padding-left: 6px;
+    
+    line-height: 0;
+    font-size: 3rem;
+    text-align: center;
 }
 
 #game2BtnLeft:hover,#game2BtnRight:hover,#game2BtnShoot:hover{
