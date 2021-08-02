@@ -358,6 +358,32 @@ Games, container and styles
     animation: none;
 }
 
+/*
+============ Game 2 ============
+*/
+
+#game2Btns{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    
+    width: 40%;
+    margin:0 auto 0 auto;
+    
+}
+
+#game2BtnLeft,#game2BtnRight,#game2BtnShoot{
+    background: rgb(36, 36, 36);
+    color: white;
+    height: 60px;
+    border-radius: var(--border-rad);
+}
+
+#game2BtnLeft:hover,#game2BtnRight:hover,#game2BtnShoot:hover{
+    color: lightgrey;
+    background: rgb(67, 67, 67);
+}
+
+
 @keyframes boxmove{
     0% {left: calc(100% - 40px);}
     100% {left: 0;}
