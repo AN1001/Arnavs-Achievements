@@ -396,6 +396,11 @@ Games, container and styles
     height: 90vmin;
     
     border: 2px solid var(--soft-black);
+	
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    grid-template-rows: repeat(11,1fr);
+}
 }
 
 @keyframes boxmove{
