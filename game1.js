@@ -8,6 +8,13 @@ var score = 0;
 var playing = false;
 var shouldAnimate = false;
 
+//check if game is being played
+const checkGamePlayState = setInterval(function(){
+  if(!document.querySelector(".game1Btn").classList.contains("active")){
+      playing = false;
+   }
+},1000);
+
 //restart game function
 game1Container.addEventListener('click',function(){
   block.style.animation = "boxmove 3s infinite linear";
@@ -39,10 +46,7 @@ const animatePlayer = setInterval(function(){
     root.style.setProperty('--game-perc-2', score/50 + "%");
     //[REMOVED]pan mountains to make player look like its moving
     //game1Container.style.backgroundPosition = "-"+score/10+"px"+" -7px, -10px 0px";
-    
-    if(!document.querySelector(".game1Btn").classList.contains("active")){
-      playing = false;
-    }
+   
   }else{
     shouldAnimate = false;
   }
