@@ -11,6 +11,7 @@ var shouldAnimate = false;
 //check if game is being played
 const checkGamePlayState = setInterval(function(){
   if(!document.querySelector(".game1Btn").classList.contains("active")){
+      document.getElementById("game1Score").textContent = "GAME PAUSED";
       playing = false;
       shouldAnimate = false;
       block.style.animation = "none";
