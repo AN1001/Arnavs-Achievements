@@ -12,6 +12,8 @@ var shouldAnimate = false;
 const checkGamePlayState = setInterval(function(){
   if(!document.querySelector(".game1Btn").classList.contains("active")){
       playing = false;
+      shouldAnimate = false;
+      block.style.animation = "none";
    }
 },1000);
 
