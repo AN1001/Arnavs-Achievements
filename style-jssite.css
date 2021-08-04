@@ -398,8 +398,8 @@ Games, container and styles
     border: 2px solid var(--soft-black);
 	
     display: grid;
-    grid-template-columns: repeat(11,1fr);
-    grid-template-rows: repeat(11,1fr);
+    grid-template-columns: repeat(21,1fr);
+    grid-template-rows: repeat(21,1fr);
 }
 .player2{
     background: rgb(40,40,150);
