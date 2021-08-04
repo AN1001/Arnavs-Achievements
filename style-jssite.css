@@ -355,7 +355,7 @@ Games, container and styles
     background-size: 60px; 
     background-position: -11px 49px;
     
-    animation: boxmove 3s infinite linear;
+    animation: none;
 }
 
 /*
@@ -401,7 +401,7 @@ Games, container and styles
     grid-template-columns: repeat(11,1fr);
     grid-template-rows: repeat(11,1fr);
 }
-}
+
 
 @keyframes boxmove{
     0% {left: calc(100% - 40px);}
