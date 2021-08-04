@@ -3,7 +3,7 @@ const gameboard = document.querySelector(".game2MainGridSpace");
 const gameTickSpeed = 1000;
 const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
-const ShootBtn2 = document.getElementById("game2BtnShoot");
+const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
 var playerPosition = 11;
 
