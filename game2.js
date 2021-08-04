@@ -11,7 +11,7 @@ gameboard.appendChild(player)
 
 gameboard.addEventListener('click',function(){
   playerPosition++;
-  };
+  });
 
 function mainLoop(currentTime){
   window.requestAnimationFrame(mainLoop);
