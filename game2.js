@@ -12,16 +12,14 @@ player.classList.add("player2");
 gameboard.appendChild(player);
 
 //Button inputs
-moveRightBtn2.addEventListener('click',function(){ playerPosition++; });
-moveLeftBtn2.addEventListener('click',function(){ playerPosition--; });
+moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
+moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style.gridColumnStart = playerPosition;});
 shootBtn2.addEventListener('click',function(){  });
 
 function mainLoop(currentTime){
   window.requestAnimationFrame(mainLoop);
   let lastTime = (currentTime - lastRenderTime);
   if (lastTime < gameTickSpeed) return;
-  
-  player.style.gridColumnStart = playerPosition;
   
   console.log("render occured");
   lastRenderTime = currentTime;
