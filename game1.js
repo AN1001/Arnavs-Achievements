@@ -20,6 +20,7 @@ const checkGamePlayState = setInterval(function(){
 
 //restart game function
 game1Container.addEventListener('click',function(){
+  block.style.animation = "boxmove 3s infinite linear";
   //Add jump class when jump is called
   game1Player.classList.add("player-jump");
   playing = true;
@@ -51,7 +52,7 @@ const animatePlayer = setInterval(function(){
    
   }else{
     shouldAnimate = false;
-    block.style.animation = "boxmove 3s infinite linear";
+    block.style.animation = "none";
 
   }
   
