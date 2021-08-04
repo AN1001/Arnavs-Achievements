@@ -9,11 +9,13 @@ player.classList.add("player2")
 player.style.gridColumnStart = playerPosition;
 gameboard.appendChild(player)
 
+//Button inputs
 gameboard.addEventListener('click',function(){
   playerPosition++;
   });
 
 function mainLoop(currentTime){
+  window.requestAnimationFrame(mainLoop)
   let lastTime = (currentTime - lastRenderTime);
   console.log(lastTime)
   if (lastTime < gameTickSpeed) return;
@@ -22,4 +24,5 @@ function mainLoop(currentTime){
   lastRenderTime = currentTime;
 }                           
 
+//Start main loop
 window.requestAnimationFrame(mainLoop)
