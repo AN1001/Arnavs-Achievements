@@ -22,3 +22,4 @@ function mainLoop(currentTime){
   lastRenderTime = currentTime;
 }                           
 
+window.requestAnimationFrame(mainLoop)
