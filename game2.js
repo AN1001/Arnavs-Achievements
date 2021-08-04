@@ -16,6 +16,7 @@ gameboard.addEventListener('click',function(){
 function mainLoop(currentTime){
   window.requestAnimationFrame(mainLoop);
   let lastTime = (currentTime - lastRenderTime) / 1000;
+  console.log(lastTime)
   if (lastTime < gameTickSpeed) return;
   
   console.log("render occured")
