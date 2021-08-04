@@ -15,12 +15,11 @@ gameboard.addEventListener('click',function(){
   });
 
 function mainLoop(currentTime){
-  window.requestAnimationFrame(mainLoop)
+  window.requestAnimationFrame(mainLoop);
   let lastTime = (currentTime - lastRenderTime);
-  console.log(lastTime)
   if (lastTime < gameTickSpeed) return;
   
-  console.log("render occured")
+  console.log("render occured");
   lastRenderTime = currentTime;
 }                           
 
