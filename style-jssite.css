@@ -355,7 +355,7 @@ Games, container and styles
     background-size: 60px; 
     background-position: -11px 49px;
     
-    animation: none;
+    animation: boxmove 3s infinite linear;
 }
 
 /*
