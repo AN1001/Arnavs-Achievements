@@ -6,7 +6,7 @@ var playerPosition = 11;
 
 player.style.gridRowStart = 21;
 player.classList.add("player2");
-
+gameboard.appendChild(player);
 
 //Button inputs
 gameboard.addEventListener('click',function(){
