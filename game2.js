@@ -14,8 +14,7 @@ gameboard.addEventListener('click',function(){
   });
 
 function mainLoop(currentTime){
-  window.requestAnimationFrame(mainLoop);
-  let lastTime = (currentTime - lastRenderTime) / 1000;
+  let lastTime = (currentTime - lastRenderTime);
   console.log(lastTime)
   if (lastTime < gameTickSpeed) return;
   
