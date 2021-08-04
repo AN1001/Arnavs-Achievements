@@ -15,7 +15,11 @@ player.style.gridColumnStart = playerPosition;
 
 //Button inputs
 moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
+moveRightBtn2.addEventListener('keyright',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
+
 moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style.gridColumnStart = playerPosition;});
+moveRightBtn2.addEventListener('keyleft',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
+
 shootBtn2.addEventListener('click',function(){  });
 
 function mainLoop(currentTime){
