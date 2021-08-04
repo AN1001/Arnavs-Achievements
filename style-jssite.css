@@ -401,7 +401,10 @@ Games, container and styles
     grid-template-columns: repeat(11,1fr);
     grid-template-rows: repeat(11,1fr);
 }
-
+.player2{
+    background: rgb(40,40,150);
+    border: 2px solid var(--soft-black);
+}
 
 @keyframes boxmove{
     0% {left: calc(100% - 40px);}
