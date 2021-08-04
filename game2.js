@@ -7,9 +7,11 @@ const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
 var playerPosition = 11;
 
+//initialise player
 player.style.gridRowStart = 21;
 player.classList.add("player2");
 gameboard.appendChild(player);
+player.style.gridColumnStart = playerPosition;
 
 //Button inputs
 moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
