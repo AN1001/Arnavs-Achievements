@@ -6,6 +6,7 @@ const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
 var playerPosition = 11;
+var bullets = [];
 
 //initialise player
 player.style.gridRowStart = 21;
@@ -34,9 +35,10 @@ window.addEventListener('keydown', e => {
         break;
   };
 });
-
-
-shootBtn2.addEventListener('click',function(){  });
+shootBtn2.addEventListener('click',function(){ 
+  bullets.push({x:playerPosition,y:2})
+  console.log(bullets)
+});
 
 function mainLoop(currentTime){
   window.requestAnimationFrame(mainLoop);
@@ -45,6 +47,8 @@ function mainLoop(currentTime){
   
   console.log("render occured");
   lastRenderTime = currentTime;
+  
+  
 }                           
 
 //Start main loop
