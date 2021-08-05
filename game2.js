@@ -20,14 +20,19 @@ moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style
 window.addEventListener('keydown', e => {
   switch(e.key){
       case 'ArrowLeft': 
-        playerPosition--; 
-        player.style.gridColumnStart = playerPosition;
+        if(playerPosition > 1){
+          playerPosition--; 
+          player.style.gridColumnStart = playerPosition;
+          };
         break;
+      
       case 'ArrowRight':
-        playerPosition++; 
-        player.style.gridColumnStart = playerPosition;
+        if(playerPosition < 21){
+          playerPosition++; 
+          player.style.gridColumnStart = playerPosition;
+          };
         break;
-  }
+  };
 });
 
 
