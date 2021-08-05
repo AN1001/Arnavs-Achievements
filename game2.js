@@ -58,7 +58,7 @@ function mainLoop(currentTime){
   lastRenderTime = currentTime;
   
   bullets.forEach(function(bullet){
-    const currentPos = bullet.style.gridRowStart;
+    const currentPos = parseInt(bullet.style.gridRowStart);
     console.log(currentPos)
     if(currentPos > 1){ bullet.gridRowStart = currentPos-1; }
   });
