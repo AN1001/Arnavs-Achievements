@@ -55,8 +55,6 @@ function mainLoop(currentTime){
   window.requestAnimationFrame(mainLoop);
   let lastTime = (currentTime - lastRenderTime);
   if (lastTime < gameTickSpeed) return;
-  
-  console.log("render occured");
   lastRenderTime = currentTime;
   
   bullets.forEach(function(bullet){
