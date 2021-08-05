@@ -10,9 +10,9 @@ var bullets = [];
 
 //initialise player
 player.style.gridRowStart = 21;
+player.style.gridColumnStart = playerPosition;
 player.classList.add("player2");
 gameboard.appendChild(player);
-player.style.gridColumnStart = playerPosition;
 
 //Button inputs
 moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
@@ -35,11 +35,20 @@ window.addEventListener('keydown', e => {
         break;
   };
 });
+
+//creates a bullet above the player
 shootBtn2.addEventListener('click',function(){ 
-  bullets.push({x:playerPosition,y:2})
+  //initialise new bullet object
+  const bullet = document.createElement("div");
+  bullet.style.gridColumnStart = playerPosition;
+  bullet.style.gridRowStart = 2;
+  bullet.classList.add("bullet");
+
+  bullets.push(bullet)
   console.log(bullets)
 });
 
+//main render loop
 function mainLoop(currentTime){
   window.requestAnimationFrame(mainLoop);
   let lastTime = (currentTime - lastRenderTime);
