@@ -15,10 +15,21 @@ player.style.gridColumnStart = playerPosition;
 
 //Button inputs
 moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
-window.addEventListener('keydown',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
-
 moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style.gridColumnStart = playerPosition;});
-window.addEventListener('ArrowLeft',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
+
+window.addEventListener('keydown', e => {
+  switch(e.key){
+      case 'ArrowLeft': 
+        playerPosition--; 
+        player.style.gridColumnStart = playerPosition;
+        break;
+      case 'ArrowRight':
+        playerPosition++; 
+        player.style.gridColumnStart = playerPosition;
+        break;
+  }
+});
+
 
 shootBtn2.addEventListener('click',function(){  });
 
