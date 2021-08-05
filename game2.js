@@ -60,7 +60,7 @@ function mainLoop(currentTime){
   bullets.forEach(function(bullet){
     const currentPos = parseInt(bullet.style.gridRowStart);
     console.log(currentPos)
-    if(currentPos > 1){ bullet.gridRowStart = currentPos-1; }
+    if(currentPos > 1){ bullet.style.gridRowStart = currentPos-1; }
   });
   
 }                           
