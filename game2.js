@@ -43,6 +43,8 @@ shootBtn2.addEventListener('click',function(){
   bullet.style.gridColumnStart = playerPosition;
   bullet.style.gridRowStart = 2;
   bullet.classList.add("bullet");
+  gameboard.appendChild(bullet);
+
 
   bullets.push(bullet)
   console.log(bullets)
