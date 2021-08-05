@@ -59,7 +59,7 @@ function mainLoop(currentTime){
   console.log("render occured");
   lastRenderTime = currentTime;
   
-  bullets.forEach(function(bullets){
+  bullets.forEach(function(bullet){
     const currentPos = parseInt(window.getComputedStyle(bullet).getPropertyValue("gridRowStart"));
     if(currentPos > 1){ bullet.gridRowStart = currentPos-1; }
   });
