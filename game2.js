@@ -6,8 +6,10 @@ const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
 var shouldShoot = 0;
+var enemyShouldMove = 0;
 var playerPosition = 11;
 var bullets = [];
+var enemyMovementPattern = [{x:-1,y:0},{x:1,y:0},{x:1,y:0}]
 var enemies = [
   {x:2,y:2},{x:4,y:2},{x:6,y:2},{x:8,y:2},{x:10,y:2},{x:12,y:2},{x:14,y:2},{x:16,y:2},{x:18,y:2},{x:20,y:2}
   ,{x:2,y:4},{x:4,y:4},{x:6,y:4},{x:8,y:4},{x:10,y:4},{x:12,y:4},{x:14,y:4},{x:16,y:4},{x:18,y:4},{x:20,y:4}
@@ -73,11 +75,20 @@ shootBtn2.addEventListener('click',function(){
 //main render loop
 function mainLoop(currentTime){
   shouldShoot++;
+  enemyShouldMove++;
   window.requestAnimationFrame(mainLoop);
   let lastTime = (currentTime - lastRenderTime);
   if (lastTime < gameTickSpeed) return;
   lastRenderTime = currentTime;
-  
+ 
+  //move enemeies
+  if(enemyShouldMove == 500)
+    currentIteration = enemyShouldMove%3;
+    enemies.forEach(function(enemy){
+      enemy.style.gridRowStart = enemyMovementPattern[currentIteration].y;
+      enemy.style.gridColumnStart = enemyMovementPattern[currentIteration].x;
+    }
+  }
   //move bullets up 1 block
   bullets.forEach(function(bullet){
     const currentPosY = parseInt(bullet.style.gridRowStart);
