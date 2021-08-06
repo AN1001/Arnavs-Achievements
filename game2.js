@@ -82,11 +82,16 @@ function mainLoop(currentTime){
   lastRenderTime = currentTime;
  
   //move enemeies
-  if(enemyShouldMove == 500){
-    currentIteration = enemyShouldMove%3;
+  if(enemyShouldMove > 500){
+    enemyShouldMove = 0;
+    console.log("enemies Moved")
+    const currentIteration = enemyShouldMove%3;
+    const currentY = parseInt(enemy.style.gridRowStart);
+    const currentX = parseInt(enemy.style.gridColumnStart);
+    
     enemies.forEach(function(enemy){
-      enemy.style.gridRowStart = enemyMovementPattern[currentIteration].y;
-      enemy.style.gridColumnStart = enemyMovementPattern[currentIteration].x;
+      enemy.style.gridRowStart = currentY + enemyMovementPattern[currentIteration].y;
+      enemy.style.gridColumnStart = currentX + enemyMovementPattern[currentIteration].x;
     });
   };
   //move bullets up 1 block
@@ -101,12 +106,10 @@ function mainLoop(currentTime){
       const enemyY = parseInt(enemy.style.gridRowStart);
       if(currentPosY == enemyY && currentPosX == enemyX){
         //If collision occured, delete enemy and bullet
-        console.log("collision occured")
-        
-        //rem bullet
+        //remove bullet
         bullet.remove(); 
         setTimeout(function(){bullets.shift();},30)
-        //rem enemy
+        //remove enemy
         enemy.remove()
         enemies.splice(enemies.indexOf(enemy),1)
         console.log(enemies)
