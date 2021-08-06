@@ -20,8 +20,8 @@ gameboard.appendChild(player);
 enemies.forEach(function(enemyData){
   const enemy = document.createElement("div");
   const index = enemies.indexOf(enemyData)
-  enemy.style.gridRowStart = enemyData.x;
-  enemy.style.gridColumnStart = enemyData.y;
+  enemy.style.gridRowStart = enemyData.y;
+  enemy.style.gridColumnStart = enemyData.x;
   enemy.classList.add("enemy");
   enemies[index] = enemy;
   gameboard.appendChild(enemy);
