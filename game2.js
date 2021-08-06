@@ -7,6 +7,7 @@ const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
 var shouldShoot = 0;
 var enemyShouldMove = 0;
+var currentIt = 0;
 var playerPosition = 11;
 var bullets = [];
 var enemyMovementPattern = [{x:-1,y:0},{x:1,y:0},{x:1,y:0}]
@@ -83,9 +84,10 @@ function mainLoop(currentTime){
  
   //move enemeies
   if(enemyShouldMove > 500){
+    const currentIteration = currentIt%3;
+    currentIt++;
     enemyShouldMove = 0;
-    console.log("enemies Moved")
-    const currentIteration = enemyShouldMove%3;    
+    console.log("enemies Moved");
     enemies.forEach(function(enemy){
       const currentY = parseInt(enemy.style.gridRowStart);
       const currentX = parseInt(enemy.style.gridColumnStart);
