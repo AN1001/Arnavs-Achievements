@@ -112,11 +112,10 @@ function mainLoop(currentTime){
         console.log("collision")
         //remove bullet
         bullet.remove(); 
-        setTimeout(function(){bullets.shift();},30)
+        bullets.splice(bullets.indexOf(bullet),1)
         //remove enemy
         enemy.remove()
         enemies.splice(enemies.indexOf(enemy),1)
-        console.log(enemies)
         };
     });
     
