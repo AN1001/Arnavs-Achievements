@@ -79,7 +79,7 @@ function mainLoop(currentTime){
   bullets.forEach(function(bullet){
     const currentPosY = parseInt(bullet.style.gridRowStart);
     const currentPosX = parseInt(bullet.style.gridColumnStart);
-    if(currentPos > 1){ bullet.style.gridRowStart = currentPos-1; 
+    if(currentPosY > 1){ bullet.style.gridRowStart = currentPos-1; 
     }else{bullet.remove(); setTimeout(function(){bullets.shift();},30)}
     //Check for collision with enemy
     enemies.forEach(function(enemy){
