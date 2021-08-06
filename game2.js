@@ -84,7 +84,7 @@ function mainLoop(currentTime){
  
   //move enemeies
   if(enemyShouldMove > 200){
-    const currentIteration = currentIt%3;
+    const currentIteration = currentIt%7;
     currentIt++;
     enemyShouldMove = 0;
     console.log("enemies Moved");
