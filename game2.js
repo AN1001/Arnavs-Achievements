@@ -98,6 +98,7 @@ function mainLoop(currentTime){
         //rem enemy
         enemy.remove()
         enemies.splice(enemies.indexOf(enemy),1)
+        console.log(enemies)
         };
     });
     
