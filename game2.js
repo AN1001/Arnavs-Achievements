@@ -82,13 +82,13 @@ function mainLoop(currentTime){
   lastRenderTime = currentTime;
  
   //move enemeies
-  if(enemyShouldMove == 500)
+  if(enemyShouldMove == 500){
     currentIteration = enemyShouldMove%3;
     enemies.forEach(function(enemy){
       enemy.style.gridRowStart = enemyMovementPattern[currentIteration].y;
       enemy.style.gridColumnStart = enemyMovementPattern[currentIteration].x;
-    }
-  }
+    });
+  };
   //move bullets up 1 block
   bullets.forEach(function(bullet){
     const currentPosY = parseInt(bullet.style.gridRowStart);
