@@ -7,12 +7,22 @@ const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
 var playerPosition = 11;
 var bullets = [];
+var enemies = [{x:2,y:2},{x:4,y:2}]
 
 //initialise player
 player.style.gridRowStart = 21;
 player.style.gridColumnStart = playerPosition;
 player.classList.add("player2");
 gameboard.appendChild(player);
+
+//initialise enemies
+enemies.forEach(function(enemyData){
+  const enemy = document.createElement("div");
+  enemy.style.gridRowStart = enemyData.x;
+  enemy.style.gridColumnStart = enemyData.y;
+  enemy.classList.add("enemy");
+  gameboard.appendChild(enemy);
+  });
 
 //Button inputs
 moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
@@ -46,8 +56,8 @@ shootBtn2.addEventListener('click',function(){
   gameboard.appendChild(bullet);
 
 
-  bullets.push(bullet)
-  console.log(bullets)
+  bullets.push(bullet);
+  console.log(bullets);
 });
 
 //main render loop
@@ -60,11 +70,11 @@ function mainLoop(currentTime){
   bullets.forEach(function(bullet){
     const currentPos = parseInt(bullet.style.gridRowStart);
     if(currentPos > 1){ bullet.style.gridRowStart = currentPos-1; 
-    }else{bullet.remove()}
+    }else{bullet.remove();}
     
   });
   
-}                           
+};                      
 
 //Start main loop
-window.requestAnimationFrame(mainLoop)
+window.requestAnimationFrame(mainLoop);
