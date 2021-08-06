@@ -97,7 +97,7 @@ function mainLoop(currentTime){
         setTimeout(function(){bullets.shift();},30)
         //rem enemy
         enemy.remove()
-        enemies.splice(enemies.indexOf(enemy),{x:0,y:0})
+        enemies.splice(enemies.indexOf(enemy),1)
         };
     });
     
