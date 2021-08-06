@@ -52,7 +52,7 @@ window.addEventListener('keydown', e => {
 
 //creates a bullet above the player
 shootBtn2.addEventListener('click',function(){ 
-  if(shouldShoot)
+  if(shouldShoot){
     shouldShoot = false;
     //initialise new bullet object
     const bullet = document.createElement("div");
