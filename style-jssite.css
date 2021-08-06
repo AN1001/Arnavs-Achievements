@@ -405,6 +405,12 @@ Games, container and styles
     background: rgb(40,40,150);
     border: 2px solid var(--soft-black);
 }
+
+.enemy{
+    background: rgb(150,40,40);
+    border: 2px solid var(--soft-black);
+}
+
 .bullet{
     background: rgb(80,80,80);
     border: 2px solid var(--soft-black);
