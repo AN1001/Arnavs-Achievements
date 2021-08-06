@@ -91,9 +91,13 @@ function mainLoop(currentTime){
       if(currentPosY == enemyY && currentPosX == enemyX){
         //If collision occured, delete enemy and bullet
         console.log("collision occured")
+        
+        //rem bullet
         bullet.remove(); 
-        enemy.remove()
         setTimeout(function(){bullets.shift();},30)
+        //rem enemy
+        enemy.remove()
+        enemies.splice(enemies.indexOf(enemy),{0,0})
         };
     });
     
