@@ -75,14 +75,24 @@ function mainLoop(currentTime){
   if (lastTime < gameTickSpeed) return;
   lastRenderTime = currentTime;
   
+  //move bullets up 1 block
   bullets.forEach(function(bullet){
-    const currentPos = parseInt(bullet.style.gridRowStart);
+    const currentPosY = parseInt(bullet.style.gridRowStart);
+    const currentPosX = parseInt(bullet.style.gridColumnStart);
     if(currentPos > 1){ bullet.style.gridRowStart = currentPos-1; 
     }else{bullet.remove(); setTimeout(function(){bullets.shift();},30)}
+    //Check for collision with enemy
+    enemies.forEach(function(enemy){
+      const enemyX = parseInt(enemy.style.gridColumnStart);
+      const enemyY = parseInt(enemy.style.gridRowStart);
+      if(currentPosY == enemyY && currentPosX == enemyX){
+        console.log("collision occured")
+      };
+    });
     
   });
   
-};                      
+};//End of render loop                   
 
 //Start main loop
 window.requestAnimationFrame(mainLoop);
