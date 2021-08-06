@@ -83,7 +83,7 @@ function mainLoop(currentTime){
   lastRenderTime = currentTime;
  
   //move enemeies
-  if(enemyShouldMove > 500){
+  if(enemyShouldMove > 200){
     const currentIteration = currentIt%3;
     currentIt++;
     enemyShouldMove = 0;
