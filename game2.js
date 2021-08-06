@@ -5,6 +5,7 @@ const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
+var shouldShoot = true;
 var playerPosition = 11;
 var bullets = [];
 var enemies = [{x:2,y:2},{x:4,y:2}]
@@ -51,20 +52,24 @@ window.addEventListener('keydown', e => {
 
 //creates a bullet above the player
 shootBtn2.addEventListener('click',function(){ 
-  //initialise new bullet object
-  const bullet = document.createElement("div");
-  bullet.style.gridColumnStart = playerPosition;
-  bullet.style.gridRowStart = 20;
-  bullet.classList.add("bullet");
-  gameboard.appendChild(bullet);
+  if(shouldShoot)
+    shouldShoot = false;
+    //initialise new bullet object
+    const bullet = document.createElement("div");
+    bullet.style.gridColumnStart = playerPosition;
+    bullet.style.gridRowStart = 20;
+    bullet.classList.add("bullet");
+    gameboard.appendChild(bullet);
 
 
-  bullets.push(bullet);
-  console.log(bullets);
+    bullets.push(bullet);
+    console.log(bullets);
+  };
 });
 
 //main render loop
 function mainLoop(currentTime){
+  shouldShoot = true;
   window.requestAnimationFrame(mainLoop);
   let lastTime = (currentTime - lastRenderTime);
   if (lastTime < gameTickSpeed) return;
