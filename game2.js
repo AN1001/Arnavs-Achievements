@@ -78,7 +78,7 @@ function mainLoop(currentTime){
   bullets.forEach(function(bullet){
     const currentPos = parseInt(bullet.style.gridRowStart);
     if(currentPos > 1){ bullet.style.gridRowStart = currentPos-1; 
-    }else{bullet.remove(); bullets.shift();}
+    }else{bullet.remove(); setTimeout(function(){bullets.shift();},30)}
     
   });
   
