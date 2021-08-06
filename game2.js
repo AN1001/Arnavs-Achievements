@@ -86,8 +86,12 @@ function mainLoop(currentTime){
       const enemyX = parseInt(enemy.style.gridColumnStart);
       const enemyY = parseInt(enemy.style.gridRowStart);
       if(currentPosY == enemyY && currentPosX == enemyX){
+        //If collision occured, delete enemy and bullet
         console.log("collision occured")
-      };
+        bullet.remove(); 
+        enemy.remove()
+        setTimeout(function(){bullets.shift();},30)
+        };
     });
     
   });
