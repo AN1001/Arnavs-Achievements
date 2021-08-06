@@ -85,15 +85,15 @@ function mainLoop(currentTime){
   if(enemyShouldMove > 500){
     enemyShouldMove = 0;
     console.log("enemies Moved")
-    const currentIteration = enemyShouldMove%3;
-    const currentY = parseInt(enemy.style.gridRowStart);
-    const currentX = parseInt(enemy.style.gridColumnStart);
-    
+    const currentIteration = enemyShouldMove%3;    
     enemies.forEach(function(enemy){
+      const currentY = parseInt(enemy.style.gridRowStart);
+      const currentX = parseInt(enemy.style.gridColumnStart);
       enemy.style.gridRowStart = currentY + enemyMovementPattern[currentIteration].y;
       enemy.style.gridColumnStart = currentX + enemyMovementPattern[currentIteration].x;
     });
   };
+  
   //move bullets up 1 block
   bullets.forEach(function(bullet){
     const currentPosY = parseInt(bullet.style.gridRowStart);
