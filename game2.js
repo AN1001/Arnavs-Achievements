@@ -18,12 +18,15 @@ gameboard.appendChild(player);
 //initialise enemies
 enemies.forEach(function(enemyData){
   const enemy = document.createElement("div");
+  const index = enemies.indexOf(enemyData)
   enemy.style.gridRowStart = enemyData.x;
   enemy.style.gridColumnStart = enemyData.y;
   enemy.classList.add("enemy");
+  enemies[index] = enemy;
   gameboard.appendChild(enemy);
   });
 
+console.log(enemies)
 //Button inputs
 moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
 moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style.gridColumnStart = playerPosition;});
