@@ -52,8 +52,8 @@ window.addEventListener('keydown', e => {
 
 //creates a bullet above the player
 shootBtn2.addEventListener('click',function(){ 
-  if(shouldShoot % 5 == 0){
-    shouldShoot++;
+  if(shouldShoot > 5){
+    shouldShoot = 0;
     //initialise new bullet object
     const bullet = document.createElement("div");
     bullet.style.gridColumnStart = playerPosition;
