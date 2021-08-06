@@ -8,7 +8,10 @@ let lastRenderTime = 0;
 var shouldShoot = 0;
 var playerPosition = 11;
 var bullets = [];
-var enemies = [{x:2,y:2},{x:4,y:2}]
+var enemies = [
+  {x:2,y:2},{x:4,y:2},{x:6,y:2},{x:8,y:2},{x:10,y:2},{x:12,y:2},{x:14,y:2},{x:16,y:2},{x:18,y:2},{x:20,y:2}
+  ,{x:2,y:4},{x:4,y:4},{x:6,y:4},{x:8,y:4},{x:10,y:4},{x:12,y:4},{x:14,y:4},{x:16,y:4},{x:18,y:4},{x:20,y:4}
+]
 
 //initialise player
 player.style.gridRowStart = 21;
