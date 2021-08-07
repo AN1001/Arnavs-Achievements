@@ -23,7 +23,7 @@ gameboard.appendChild(player);
 //initialise enemies
 enemies.forEach(function(enemyData){
   const enemy = document.createElement("div");
-  const index = enemies.indexOf(enemyData)
+  const index = enemies.indexOf(enemyData);
   enemy.style.gridRowStart = enemyData.y;
   enemy.style.gridColumnStart = enemyData.x;
   enemy.classList.add("enemy");
@@ -77,9 +77,9 @@ function shoot(){
  
 function restart(){
     //delete old enemies
-    enemies.forEach(function(){
-      enemy.remove()
-    })
+    enemies.forEach(function(enemy){
+      enemy.remove();
+    });
   
     //reset variables
     playerPosition = 11;
@@ -88,7 +88,7 @@ function restart(){
     enemies = [
       {x:2,y:2},{x:4,y:2},{x:6,y:2},{x:8,y:2},{x:10,y:2},{x:12,y:2},{x:14,y:2},{x:16,y:2},{x:18,y:2},{x:20,y:2}
       ,{x:2,y:4},{x:4,y:4},{x:6,y:4},{x:8,y:4},{x:10,y:4},{x:12,y:4},{x:14,y:4},{x:16,y:4},{x:18,y:4},{x:20,y:4}
-    ]
+    ];
     
     //reset player position
     player.style.gridColumnStart = playerPosition;
@@ -96,14 +96,14 @@ function restart(){
     //create new enemies
     enemies.forEach(function(enemyData){
     const enemy = document.createElement("div");
-    const index = enemies.indexOf(enemyData)
+    const index = enemies.indexOf(enemyData);
     enemy.style.gridRowStart = enemyData.y;
     enemy.style.gridColumnStart = enemyData.x;
     enemy.classList.add("enemy");
     enemies[index] = enemy;
     gameboard.appendChild(enemy);
     });
-}
+};
 
 //main render loop
 function mainLoop(currentTime){
