@@ -40,22 +40,23 @@ moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style
 shootBtn2.addEventListener('click',shoot);
 
 window.addEventListener('keydown', e => {
-  switch(e.key){
-      case 'ArrowLeft': 
+  console.log(e.KeyCode)
+  switch(e.keyCode){
+      case 37: 
         if(playerPosition > 1){
           playerPosition--; 
           player.style.gridColumnStart = playerPosition;
           };
         break;
       
-      case 'ArrowRight':
+      case 39:
         if(playerPosition < 21){
           playerPosition++; 
           player.style.gridColumnStart = playerPosition;
           };
         break; 
       
-      case 'Space':
+      case 32:
         console.log("bullet shot with key")
         shoot()
         break; 
