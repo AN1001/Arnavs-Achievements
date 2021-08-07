@@ -68,7 +68,7 @@ window.addEventListener('keydown', e => {
 
 //creates a bullet above the player
 function shoot(){
-  if(shouldShoot > 50){
+  if(shouldShoot > 30){
     shouldShoot = 0;
     //initialise new bullet object
     const bullet = document.createElement("div");
@@ -92,7 +92,7 @@ function mainLoop(currentTime){
   lastRenderTime = currentTime;
  
   //move enemeies
-  if(enemyShouldMove > 200){
+  if(enemyShouldMove > 75){
     const currentIteration = currentIt%7;
     currentIt++;
     enemyShouldMove = 0;
