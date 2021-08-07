@@ -4,6 +4,7 @@ const gameTickSpeed = 100;
 const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
+var gameShouldRestart = false;
 var gameShouldPlay = true;
 var lastRenderTime = 0;
 var shouldShoot = 0;
@@ -107,7 +108,8 @@ function init(){
 
 //main render loop
 function mainLoop(currentTime){
-if(gameShouldPlay){
+if(gameShouldRestart){
+  gameShouldRestart = false;
   shouldShoot++;
   enemyShouldMove++;
   window.requestAnimationFrame(mainLoop);
