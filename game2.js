@@ -4,9 +4,7 @@ const gameTickSpeed = 100;
 const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
-var gameShouldRestart = false;
-var gameShouldPlay = true;
-var lastRenderTime = 0;
+let lastRenderTime = 0;
 var shouldShoot = 0;
 var enemyShouldMove = 0;
 var currentIt = 0;
@@ -16,18 +14,28 @@ var enemyMovementPattern = [{x:-1,y:0},{x:1,y:0},{x:1,y:0},{x:-1,y:0},{x:-1,y:0}
 var enemies = [
   {x:2,y:2},{x:4,y:2},{x:6,y:2},{x:8,y:2},{x:10,y:2},{x:12,y:2},{x:14,y:2},{x:16,y:2},{x:18,y:2},{x:20,y:2}
   ,{x:2,y:4},{x:4,y:4},{x:6,y:4},{x:8,y:4},{x:10,y:4},{x:12,y:4},{x:14,y:4},{x:16,y:4},{x:18,y:4},{x:20,y:4}
-  ]
-
-//STARTS GAME
-const initialiseRePlay = setInterval(init,1000)
-
+]
+//initialise player
+player.style.gridRowStart = 21;
+player.style.gridColumnStart = playerPosition;
+player.classList.add("player2");
+gameboard.appendChild(player);
+//initialise enemies
+enemies.forEach(function(enemyData){
+  const enemy = document.createElement("div");
+  const index = enemies.indexOf(enemyData)
+  enemy.style.gridRowStart = enemyData.y;
+  enemy.style.gridColumnStart = enemyData.x;
+  enemy.classList.add("enemy");
+  enemies[index] = enemy;
+  gameboard.appendChild(enemy);
+  });
+console.log(enemies)
 //Button inputs
-moveRightBtn2.addEventListener('click',function(){ gameshouldPlay = true;if(gameShouldPlay){playerPosition++; player.style.gridColumnStart = playerPosition;} });
-moveLeftBtn2.addEventListener('click',function(){ if(gameShouldPlay){playerPosition--; player.style.gridColumnStart = playerPosition;} });
+moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
+moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style.gridColumnStart = playerPosition;});
 shootBtn2.addEventListener('click',shoot);
-
 window.addEventListener('keydown', e => {
-  if(gameShouldPlay){
   switch(e.keyCode){
       case 37: 
         if(playerPosition > 1){
@@ -52,9 +60,7 @@ window.addEventListener('keydown', e => {
         break;
       
   };
-  };
 });
-
 //creates a bullet above the player
 function shoot(){
   if(shouldShoot > 30){
@@ -65,51 +71,12 @@ function shoot(){
     bullet.style.gridRowStart = 20;
     bullet.classList.add("bullet");
     gameboard.appendChild(bullet);
-
-
     bullets.push(bullet);
   };
 };
-
-function init(){
-  if(gameShouldRestart){
-    gameShouldRestart = false;
-    
-    //redefine variables
-    lastRenderTime = 0;
-    shouldShoot = 0;
-    enemyShouldMove = 0;
-    currentIt = 0;
-    playerPosition = 11;
-    bullets = [];
-    enemyMovementPattern = [{x:-1,y:0},{x:1,y:0},{x:1,y:0},{x:-1,y:0},{x:-1,y:0},{x:1,y:0},{x:0,y:1}]
-    enemies = [
-      {x:2,y:2},{x:4,y:2},{x:6,y:2},{x:8,y:2},{x:10,y:2},{x:12,y:2},{x:14,y:2},{x:16,y:2},{x:18,y:2},{x:20,y:2}
-      ,{x:2,y:4},{x:4,y:4},{x:6,y:4},{x:8,y:4},{x:10,y:4},{x:12,y:4},{x:14,y:4},{x:16,y:4},{x:18,y:4},{x:20,y:4}
-    ]
-    
-    //initialise player
-    player.style.gridRowStart = 21;
-    player.style.gridColumnStart = playerPosition;
-    player.classList.add("player2");
-    gameboard.appendChild(player);
-
-    //initialise enemies
-    enemies.forEach(function(enemyData){
-    const enemy = document.createElement("div");
-    const index = enemies.indexOf(enemyData)
-    enemy.style.gridRowStart = enemyData.y;
-    enemy.style.gridColumnStart = enemyData.x;
-    enemy.classList.add("enemy");
-    enemies[index] = enemy;
-    gameboard.appendChild(enemy);
-    });
-  };
-};
-
+  
 //main render loop
 function mainLoop(currentTime){
-if(gameShouldPlay){
   shouldShoot++;
   enemyShouldMove++;
   window.requestAnimationFrame(mainLoop);
@@ -153,9 +120,7 @@ if(gameShouldPlay){
     });
     
   });
-
-};
+  
 };//End of render loop                   
-
 //Start main loop
 window.requestAnimationFrame(mainLoop);
