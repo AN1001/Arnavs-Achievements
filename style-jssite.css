@@ -280,6 +280,7 @@ Games, container and styles
 
 .game-container {
 	display: none;
+	position: relative;
 }
 
 .game-container.active {
@@ -401,6 +402,22 @@ Games, container and styles
     grid-template-columns: repeat(21,1fr);
     grid-template-rows: repeat(21,1fr);
 }
+
+#overlay{
+  position: absolute;
+  display: ;
+  width: 85vmin;
+  height: 100px;
+  border: 2px solid var(--soft-black);
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer; 
+}
+
 .player2{
     background: rgb(40,40,150);
     border: 2px solid var(--soft-black);
