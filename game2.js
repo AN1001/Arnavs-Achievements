@@ -72,7 +72,8 @@ function shoot(){
 };
 
 function init(){
-  if(gameShouldPlay){
+  if(gameShouldRestart){
+    gameShouldRestart = false;
     
     //redefine variables
     lastRenderTime = 0;
@@ -108,8 +109,7 @@ function init(){
 
 //main render loop
 function mainLoop(currentTime){
-if(gameShouldRestart){
-  gameShouldRestart = false;
+if(gameShouldPlay){
   shouldShoot++;
   enemyShouldMove++;
   window.requestAnimationFrame(mainLoop);
