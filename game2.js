@@ -7,7 +7,7 @@ const shootBtn2 = document.getElementById("game2BtnShoot");
 var gameShouldPlay = false;
 
 //STARTS GAME
-const initialiseRePlay setInterval(init,1000)
+const initialiseRePlay = setInterval(init,1000)
 
 console.log(enemies)
 //Button inputs
