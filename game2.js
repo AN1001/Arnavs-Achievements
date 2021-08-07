@@ -40,7 +40,6 @@ moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style
 shootBtn2.addEventListener('click',shoot);
 
 window.addEventListener('keydown', e => {
-  console.log(e.KeyCode)
   switch(e.keyCode){
       case 37: 
         if(playerPosition > 1){
@@ -57,9 +56,12 @@ window.addEventListener('keydown', e => {
         break; 
       
       case 32:
-        console.log("bullet shot with key")
         shoot()
         break; 
+      
+      case 115:
+        shoot()
+        break;
       
   };
 });
@@ -77,7 +79,6 @@ function shoot(){
 
 
     bullets.push(bullet);
-    console.log(bullets);
   };
 };
   
@@ -95,8 +96,6 @@ function mainLoop(currentTime){
     const currentIteration = currentIt%7;
     currentIt++;
     enemyShouldMove = 0;
-    console.log("enemies Moved");
-    console.log(enemyMovementPattern[currentIteration].y)
     enemies.forEach(function(enemy){
       const currentY = parseInt(enemy.style.gridRowStart);
       const currentX = parseInt(enemy.style.gridColumnStart);
