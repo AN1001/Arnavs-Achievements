@@ -55,8 +55,8 @@ window.addEventListener('keydown', e => {
         shoot()
         break; 
       
-      case 115:
-        shoot()
+      case 48:
+        restart()
         break;
       
   };
@@ -96,6 +96,29 @@ function mainLoop(currentTime){
       enemy.style.gridColumnStart = currentX + enemyMovementPattern[currentIteration].x;
     });
   };
+  
+  function restart(){
+    //reset variables
+    playerPosition = 11;
+    enemies = [
+      {x:2,y:2},{x:4,y:2},{x:6,y:2},{x:8,y:2},{x:10,y:2},{x:12,y:2},{x:14,y:2},{x:16,y:2},{x:18,y:2},{x:20,y:2}
+      ,{x:2,y:4},{x:4,y:4},{x:6,y:4},{x:8,y:4},{x:10,y:4},{x:12,y:4},{x:14,y:4},{x:16,y:4},{x:18,y:4},{x:20,y:4}
+    ]
+    
+    //reset player position
+    player.style.gridColumnStart = playerPosition;
+    
+    //restart enemies
+    enemies.forEach(function(enemyData){
+    const enemy = document.createElement("div");
+    const index = enemies.indexOf(enemyData)
+    enemy.style.gridRowStart = enemyData.y;
+    enemy.style.gridColumnStart = enemyData.x;
+    enemy.classList.add("enemy");
+    enemies[index] = enemy;
+    gameboard.appendChild(enemy);
+    });
+  }
   
   //move bullets up 1 block
   bullets.forEach(function(bullet){
