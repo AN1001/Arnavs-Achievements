@@ -76,6 +76,11 @@ function shoot(){
 };
  
 function restart(){
+    //delete old enemies
+    enemies.forEach(function(){
+      enemy.remove()
+    })
+  
     //reset variables
     playerPosition = 11;
     enemies = [
@@ -85,8 +90,8 @@ function restart(){
     
     //reset player position
     player.style.gridColumnStart = playerPosition;
-    
-    //restart enemies
+  
+    //create new enemies
     enemies.forEach(function(enemyData){
     const enemy = document.createElement("div");
     const index = enemies.indexOf(enemyData)
