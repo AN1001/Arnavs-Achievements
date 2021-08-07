@@ -37,6 +37,7 @@ console.log(enemies)
 //Button inputs
 moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
 moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style.gridColumnStart = playerPosition;});
+shootBtn2.addEventListener('click',shoot);
 
 window.addEventListener('keydown', e => {
   switch(e.key){
@@ -54,11 +55,15 @@ window.addEventListener('keydown', e => {
           };
         break; 
       
+      case 'Space':
+        shoot()
+        break; 
+      
   };
 });
 
 //creates a bullet above the player
-shootBtn2.addEventListener('click',function(){ 
+function shoot(){
   if(shouldShoot > 50){
     shouldShoot = 0;
     //initialise new bullet object
@@ -72,8 +77,8 @@ shootBtn2.addEventListener('click',function(){
     bullets.push(bullet);
     console.log(bullets);
   };
-});
-
+};
+  
 //main render loop
 function mainLoop(currentTime){
   shouldShoot++;
