@@ -9,7 +9,6 @@ var gameShouldPlay = false;
 //STARTS GAME
 const initialiseRePlay = setInterval(init,1000)
 
-console.log(enemies)
 //Button inputs
 moveRightBtn2.addEventListener('click',function(){ gameshouldPlay = true;if(gameShouldPlay){playerPosition++; player.style.gridColumnStart = playerPosition;} });
 moveLeftBtn2.addEventListener('click',function(){ if(gameShouldPlay){playerPosition--; player.style.gridColumnStart = playerPosition;} });
