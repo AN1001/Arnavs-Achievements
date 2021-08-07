@@ -52,7 +52,8 @@ window.addEventListener('keydown', e => {
           playerPosition++; 
           player.style.gridColumnStart = playerPosition;
           };
-        break;
+        break; 
+      
   };
 });
 
