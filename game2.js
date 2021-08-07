@@ -1,6 +1,6 @@
 const player = document.createElement("div");
 const gameboard = document.querySelector(".game2MainGridSpace");
-const gameTickSpeed = 200;
+const gameTickSpeed = 100;
 const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
