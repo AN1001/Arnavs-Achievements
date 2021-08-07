@@ -56,6 +56,7 @@ window.addEventListener('keydown', e => {
         break; 
       
       case 'Space':
+        console.log("bullet shot with key")
         shoot()
         break; 
       
