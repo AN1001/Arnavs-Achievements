@@ -114,6 +114,11 @@ function mainLoop(currentTime){
   if (lastTime < gameTickSpeed) return;
   lastRenderTime = currentTime;
  
+  //check for win
+  if(enemies.length < 1){
+    console.log("Win")
+  }
+  
   //move enemeies
   if(enemyShouldMove > 75){
     const currentIteration = currentIt%7;
