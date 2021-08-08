@@ -131,11 +131,13 @@ function mainLoop(currentTime){
   
   if(enemyShouldShoot > 5 && playingGame2){
    enemyShouldShoot = 0;
+   //choose 3 enemies at random
    var shootingEnemies = [
       enemies[Math.ceil(Math.random() * enemies.length)],
-      enemies[Math.ceil(Math.random() * enemies.length)], 
+      enemies[Math.floor(Math.random() * enemies.length)], 
       enemies[Math.ceil(Math.random() * enemies.length)]
    ];
+   //summon a bullet at all 3 enemies
    shootingEnemies.forEach(function(enemy){
       enemy.style.background = "green";
    });  
