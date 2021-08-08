@@ -132,9 +132,9 @@ function mainLoop(currentTime){
   if(enemyShouldShoot > 5 && playingGame2){
    enemyShouldShoot = 0;
    var shootingEnemies = [
-      enemies[(math.random() * enemies.length)],
-      enemies[(math.random() * enemies.length)], 
-      enemies[(math.random() * enemies.length)]
+      enemies[(Math.random() * enemies.length)],
+      enemies[(Math.random() * enemies.length)], 
+      enemies[(Math.random() * enemies.length)]
    ];
      
    shootingEnemies.forEach(function(enemy){
