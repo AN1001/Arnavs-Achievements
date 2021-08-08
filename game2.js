@@ -40,8 +40,8 @@ moveRightBtn2.addEventListener('click',function(){ if(playing){playerPosition++;
 moveLeftBtn2.addEventListener('click',function(){ if(playing){playerPosition--; player.style.gridColumnStart = playerPosition;} });
 shootBtn2.addEventListener('click',shoot);
 window.addEventListener('keydown', e => {
-  switch(e.keyCode){
-      if(playing){
+  if(playing){
+    switch(e.keyCode){
       case 37: 
         if(playerPosition > 1){
           playerPosition--; 
@@ -63,7 +63,7 @@ window.addEventListener('keydown', e => {
       case 48:
         restart()
         break;
-      };
+    };
   };
 });
 //creates a bullet above the player
