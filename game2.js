@@ -1,5 +1,6 @@
 const player = document.createElement("div");
 const gameboard = document.querySelector(".game2MainGridSpace");
+const overlay = document.getElementById("overlay");
 const gameTickSpeed = 100;
 const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
@@ -15,6 +16,8 @@ var enemies = [
   {x:2,y:2},{x:4,y:2},{x:6,y:2},{x:8,y:2},{x:10,y:2},{x:12,y:2},{x:14,y:2},{x:16,y:2},{x:18,y:2},{x:20,y:2}
   ,{x:2,y:4},{x:4,y:4},{x:6,y:4},{x:8,y:4},{x:10,y:4},{x:12,y:4},{x:14,y:4},{x:16,y:4},{x:18,y:4},{x:20,y:4}
 ]
+
+overlay.style.display = "none";
 //initialise player
 player.style.gridRowStart = 21;
 player.style.gridColumnStart = playerPosition;
@@ -116,7 +119,7 @@ function mainLoop(currentTime){
  
   //check for win
   if(enemies.length < 1){
-    console.log("Win")
+    overlay.style.display = "block";
   }
   
   //move enemeies
