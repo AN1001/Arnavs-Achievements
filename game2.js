@@ -70,7 +70,7 @@ window.addEventListener('keydown', e => {
 });
 //creates a bullet above the player
 function shoot(){
-  if(shouldShoot > 30){
+  if(shouldShoot > 5){
     shouldShoot = 0;
     //initialise new bullet object
     const bullet = document.createElement("div");
@@ -119,13 +119,14 @@ function restart(){
 
 //main render loop
 function mainLoop(currentTime){
-  shouldShoot++;
-  enemyShouldMove++;
   window.requestAnimationFrame(mainLoop);
   let lastTime = (currentTime - lastRenderTime);
   if (lastTime < gameTickSpeed) return;
   lastRenderTime = currentTime;
  
+  shouldShoot++;
+  enemyShouldMove++;
+   
   //check for win
   if(enemies.length < 1){
     overlay.style.display = "block";
@@ -135,7 +136,7 @@ function mainLoop(currentTime){
   }
   
   //move enemeies
-  if(enemyShouldMove > 75 && playingGame2){
+  if(enemyShouldMove > 30 && playingGame2){
     const currentIteration = currentIt%7;
     currentIt++;
     enemyShouldMove = 0;
