@@ -129,7 +129,7 @@ function mainLoop(currentTime){
   enemyShouldMove++;
   enemyShouldShoot++;
   
-  if(enemyShouldShoot > 5 %% playingGame2){
+  if(enemyShouldShoot > 5 && playingGame2){
    enemyShouldShoot = 0;
    var shootingEnemies = [
       enemies[(math.random() * enemies.length)],
