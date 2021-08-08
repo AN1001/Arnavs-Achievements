@@ -19,7 +19,6 @@ var enemies = [
   ,{x:2,y:6},{x:4,y:6},{x:6,y:6},{x:8,y:6},{x:14,y:6},{x:16,y:6},{x:18,y:6},{x:20,y:6}
 ]
 
-overlay.style.display = "none";
 //initialise player
 player.style.gridRowStart = 21;
 player.style.gridColumnStart = playerPosition;
