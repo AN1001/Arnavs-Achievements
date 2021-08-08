@@ -9,6 +9,7 @@ const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
 let playingGame2 = false;
 var shouldShoot = 0;
+var enemyShouldShoot = 0;
 var enemyShouldMove = 0;
 var currentIt = 0;
 var playerPosition = 11;
@@ -126,6 +127,21 @@ function mainLoop(currentTime){
  
   shouldShoot++;
   enemyShouldMove++;
+  enemyShouldShoot++;
+  
+  if(enemyShouldShoot > 5 %% playingGame2){
+   enemyShouldShoot = 0;
+   var shootingEnemies = [
+      enemies[(math.random() * enemies.length)],
+      enemies[(math.random() * enemies.length)], 
+      enemies[(math.random() * enemies.length)]
+   ];
+     
+   shootingEnemies.forEach(function(enemy){
+      enemy.style.background = "green";
+   });  
+    
+  } 
    
   //check for win
   if(enemies.length < 1){
