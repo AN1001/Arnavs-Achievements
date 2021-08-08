@@ -6,7 +6,7 @@ const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
-let playing = true;
+let playingGame2 = true;
 var shouldShoot = 0;
 var enemyShouldMove = 0;
 var currentIt = 0;
@@ -36,11 +36,11 @@ enemies.forEach(function(enemyData){
   });
 console.log(enemies)
 //Button inputs
-moveRightBtn2.addEventListener('click',function(){ if(playing){playerPosition++; player.style.gridColumnStart = playerPosition;} });
-moveLeftBtn2.addEventListener('click',function(){ if(playing){playerPosition--; player.style.gridColumnStart = playerPosition;} });
+moveRightBtn2.addEventListener('click',function(){ if(playingGame2){playerPosition++; player.style.gridColumnStart = playerPosition;} });
+moveLeftBtn2.addEventListener('click',function(){ if(playingGame2){playerPosition--; player.style.gridColumnStart = playerPosition;} });
 shootBtn2.addEventListener('click',shoot);
 window.addEventListener('keydown', e => {
-  if(playing){
+  if(playingGame2){
     switch(e.keyCode){
       case 37: 
         if(playerPosition > 1){
@@ -125,7 +125,7 @@ function mainLoop(currentTime){
   }
   
   //move enemeies
-  if(enemyShouldMove > 75){
+  if(enemyShouldMove > 75 && playingGame2){
     const currentIteration = currentIt%7;
     currentIt++;
     enemyShouldMove = 0;
