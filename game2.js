@@ -2,11 +2,12 @@ const player = document.createElement("div");
 const gameboard = document.querySelector(".game2MainGridSpace");
 const overlay = document.getElementById("overlay");
 const gameTickSpeed = 100;
+const game2PlayBtn = document.getElementById("game2PlayBtn");
 const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
-let playingGame2 = true;
+let playingGame2 = false;
 var shouldShoot = 0;
 var enemyShouldMove = 0;
 var currentIt = 0;
@@ -34,8 +35,9 @@ enemies.forEach(function(enemyData){
   enemies[index] = enemy;
   gameboard.appendChild(enemy);
   });
-console.log(enemies)
+
 //Button inputs
+game2PlayBtn.addEventListener('click',restart)
 moveRightBtn2.addEventListener('click',function(){ if(playingGame2){playerPosition++; player.style.gridColumnStart = playerPosition;} });
 moveLeftBtn2.addEventListener('click',function(){ if(playingGame2){playerPosition--; player.style.gridColumnStart = playerPosition;} });
 shootBtn2.addEventListener('click',shoot);
@@ -81,6 +83,10 @@ function shoot(){
 };
  
 function restart(){
+    //change game to playing state
+    overlay.style.display = "none";
+    playingGame2 = true;
+    
     //delete old enemies
     enemies.forEach(function(enemy){
       enemy.remove();
@@ -123,6 +129,8 @@ function mainLoop(currentTime){
   if(enemies.length < 1){
     overlay.style.display = "block";
     playingGame2 = false;
+    game2PlayBtn.textContent = "REPLAY";
+    document.getElementById("game2WinLoss").textContent = "Victory All enemies defeated- press replay to play again";
   }
   
   //move enemeies
