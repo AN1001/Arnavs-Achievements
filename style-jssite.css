@@ -429,6 +429,7 @@ Games, container and styles
 }
 
 #game2WinLoss{
+    color: var(--soft-white);
     text-align: center;
     border: 2px solid black;
     margin: 3px;
