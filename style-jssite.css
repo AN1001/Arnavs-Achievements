@@ -299,7 +299,7 @@ Games, container and styles
     
     background-image:url(pixelMountain.png), linear-gradient(to top, rgb(56, 56, 56), rgb(87, 87, 90) var(--game-perc-1), rgb(122, 120, 127) var(--game-perc-2), rgb(179, 172, 177));
     background-position: -500px -7px, -10px 0px;
-    background-size: 1100px, 1300px;
+    background-size: 1100px, 2000px;
     background-repeat: repeat-x;
 }
 
@@ -409,7 +409,7 @@ Games, container and styles
   width: 85vmin;
   height: ;
   border: 2px solid var(--soft-black);
-  top: 100px;
+  top: 30%;
   left: 0;
   right: 0;
   margin: auto;
