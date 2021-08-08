@@ -407,7 +407,7 @@ Games, container and styles
   position: absolute;
   display: ;
   width: 85vmin;
-  height: 100px;
+  height: ;
   border: 2px solid var(--soft-black);
   top: 100px;
   left: 0;
@@ -416,6 +416,34 @@ Games, container and styles
   background-color: rgba(0,0,0,0.5);
   z-index: 2;
   cursor: pointer; 
+}
+
+#game2controls{
+    color: white;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+#game2Commands{
+    display: grid;
+}
+
+#game2WinLoss{
+    text-align: center;
+    border: 2px solid black;
+    margin: 3px;
+}
+
+#game2PlayBtn{
+    background: none;
+    margin: 3px;
+    border: 2px solid black;
+}
+
+#game2PlayBtn:hover{
+    background: grey;
+    margin: 3px;
+    border: 2px solid black;
 }
 
 .player2{
