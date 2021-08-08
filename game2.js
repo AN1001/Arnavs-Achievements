@@ -6,6 +6,7 @@ const moveLeftBtn2 = document.getElementById("game2BtnLeft");
 const moveRightBtn2 = document.getElementById("game2BtnRight");
 const shootBtn2 = document.getElementById("game2BtnShoot");
 let lastRenderTime = 0;
+let playing = true;
 var shouldShoot = 0;
 var enemyShouldMove = 0;
 var currentIt = 0;
@@ -35,11 +36,12 @@ enemies.forEach(function(enemyData){
   });
 console.log(enemies)
 //Button inputs
-moveRightBtn2.addEventListener('click',function(){ playerPosition++; player.style.gridColumnStart = playerPosition;});
-moveLeftBtn2.addEventListener('click',function(){ playerPosition--; player.style.gridColumnStart = playerPosition;});
+moveRightBtn2.addEventListener('click',function(){ if(playing){playerPosition++; player.style.gridColumnStart = playerPosition;} });
+moveLeftBtn2.addEventListener('click',function(){ if(playing){playerPosition--; player.style.gridColumnStart = playerPosition;} });
 shootBtn2.addEventListener('click',shoot);
 window.addEventListener('keydown', e => {
   switch(e.keyCode){
+      if(playing){
       case 37: 
         if(playerPosition > 1){
           playerPosition--; 
@@ -61,7 +63,7 @@ window.addEventListener('keydown', e => {
       case 48:
         restart()
         break;
-      
+      };
   };
 });
 //creates a bullet above the player
