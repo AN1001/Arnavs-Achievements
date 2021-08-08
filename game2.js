@@ -136,7 +136,7 @@ function mainLoop(currentTime){
       enemies[(Math.random() * enemies.length)], 
       enemies[(Math.random() * enemies.length)]
    ];
-     
+   console.log(shootingEnemies)
    shootingEnemies.forEach(function(enemy){
       enemy.style.background = "green";
    });  
