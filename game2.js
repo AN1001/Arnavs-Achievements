@@ -122,6 +122,7 @@ function mainLoop(currentTime){
   //check for win
   if(enemies.length < 1){
     overlay.style.display = "block";
+    playing = false;
   }
   
   //move enemeies
