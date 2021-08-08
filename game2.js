@@ -136,7 +136,7 @@ function mainLoop(currentTime){
   }
   
   //move enemeies
-  if(enemyShouldMove > 30 && playingGame2){
+  if(enemyShouldMove > 15 && playingGame2){
     const currentIteration = currentIt%7;
     currentIt++;
     enemyShouldMove = 0;
