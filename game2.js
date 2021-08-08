@@ -132,11 +132,10 @@ function mainLoop(currentTime){
   if(enemyShouldShoot > 5 && playingGame2){
    enemyShouldShoot = 0;
    var shootingEnemies = [
-      enemies[(Math.random() * enemies.length)],
-      enemies[(Math.random() * enemies.length)], 
-      enemies[(Math.random() * enemies.length)]
+      enemies[Math.ceil(Math.random() * enemies.length)],
+      enemies[Math.ceil(Math.random() * enemies.length)], 
+      enemies[Math.ceil(Math.random() * enemies.length)]
    ];
-   console.log(shootingEnemies, enemies, enemies[3],(Math.random() * enemies.length),5)
    shootingEnemies.forEach(function(enemy){
       enemy.style.background = "green";
    });  
