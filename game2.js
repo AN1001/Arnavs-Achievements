@@ -202,7 +202,7 @@ function mainLoop(currentTime){
       if(bulletY < 21){enemyBullet.style.gridRowStart = bulletY+1; console.log("movebullet");
       }else if(bulletX == playerPosition){console.log("collision with enemy bullet")
       }else{
-         enemyBullet.remove(); setTimeout(function(){enemybullets.shift();},30)
+         enemyBullet.remove(); setTimeout(function(){enemyBullets.shift();},30)
       }
        
     });
