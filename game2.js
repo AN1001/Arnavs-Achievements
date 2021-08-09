@@ -139,13 +139,13 @@ function mainLoop(currentTime){
          enemies[Math.ceil(Math.random() * enemies.length)]
       ];
       //summon a bullet at all 3 enemies
-      shootingEnemies.forEach(function(enemy){
+      shootingEnemies.forEach(function(shootingEnemy){
          const bullet = document.createElement("div");
-         bullet.style.gridColumnStart = enemy.style.gridColumnStart;
-         bullet.style.gridRowStart = parseInt(enemy.style.gridRowStart) + 1;
+         bullet.style.gridColumnStart = shootingEnemy.style.gridColumnStart;
+         bullet.style.gridRowStart = parseInt(shootingEnemy.style.gridRowStart) + 1;
          bullet.classList.add("bullet");
          gameboard.appendChild(bullet);
-         enemybullets.push(bullet);
+         enemyBullets.push(bullet);
       });  
     
   } 
@@ -191,6 +191,17 @@ function mainLoop(currentTime){
         enemy.remove()
         enemies.splice(enemies.indexOf(enemy),1)
         };
+       
+  enemyBullets.forEach(function(enemyBullet){
+      const bulletY = parseInt(enemyBullet.style.gridRowStart);
+      const bulletX = parseInt(enemyBullet.style.gridColumnStart);
+      if(bulletY < 21){bulletY++}else if(bulletX == playerPosition){
+         console.log("collision with enemy bullet")
+      }
+     
+  });
+       
+       
     });
     
   });
