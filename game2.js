@@ -195,7 +195,7 @@ function mainLoop(currentTime){
   enemyBullets.forEach(function(enemyBullet){
       const bulletY = parseInt(enemyBullet.style.gridRowStart);
       const bulletX = parseInt(enemyBullet.style.gridColumnStart);
-      if(bulletY < 21){bulletY++}else if(bulletX == playerPosition){
+      if(bulletY < 21){enemyBullet.style.gridRowStart = bulletY++;}else if(bulletX == playerPosition){
          console.log("collision with enemy bullet")
       }
      
