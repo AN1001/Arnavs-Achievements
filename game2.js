@@ -201,7 +201,7 @@ function mainLoop(currentTime){
       if(bulletY < 21){enemyBullet.style.gridRowStart = bulletY+1;
       }else if(bulletX == playerPosition){console.log("collision with enemy bullet")
       }else{
-         enemyBullet.remove(); enemyBullets.splice(enemyBullets.indexOf(enemyBullet),1) )
+         enemyBullet.remove(); enemyBullets.splice(enemyBullets.indexOf(enemyBullet),1)
       }
        
     });
