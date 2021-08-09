@@ -131,22 +131,23 @@ function mainLoop(currentTime){
   enemyShouldShoot++;
   
   if(enemyShouldShoot > 5 && playingGame2){
-   enemyShouldShoot = 0;
-   //choose 3 enemies at random
-   var shootingEnemies = [
-      enemies[Math.ceil(Math.random() * enemies.length)],
-      enemies[Math.floor(Math.random() * enemies.length)], 
-      enemies[Math.ceil(Math.random() * enemies.length)]
-   ];
-   //summon a bullet at all 3 enemies
-   shootingEnemies.forEach(function(enemy){
-      const bullet = document.createElement("div");
-      bullet.style.gridColumnStart = enemy.style.gridColumnStart;
-      bullet.style.gridRowStart = (enemy.style.gridRowStart)+1;
-      bullet.classList.add("bullet");
-      gameboard.appendChild(bullet);
-      Enemybullets.push(bullet);
-   });  
+     enemyShouldShoot = 0;
+     //choose 3 enemies at random
+     var shootingEnemies = [
+         enemies[Math.ceil(Math.random() * enemies.length)],
+         enemies[Math.floor(Math.random() * enemies.length)], 
+         enemies[Math.ceil(Math.random() * enemies.length)]
+      ];
+      //summon a bullet at all 3 enemies
+      shootingEnemies.forEach(function(enemy){
+         const bullet = document.createElement("div");
+         bullet.style.gridColumnStart = enemy.style.gridColumnStart;
+         console.log(enemy.style.gridRowStart)
+         bullet.style.gridRowStart = enemy.style.gridRowStart;
+         bullet.classList.add("bullet");
+         gameboard.appendChild(bullet);
+         Enemybullets.push(bullet);
+      });  
     
   } 
    
