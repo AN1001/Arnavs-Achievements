@@ -14,6 +14,7 @@ var enemyShouldMove = 0;
 var currentIt = 0;
 var playerPosition = 11;
 var bullets = [];
+var enemyBullets = [];
 var enemyMovementPattern = [{x:-1,y:0},{x:1,y:0},{x:1,y:0},{x:-1,y:0},{x:-1,y:0},{x:1,y:0},{x:0,y:1}]
 var enemies = [
    {x:2,y:2},{x:4,y:2},{x:6,y:2},{x:8,y:2},    {x:14,y:2},{x:16,y:2},{x:18,y:2},{x:20,y:2}
@@ -139,7 +140,12 @@ function mainLoop(currentTime){
    ];
    //summon a bullet at all 3 enemies
    shootingEnemies.forEach(function(enemy){
-      enemy.style.background = "green";
+      const bullet = document.createElement("div");
+      bullet.style.gridColumnStart = enemy.style.gridColumnStart;
+      bullet.style.gridRowStart = (enemy.style.gridRowStart)+1;
+      bullet.classList.add("bullet");
+      gameboard.appendChild(bullet);
+      Enemybullets.push(bullet);
    });  
     
   } 
