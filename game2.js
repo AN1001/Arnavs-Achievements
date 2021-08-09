@@ -191,7 +191,8 @@ function mainLoop(currentTime){
         enemy.remove()
         enemies.splice(enemies.indexOf(enemy),1)
         };
-       
+  });     
+  console.log(enemyBullets)    
   enemyBullets.forEach(function(enemyBullet){
       const bulletY = parseInt(enemyBullet.style.gridRowStart); 
       const bulletX = parseInt(enemyBullet.style.gridColumnStart);
@@ -199,9 +200,6 @@ function mainLoop(currentTime){
       //check for collision with bullet and move bullet
       if(bulletY < 21){enemyBullet.style.gridRowStart = bulletY+1; console.log("movebullet");
       }else if(bulletX == playerPosition){console.log("collision with enemy bullet")}
-     
-  });
-       
        
     });
     
