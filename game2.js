@@ -199,7 +199,15 @@ function mainLoop(currentTime){
       const bulletX = parseInt(enemyBullet.style.gridColumnStart);
       //check for collision with bullet and move bullet
       if(bulletY < 21){enemyBullet.style.gridRowStart = bulletY+1;
-      }else if(bulletX == playerPosition){console.log("collision with enemy bullet")
+      }else if(bulletX == playerPosition){
+         console.log("collision with enemy bullet"); 
+         enemyBullet.remove(); 
+         enemyBullets.splice(enemyBullets.indexOf(enemyBullet),1); 
+         playingGame2 = false; 
+         overlay.style.display = "block";
+         playingGame2 = false;
+         game2PlayBtn.textContent = "REPLAY";
+         document.getElementById("game2WinLoss").textContent = "Defeat you were killed- press replay to play again";
       }else{
          enemyBullet.remove(); enemyBullets.splice(enemyBullets.indexOf(enemyBullet),1)
       }
