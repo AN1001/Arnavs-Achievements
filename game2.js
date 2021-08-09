@@ -130,7 +130,7 @@ function mainLoop(currentTime){
   enemyShouldMove++;
   enemyShouldShoot++;
   
-  if(enemyShouldShoot > 5 && playingGame2){
+  if(enemyShouldShoot > 10 && playingGame2){
      enemyShouldShoot = 0;
      //choose 3 enemies at random
      var shootingEnemies = [
@@ -193,7 +193,7 @@ function mainLoop(currentTime){
         };
      });
   });
-  console.log(enemyBullets)    
+   
   enemyBullets.forEach(function(enemyBullet){
       const bulletY = parseInt(enemyBullet.style.gridRowStart); 
       const bulletX = parseInt(enemyBullet.style.gridColumnStart);
@@ -201,6 +201,9 @@ function mainLoop(currentTime){
       //check for collision with bullet and move bullet
       if(bulletY < 21){enemyBullet.style.gridRowStart = bulletY+1; console.log("movebullet");
       }else if(bulletX == playerPosition){console.log("collision with enemy bullet")}
+      }else{
+         enemyBullet.remove(); setTimeout(function(){enemybullets.shift();},30)
+      }
        
     });
   
