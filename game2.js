@@ -142,11 +142,10 @@ function mainLoop(currentTime){
       shootingEnemies.forEach(function(enemy){
          const bullet = document.createElement("div");
          bullet.style.gridColumnStart = enemy.style.gridColumnStart;
-         console.log(enemy.style.gridRowStart)
-         bullet.style.gridRowStart = enemy.style.gridRowStart;
+         bullet.style.gridRowStart = parseInt(enemy.style.gridRowStart) + 1;
          bullet.classList.add("bullet");
          gameboard.appendChild(bullet);
-         Enemybullets.push(bullet);
+         enemybullets.push(bullet);
       });  
     
   } 
