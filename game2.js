@@ -191,7 +191,8 @@ function mainLoop(currentTime){
         enemy.remove()
         enemies.splice(enemies.indexOf(enemy),1)
         };
-  });     
+     });
+  });
   console.log(enemyBullets)    
   enemyBullets.forEach(function(enemyBullet){
       const bulletY = parseInt(enemyBullet.style.gridRowStart); 
@@ -202,8 +203,6 @@ function mainLoop(currentTime){
       }else if(bulletX == playerPosition){console.log("collision with enemy bullet")}
        
     });
-    
-  });
   
 };//End of render loop                   
 //Start main loop
