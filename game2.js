@@ -78,7 +78,7 @@ function shoot(){
     const bullet = document.createElement("div");
     bullet.style.gridColumnStart = playerPosition;
     bullet.style.gridRowStart = 20;
-    bullet.classList.add("bullet");
+    bullet.classList.add("playerBullet");
     gameboard.appendChild(bullet);
     bullets.push(bullet);
   };
