@@ -4,7 +4,7 @@ const game3ErrorField = document.getElementById("errorDisplayField");
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
 game3PlayBtn.addEventListener("click",function(){
-  const game3Input =  document.getElementById("game3Input").value;
+  const game3Input =  parseInt( document.getElementById("game3Input").value );
   if(game3Input > 30 || game3Input < 5){
     game3ErrorField.textContent = "Error:- selected value not in acceptable range 5-30";
   }else if(!Number.isInteger(game3Input)){
