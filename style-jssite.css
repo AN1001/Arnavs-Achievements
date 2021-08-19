@@ -1,8 +1,12 @@
 :root{
     --soft-white: hsla(0, 0%, 98%, 1);
     --soft-black: #222;
-    --border-rad: 0.25rem;
 	
+    --soft-red: rgb(150,40,40);
+    --soft-green: rgb(40,150,40);
+    --soft-blue: rgb(40,40,150);
+	
+    --border-rad: 0.25rem;
     --game-perc-1: 4%;
     --game-perc-2: 9%;
 }
@@ -515,6 +519,7 @@ Games, container and styles
 
 #errorDisplayField{
     text-align: center;
+    color: var(--soft-red);
     word-wrap: break;
     margin-top: 5px;
     height: auto;
