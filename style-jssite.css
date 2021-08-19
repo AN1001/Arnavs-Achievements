@@ -479,6 +479,7 @@ Games, container and styles
 #game3SelectionScreen > *{
     padding: 5px;
     margin: 4px;
+    word-wrap:break;
     border: 2px solid var(--soft-black);
     border-radius: var(--border-rad)
 }
