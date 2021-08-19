@@ -508,6 +508,12 @@ Games, container and styles
 	background: rgb(190,190,190);
 }
 
+#errorDisplayField{
+    text-align: center;
+    margin-top: 5px;
+    height: auto;
+}
+
 /*
 ======================
 Animations- All games
