@@ -510,6 +510,7 @@ Games, container and styles
 
 #errorDisplayField{
     text-align: center;
+    word-wrap: break;
     margin-top: 5px;
     height: auto;
 }
