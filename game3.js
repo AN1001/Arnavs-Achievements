@@ -7,7 +7,7 @@ game3PlayBtn.addEventListener("click",function(){
   const game3Input =  document.getElementById("game3Input").value;
   if(game3Input > 30 || game3Input < 5){
     game3ErrorField.textContent = "Error:- selected value not in acceptable range 5-30";
-  }else if(!game3Input.isInteger()){
+  }else if(!Number.isInteger(game3Input)){
     game3ErrorField.textContent = "Error:- selected value is not a whole number";
   } else {
     game3ErrorField.textContent = "";
