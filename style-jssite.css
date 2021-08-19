@@ -484,6 +484,10 @@ Games, container and styles
     border-radius: var(--border-rad)
 }
 
+#game3Hud{
+    width: 200px;
+}
+
 #game3Hud > h1{
     text-decoration: underline;
     text-align: center;
