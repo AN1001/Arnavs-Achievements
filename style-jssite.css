@@ -569,8 +569,37 @@ Games, container and styles
 
 #game3InfoBar{
     height: 50px;
+    display: flex;
+    align-items: center;
     border-bottom: 2px solid var(--soft-black);
     background: hsl(212, 33%, 89%);
+}
+
+#game3Stats{
+    margin: 0 auto 0 10px;
+}
+
+#game3Stats > *{
+    margin: 10px;
+    padding: 3px;
+    
+    background: hsl(216, 48%, 92%);
+	border: 2px solid var(--soft-black);
+    border-radius: var(--border-rad);
+}
+
+#game3EndBtn{
+    margin-right: 20px;
+    border: 2px solid var(--soft-black);
+    border-radius: var(--border-rad);
+    font-size: 1.3em;
+    background: hsl(216, 48%, 92%);
+    height: 70%;
+    width: 10%;
+}
+
+#game3EndBtn:hover{
+    background: rgb(192, 255, 192);
 }
 
 
