@@ -530,10 +530,17 @@ Games, container and styles
 }
 
 #game3MainGridSpace > *{
-    height: 100px;
-    background: blue;
+    height: auto;
     margin: 5px;
+    padding: 5px;
+    
+    border: 2px solid var(--soft-black);
+    border-radius: var(--border-rad);
+    
+    text-align: center;
 }
+
+
 
 #game3Controls{
     width: 20%;
