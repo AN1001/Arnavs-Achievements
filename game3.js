@@ -18,7 +18,7 @@ game3PlayBtn.addEventListener("click",function(){
   } else {
     game3ErrorField.textContent = "";
     game3MenuScreen.style.display = "none";
-    game3BoardSpace.style.display = "block";
+    game3BoardSpace.style.display = "flex";
   }
   
 });
