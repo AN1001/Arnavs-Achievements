@@ -32,6 +32,11 @@ function initGame3(gridSize){
     game3Grid.style.gridTemplateColumns = "repeat("+gridSize+",1fr)";
     game3Grid.style.gridTemplateRows = "repeat("+gridSize+",1fr)";
   
-    var xarray = Array(gridSize).fill(0).map(x => Array(gridSize).fill(0));
-    console.log(xarray)
+    var field = Array(gridSize).fill(0).map(x => Array(gridSize).fill(0));
+    var Nmines = parseInt((gridSize/2)+2);
+    console.log(Nmines)
+    for (let i = 0; i < Nmines; i++) {
+      console.log("mine added")
+    }
+  
 }
