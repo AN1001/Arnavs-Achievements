@@ -560,6 +560,8 @@ Games, container and styles
 }
 
 #game3Grid{
+	width: 60vw;
+   	height: 60vw;
 	display:grid;
 }
 
