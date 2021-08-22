@@ -547,7 +547,8 @@ Games, container and styles
 
 #game3GridSpace{
     width: 65%;
-    margin-right: auto
+    padding: 0;
+    margin-right: auto;
 }
 
 #game3Controls > h3{
@@ -560,18 +561,18 @@ Games, container and styles
 }
 
 #game3Grid{
-	width: 60vw;
-   	height: 60vw;
+    margin: 2px auto 2px auto;
+	width: 62vw;
+   	height: 62vw;
 	display:grid;
 }
 
 #game3InfoBar{
     height: 50px;
-    margin: -5px;
-    
     border-bottom: 2px solid var(--soft-black);
     background: hsl(212, 33%, 89%);
 }
+
 
 /*
 ======================
