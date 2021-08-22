@@ -559,6 +559,10 @@ Games, container and styles
     font-size: 0.7em;
 }
 
+#game3Grid{
+	display:grid;
+}
+
 #game3InfoBar{
     height: 50px;
     margin: -5px;
