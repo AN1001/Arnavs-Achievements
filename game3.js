@@ -28,10 +28,10 @@ function initGame3(gridSize){
     game3MenuScreen.style.display = "none";
     game3PlaySpace.style.display = "flex";
     
-    console.log("repeat("+game3Input+",1fr)")
+    console.log("repeat("+gridSize+",1fr)")
     
-    game3Grid.style.gridTemplateColumns = "repeat("+game3Input+",1fr)";
-    game3Grid.style.gridTemplateRows = "repeat("+game3Input+",1fr)";
+    game3Grid.style.gridTemplateColumns = "repeat("+gridSize+",1fr)";
+    game3Grid.style.gridTemplateRows = "repeat("+gridSize+",1fr)";
   
     const enemy = document.createElement("div");
     enemy.style.gridRowStart = 4;
