@@ -11,8 +11,8 @@ const game3Grid = document.getElementById("game3Grid");
 game3PlayBtn.addEventListener("click",function(){
   const game3Input =  parseInt( document.getElementById("game3Input").value );
   
-  if(game3Input > 30 || game3Input < 5){
-    game3ErrorField.textContent = "Error:- selected value not in acceptable range 5-30";
+  if(game3Input > 30 || game3Input < 8){
+    game3ErrorField.textContent = "Error:- selected value not in acceptable range 8-30";
   }else if(!Number.isInteger(game3Input)){
     game3ErrorField.textContent = "Error:- selected value is not a number";
   } else {
