@@ -525,11 +525,11 @@ Games, container and styles
     height: auto;
 }
 
-#game3MainGridSpace{
+#game3PlaySpace{
 	display: none;   
 }
 
-#game3MainGridSpace > *{
+#game3PlaySpace > *{
     height: auto;
     margin: 5px;
     padding: 5px;
@@ -545,7 +545,7 @@ Games, container and styles
     margin-left: auto;
 }
 
-#game3Grid{
+#game3GridSpace{
     width: 65%;
     margin-right: auto
 }
