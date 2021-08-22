@@ -526,7 +526,7 @@ Games, container and styles
 }
 
 #game3MainGridSpace{
-	display: flex;   
+	display: none;   
 }
 
 #game3MainGridSpace > *{
