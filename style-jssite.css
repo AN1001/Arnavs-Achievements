@@ -259,7 +259,7 @@ Games, container and styles
   	text-transform: capitalize;
   	font-size: 1rem;
   	display: block;
-  	background: hsl(212, 33%, 89%);;
+  	background: hsl(212, 33%, 89%);
   	cursor: pointer;
   	letter-spacing: 0.25rem;
 }
@@ -557,6 +557,14 @@ Games, container and styles
 
 #game3Controls > p{
     font-size: 0.7em;
+}
+
+#game3InfoBar{
+    height: 50px;
+    margin: -5px;
+    
+    border-bottom: 2px solid var(--soft-black);
+    background: hsl(212, 33%, 89%);
 }
 
 /*
