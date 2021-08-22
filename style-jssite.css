@@ -550,9 +550,13 @@ Games, container and styles
     margin-right: auto
 }
 
-#game3Grid > h3{
+#game3Controls > h3{
 	text-decoration: underline;
 	margin-bottom: 10px;
+}
+
+#game3Controls > p{
+    font-size: 0.7em;
 }
 
 /*
