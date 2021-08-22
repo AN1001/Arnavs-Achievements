@@ -28,14 +28,10 @@ function initGame3(gridSize){
     game3MenuScreen.style.display = "none";
     game3PlaySpace.style.display = "flex";
     
-    console.log("repeat("+gridSize+",1fr)")
-    
+    /*create grid*/
     game3Grid.style.gridTemplateColumns = "repeat("+gridSize+",1fr)";
     game3Grid.style.gridTemplateRows = "repeat("+gridSize+",1fr)";
   
-    const enemy = document.createElement("div");
-    enemy.style.gridRowStart = 4;
-    enemy.style.gridColumnStart = 4;
-    enemy.classList.add("enemy");
-    game3Grid.appendChild(enemy);
+    var xarray = Array(5).fill(0).map(x => Array(10).fill(0));
+    console.log(xarray)
 }
