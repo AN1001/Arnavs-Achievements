@@ -540,7 +540,10 @@ Games, container and styles
     text-align: center;
 }
 
-
+#game3MainGridSpace > h3{
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
 
 #game3Controls{
     width: 20%;
