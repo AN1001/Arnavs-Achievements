@@ -525,6 +525,28 @@ Games, container and styles
     height: auto;
 }
 
+#game3MainGridSpace{
+	display: flex;   
+}
+
+#game3MainGridSpace > *{
+    height: 100px;
+    background: blue;
+    margin: 5px;
+}
+
+#game3Controls{
+    width: 20%;
+    margin-left: auto;
+}
+
+#game3Grid{
+    width: 65%;
+    margin-right: auto
+}
+
+
+
 /*
 ======================
 Animations- All games
