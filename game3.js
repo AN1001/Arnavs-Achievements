@@ -4,7 +4,7 @@ const game3PlayBtn =  document.getElementById("game3StartButton");
 const game3ErrorField = document.getElementById("errorDisplayField");
 
 /*gameboard variables*/
-const game3BoardSpace = document.getElementById("game3MainGridSpace");
+const game3PlaySpace = document.getElementById("game3MainPlaySpace");
 const game3Grid = document.getElementById("game3Grid");
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
@@ -18,7 +18,7 @@ game3PlayBtn.addEventListener("click",function(){
   } else {
     game3ErrorField.textContent = "";
     game3MenuScreen.style.display = "none";
-    game3BoardSpace.style.display = "flex";
+    game3PlaySpace.style.display = "flex";
   }
   
 });
