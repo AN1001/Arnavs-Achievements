@@ -525,11 +525,11 @@ Games, container and styles
     height: auto;
 }
 
-#game3PlaySpace{
+#game3MainPlaySpace{
 	display: none;   
 }
 
-#game3PlaySpace > *{
+#game3MainPlaySpace > *{
     height: auto;
     margin: 5px;
     padding: 5px;
