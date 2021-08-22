@@ -16,9 +16,26 @@ game3PlayBtn.addEventListener("click",function(){
   }else if(!Number.isInteger(game3Input)){
     game3ErrorField.textContent = "Error:- selected value is not a number";
   } else {
-    game3ErrorField.textContent = "";
-    game3MenuScreen.style.display = "none";
-    game3PlaySpace.style.display = "flex";
+    initGame3(game3Input)
   }
   
 });
+
+
+function initGame3(gridSize){
+    /*Initialise start of game*/
+    game3ErrorField.textContent = "";
+    game3MenuScreen.style.display = "none";
+    game3PlaySpace.style.display = "flex";
+    
+    console.log("repeat("+game3Input+",1fr)")
+    
+    game3Grid.style.gridTemplateColumns = "repeat("+game3Input+",1fr)";
+    game3Grid.style.gridTemplateRows = "repeat("+game3Input+",1fr)";
+  
+    const enemy = document.createElement("div");
+    enemy.style.gridRowStart = 4;
+    enemy.style.gridColumnStart = 4;
+    enemy.classList.add("enemy");
+    game3Grid.appendChild(enemy);
+}
