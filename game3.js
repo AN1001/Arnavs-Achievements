@@ -32,6 +32,6 @@ function initGame3(gridSize){
     game3Grid.style.gridTemplateColumns = "repeat("+gridSize+",1fr)";
     game3Grid.style.gridTemplateRows = "repeat("+gridSize+",1fr)";
   
-    var xarray = Array(5).fill(0).map(x => Array(10).fill(0));
+    var xarray = Array(gridSize).fill(0).map(x => Array(gridSize).fill(0));
     console.log(xarray)
 }
