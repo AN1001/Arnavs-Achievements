@@ -108,7 +108,7 @@ function initGame3(gridSize){
       var flags = Nmines;
       NumberFlags.textContent = flags+" Flags";
       NumberMines.textContent = Nmines+" Mines";
-      root.style.setProperty('--game3-adaptive-font-size', gridSize/6 + "em");
+      root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
       
       /*Draws all tiles*/
       for (let i = 0; i < field.length; i++){
