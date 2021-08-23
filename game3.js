@@ -33,6 +33,7 @@ function initGame3(gridSize){
     game3Grid.style.gridTemplateRows = "repeat("+gridSize+",1fr)";
   
     var field = (new Array(gridSize)).fill().map(function(){ return new Array(gridSize).fill(0);});
+    console.log(field)
     var Nmines = parseInt((gridSize/2)+2);
     for (let i = 0; i < Nmines; i++) {
       let randX = Math.floor(Math.random() * gridSize+1);
