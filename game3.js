@@ -32,7 +32,11 @@ game3Grid.addEventListener("click",function(e){
   let tileID = field[tileY-1][tileX-1]
   
   if(typeof tileID == "string"){
+    /* Handle death occurence */
     console.log("Player died at ---> Game 3")
+    game3MenuScreen.style.display = "block";
+    game3PlaySpace.style.display = "none";
+    
   } else if(tileID == 0){ } else {
     clickedTile.classList.remove("landTile");
     clickedTile.textContent = tileID;
