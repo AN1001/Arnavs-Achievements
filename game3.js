@@ -45,7 +45,7 @@ function initGame3(gridSize){
     
     /*fill grid with mines*/
     field = (new Array(gridSize)).fill().map(function(){ return new Array(gridSize).fill(0);});
-    var Nmines = parseInt((gridSize/2)+2);
+    var Nmines = parseInt(0.15*(gridSize*gridSize));
     for (let i = 0; i < Nmines; i++) {
       let randX = Math.floor(Math.random() * gridSize);
       let randY = Math.floor(Math.random() * gridSize);
