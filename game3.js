@@ -29,8 +29,16 @@ game3Grid.addEventListener("click",function(e){
   const clickedTile = e.target;
   let tileY = clickedTile.style.gridRowStart;
   let tileX = clickedTile.style.gridColumnStart;
-  clickedTile.classList.remove("landTile");
-  clickedTile.textContent = field[tileY-1][tileX-1];
+  let tileID = field[tileY-1][tileX-1]
+  
+  if(typeof tileID == "string"){
+    console.log("Player died at ---> Game 3")
+  } else if(tileID == 0){ } else {
+    clickedTile.classList.remove("landTile");
+    clickedTile.textContent = tileID;
+  }
+  
+  
 });
 
 function initGame3(gridSize){
