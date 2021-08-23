@@ -23,7 +23,7 @@ game3PlayBtn.addEventListener("click",function(){
 });
 
 game3Grid.addEventListener("click",function(e){
-  const clickedTile = e.currentTarget;
+  const clickedTile = e.target;
   clickedTile.style.border = "2px solid yellow";
 });
 
