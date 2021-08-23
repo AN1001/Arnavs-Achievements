@@ -6,6 +6,8 @@ const game3ErrorField = document.getElementById("errorDisplayField");
 /*gameboard variables*/
 const game3PlaySpace = document.getElementById("game3MainPlaySpace");
 const game3Grid = document.getElementById("game3Grid");
+const NumberFlags = document.getElementById("NFlags")
+const NumberMines = document.getElementById("NMines")
 var field = []
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
@@ -102,6 +104,10 @@ function initGame3(gridSize){
           
         }
       }
+      
+      var flags = Nmines;
+      NumberFlags.textContent = flags+" Flags";
+      NumberMines.textContent = Nmines+" Mines";
       
       /*Draws all tiles*/
       for (let i = 0; i < field.length; i++){
