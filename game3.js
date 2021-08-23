@@ -31,7 +31,8 @@ function initGame3(gridSize){
     /*create grid*/
     game3Grid.style.gridTemplateColumns = "repeat("+gridSize+",1fr)";
     game3Grid.style.gridTemplateRows = "repeat("+gridSize+",1fr)";
-  
+    
+    /*fill grid with mines*/
     var field = (new Array(gridSize)).fill().map(function(){ return new Array(gridSize).fill(0);});
     var Nmines = parseInt((gridSize/2)+2);
     for (let i = 0; i < Nmines; i++) {
@@ -40,5 +41,13 @@ function initGame3(gridSize){
       field[randY][randX] = "x";
     }
     
+    /*Count mines -sometimes mines can be overriden*/
+    Nmines = 0;
+    for (let i = 0; i < field.length; i++){
+      for (let j = 0; i < field[i].length; j++){
+        if(field[i][j] == "x"){Nmines++}
+      } 
+    }
+    console.log("nmines")
     
 }
