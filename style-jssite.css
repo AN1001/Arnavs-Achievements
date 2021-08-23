@@ -602,6 +602,10 @@ Games, container and styles
     background: rgb(192, 255, 192);
 }
 
+.landTile{
+    background: var(--soft-green);
+    border: 2px solid var(--soft-black);
+}
 
 /*
 ======================
