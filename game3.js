@@ -34,6 +34,7 @@ game3Grid.addEventListener("click",function(e){
   if(typeof tileID == "string"){
     /* Handle death occurence */
     console.log("Player died at ---> Game 3")
+    game3ErrorField.textContent = "You Died";
     game3MenuScreen.style.display = "block";
     game3PlaySpace.style.display = "none";
     
