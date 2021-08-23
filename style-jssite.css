@@ -616,6 +616,11 @@ Games, container and styles
     border: 2px solid var(--soft-black);
 }
 
+.emptyTile{
+    background: rgb(217, 235, 232);
+    border: 2px solid lightgray;
+}
+
 /*
 ======================
 Animations- All games
