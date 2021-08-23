@@ -22,6 +22,10 @@ game3PlayBtn.addEventListener("click",function(){
   
 });
 
+game3Grid.addEventListener("click",function(e){
+  const clickedTile = e.currentTarget;
+  console.log(clickedTile.style.gridRowStart)
+});
 
 function initGame3(gridSize){
     /*Initialise start of game*/
@@ -51,7 +55,6 @@ function initGame3(gridSize){
         tile.style.gridColumnStart = i+1;
         tile.style.gridRowStart = j+1;
         tile.classList.add("landTile");
-        tile.textContent = field[i][j];
         game3Grid.appendChild(tile);
         
         /*Add one all around mines*/
