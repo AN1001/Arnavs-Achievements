@@ -24,7 +24,7 @@ game3PlayBtn.addEventListener("click",function(){
 
 game3Grid.addEventListener("click",function(e){
   const clickedTile = e.currentTarget;
-  console.log(clickedTile.style.gridRowStart)
+  clickedTile.style.border = "2px solid yellow";
 });
 
 function initGame3(gridSize){
