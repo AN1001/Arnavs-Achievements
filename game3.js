@@ -43,12 +43,6 @@ function initGame3(gridSize){
     }
     
     /*Count mines -sometimes mines can be overriden*/
-    Nmines = 0;
-    for (let i = 0; i < field.length; i++){
-      for (let j = 0; i < field[i].length; j++){
-        if(field[i][j] == "x"){Nmines++}
-      } 
-    }
-    console.log("nmines")
+
     
 }
