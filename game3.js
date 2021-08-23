@@ -38,7 +38,7 @@ function initGame3(gridSize){
       let randX = Math.floor(Math.random() * gridSize+1);
       let randY = Math.floor(Math.random() * gridSize+1);
       field[randY][randX] = "x";
-      console.log("mine added at", randX, randY)
     }
+    console.log( field.filter(x => x.filter(y => y=="x")) )
     console.log(field)
 }
