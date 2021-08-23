@@ -43,7 +43,7 @@ function initGame3(gridSize){
       field[randX][randY] = "x";
     }
     
-    /*iterate through all mines and add 1 all around them*/
+    /*iterate through all mines and adds 1 all around them*/
     Nmines = 0;
     for (let i = 0; i < field.length; i++){
       for (let j = 0; j < field[i].length; j++){
@@ -58,6 +58,36 @@ function initGame3(gridSize){
           /* above */
           try{
             field[i-1][j] = (field[i-1][j])+1;   
+          }catch(e){}
+          
+          /* left */
+          try{
+            field[i][j-1] = (field[i][j-1])+1;   
+          }catch(e){}
+          
+          /* right */
+          try{
+            field[i][j+1] = (field[i][j+1])+1;   
+          }catch(e){}
+         
+          /* NE corner */
+          try{
+            field[i-1][j+1] = (field[i-1][j+1])+1;   
+          }catch(e){}
+          
+          /* SE corner */
+          try{
+            field[i+1][j+1] = (field[i+1][j+1])+1;   
+          }catch(e){}
+          
+          /* SW corner */
+          try{
+            field[i+1][j-1] = (field[i+1][j-1])+1;   
+          }catch(e){}
+          
+          /* NW corner */
+          try{
+            field[i-1][j-1] = (field[i-1][j-1])+1;   
           }catch(e){}
           
         }
