@@ -51,7 +51,7 @@ function initGame3(gridSize){
           Nmines++
           try{
             field[i+1][j] = (field[i+1][j])+1;   
-          }finally{}
+          }catch(e){}
           
           
         }
