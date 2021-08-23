@@ -22,9 +22,12 @@ game3PlayBtn.addEventListener("click",function(){
   
 });
 
+/*Logic for when a tile is clicked*/
 game3Grid.addEventListener("click",function(e){
   const clickedTile = e.target;
-  clickedTile.style.border = "2px solid yellow";
+  let tileX = clickedTile.style.gridRowStart;
+  let tileY = clickedTile.style.gridColumnStart;
+  console.log(tileX,tileY)
 });
 
 function initGame3(gridSize){
