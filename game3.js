@@ -52,8 +52,7 @@ function initGame3(gridSize){
     game3MenuScreen.style.display = "none";
     game3PlaySpace.style.display = "flex";
     
-    const game3Grid = document.getElementById("game3Grid");
-    game3Grid.remove()
+    document.getElementById("game3Grid").remove()
     const game3Grid = document.createElement("div")
     game3Grid.setAttribute("id", "game3Grid");
     game3GridSpace.appendChild(game3Grid)
