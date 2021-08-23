@@ -27,7 +27,8 @@ game3Grid.addEventListener("click",function(e){
   const clickedTile = e.target;
   let tileY = clickedTile.style.gridRowStart;
   let tileX = clickedTile.style.gridColumnStart;
-  console.log(tileY-1,tileX-1, field[tileY-1][tileX-1])
+  clickedTile.classList.remove("landTile");
+  clickedTile.textContent = field[tileY-1][tileX-1];
 });
 
 function initGame3(gridSize){
@@ -58,6 +59,7 @@ function initGame3(gridSize){
         tile.style.gridColumnStart = i+1;
         tile.style.gridRowStart = j+1;
         tile.classList.add("landTile");
+        tile.classList.add("minesweeperTile");
         game3Grid.appendChild(tile);
         
         /*Add one all around mines*/
