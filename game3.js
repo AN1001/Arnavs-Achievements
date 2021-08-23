@@ -24,27 +24,6 @@ game3PlayBtn.addEventListener("click",function(){
   
 });
 
-/*Logic for when a tile is clicked*/
-game3Grid.addEventListener("click",function(e){
-  const clickedTile = e.target;
-  let tileY = clickedTile.style.gridRowStart;
-  let tileX = clickedTile.style.gridColumnStart;
-  let tileID = field[tileY-1][tileX-1]
-  
-  if(typeof tileID == "string"){
-    /* Handle death occurence */
-    console.log("Player died at ---> Game 3")
-    game3ErrorField.textContent = "You Died";
-    game3MenuScreen.style.display = "flex";
-    game3PlaySpace.style.display = "none";
-    
-  } else if(tileID == 0){ } else {
-    clickedTile.classList.remove("landTile");
-    clickedTile.textContent = tileID;
-  }
-  
-  
-});
 
 function initGame3(gridSize){
     /*Initialise start of game*/
@@ -56,6 +35,26 @@ function initGame3(gridSize){
     const game3Grid = document.createElement("div")
     game3Grid.setAttribute("id", "game3Grid");
     game3GridSpace.appendChild(game3Grid)
+    
+    /*Logic for when a tile is clicked*/
+    game3Grid.addEventListener("click",function(e){
+      const clickedTile = e.target;
+      let tileY = clickedTile.style.gridRowStart;
+      let tileX = clickedTile.style.gridColumnStart;
+      let tileID = field[tileY-1][tileX-1]
+  
+      if(typeof tileID == "string"){
+        /* Handle death occurence */
+        console.log("Player died at ---> Game 3")
+        game3ErrorField.textContent = "You Died";
+        game3MenuScreen.style.display = "flex";
+        game3PlaySpace.style.display = "none";
+    
+      } else if(tileID == 0){ } else {
+        clickedTile.classList.remove("landTile");
+        clickedTile.textContent = tileID;
+      }
+    });
   
     /*create grid*/
     game3Grid.style.gridTemplateColumns = "repeat("+gridSize+",1fr)";
