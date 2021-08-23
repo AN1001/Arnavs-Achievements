@@ -38,8 +38,8 @@ function initGame3(gridSize){
     for (let i = 0; i < Nmines; i++) {
       let randX = Math.floor(Math.random() * gridSize+1);
       let randY = Math.floor(Math.random() * gridSize+1);
-      console.log("mine added at",randX,randY)
-      field[randY][randX] = "x";
+      console.log(field[randX][randY])
+      field[randX][randY] = "x";
     }
     
     /*Count mines -sometimes mines can be overriden*/
