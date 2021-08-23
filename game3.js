@@ -49,10 +49,16 @@ function initGame3(gridSize){
       for (let j = 0; j < field[i].length; j++){
         if(typeof field[i][j] == "string"){
           Nmines++
+          
+          /* below */
           try{
             field[i+1][j] = (field[i+1][j])+1;   
           }catch(e){}
           
+          /* above */
+          try{
+            field[i-1][j] = (field[i-1][j])+1;   
+          }catch(e){}
           
         }
       } 
