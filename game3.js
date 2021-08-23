@@ -74,17 +74,17 @@ function initGame3(gridSize){
           
           /* right */
           try{
-            if(!j==gridSize){field[i][j+1] = (field[i][j+1])+1;}
+            if(j>gridSize-1){field[i][j+1] = (field[i][j+1])+1;}
           }catch(e){}
          
           /* NE corner */
           try{
-            if(!j==gridSize){field[i-1][j+1] = (field[i-1][j+1])+1;}
+            if(j>gridSize-1){field[i-1][j+1] = (field[i-1][j+1])+1;}
           }catch(e){}
           
           /* SE corner */
           try{
-            if(!j==gridSize){field[i+1][j+1] = (field[i+1][j+1])+1;}
+            if(j>gridSize-1){field[i+1][j+1] = (field[i+1][j+1])+1;}
           }catch(e){}
           
           /* SW corner */
