@@ -39,6 +39,6 @@ function initGame3(gridSize){
       let randY = Math.floor(Math.random() * gridSize+1);
       field[randY][randX] = "x";
     }
-    console.log( field.filter(x => x.filter(y => y=="x")) )
+    console.log( new field.filter(x => x.filter(y => y=="x")) )
     console.log(field)
 }
