@@ -43,10 +43,17 @@ function initGame3(gridSize){
       field[randX][randY] = "x";
     }
     
-    /*iterate through all mines and adds 1 all around them*/
+    /*iterate through all mines and adds 1 all around them as well as drawing the board*/
     Nmines = 0;
     for (let i = 0; i < field.length; i++){
       for (let j = 0; j < field[i].length; j++){
+        const tile = document.createElement("div");
+        tile.style.gridColumnStart = i+1;
+        tile.style.gridRowStart = j+1;
+        tile.classList.add("landTile");
+        game3Grid.appendChild(tile);
+        
+        /*Add one all around mines*/
         if(typeof field[i][j] == "string"){
           Nmines++
           
