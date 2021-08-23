@@ -6,6 +6,7 @@ const game3ErrorField = document.getElementById("errorDisplayField");
 /*gameboard variables*/
 const game3PlaySpace = document.getElementById("game3MainPlaySpace");
 const game3Grid = document.getElementById("game3Grid");
+var field = []
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
 game3PlayBtn.addEventListener("click",function(){
@@ -33,7 +34,7 @@ function initGame3(gridSize){
     game3Grid.style.gridTemplateRows = "repeat("+gridSize+",1fr)";
     
     /*fill grid with mines*/
-    var field = (new Array(gridSize)).fill().map(function(){ return new Array(gridSize).fill(0);});
+    field = (new Array(gridSize)).fill().map(function(){ return new Array(gridSize).fill(0);});
     var Nmines = parseInt((gridSize/2)+2);
     for (let i = 0; i < Nmines; i++) {
       let randX = Math.floor(Math.random() * gridSize+1);
