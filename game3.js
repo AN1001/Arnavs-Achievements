@@ -55,17 +55,6 @@ function initGame3(gridSize){
     Nmines = 0;
     for (let i = 0; i < field.length; i++){
       for (let j = 0; j < field[i].length; j++){
-        
-        const tile = document.createElement("div");
-        tile.style.gridColumnStart = i+1;
-        tile.style.gridRowStart = j+1;
-        if(!field[j][i] == 0){
-          tile.classList.add("landTile");
-          tile.classList.add("minesweeperTile");
-        }else{
-          tile.classList.add("emptyTile");
-        }
-        game3Grid.appendChild(tile);
           
         /*Add one all around mines*/
         if(typeof field[i][j] == "string"){
@@ -112,7 +101,24 @@ function initGame3(gridSize){
           }catch(e){}
           
         }
-      } 
+      }
+      
+      /*Draws all tiles*/
+      for (let i = 0; i < field.length; i++){
+        for (let j = 0; j < field[i].length; j++){
+          const tile = document.createElement("div");
+          tile.style.gridColumnStart = i+1;
+          tile.style.gridRowStart = j+1;
+          if(!field[j][i] == 0){
+            tile.classList.add("landTile");
+            tile.classList.add("minesweeperTile");
+          }else{
+            tile.classList.add("emptyTile");
+          }
+          game3Grid.appendChild(tile);
+        }
+      }
+      
     }
     
     console.log(field)
