@@ -34,9 +34,11 @@ function initGame3(gridSize){
   
     var field = Array(gridSize).fill(0).map(x => Array(gridSize).fill(0));
     var Nmines = parseInt((gridSize/2)+2);
-    console.log(Nmines)
     for (let i = 0; i < Nmines; i++) {
-      console.log("mine added")
+      let randX = Math.floor(Math.random() * gridSize+1);
+      let randY = Math.floor(Math.random() * gridSize+1);
+      field[randY][randX] = "x";
+      console.log("mine added at", randX, randY)
     }
-  
+    console.log(field)
 }
