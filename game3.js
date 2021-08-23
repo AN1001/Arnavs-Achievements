@@ -5,7 +5,7 @@ const game3ErrorField = document.getElementById("errorDisplayField");
 
 /*gameboard variables*/
 const game3PlaySpace = document.getElementById("game3MainPlaySpace");
-const game3Grid = document.getElementById("game3Grid");
+const game3GridSpace = document.getElementById("game3GridSpace");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 var field = []
@@ -35,7 +35,7 @@ game3Grid.addEventListener("click",function(e){
     /* Handle death occurence */
     console.log("Player died at ---> Game 3")
     game3ErrorField.textContent = "You Died";
-    game3MenuScreen.style.display = "block";
+    game3MenuScreen.style.display = "flex";
     game3PlaySpace.style.display = "none";
     
   } else if(tileID == 0){ } else {
@@ -52,6 +52,12 @@ function initGame3(gridSize){
     game3MenuScreen.style.display = "none";
     game3PlaySpace.style.display = "flex";
     
+    const game3Grid = document.getElementById("game3Grid");
+    game3Grid.remove()
+    const game3Grid = document.createElement("div")
+    game3Grid.setAttribute("id", "game3Grid");
+    game3GridSpace.appendChild(game3Grid)
+  
     /*create grid*/
     game3Grid.style.gridTemplateColumns = "repeat("+gridSize+",1fr)";
     game3Grid.style.gridTemplateRows = "repeat("+gridSize+",1fr)";
