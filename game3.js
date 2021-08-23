@@ -49,6 +49,6 @@ function initGame3(gridSize){
         if(field[i][j] == "x"){Nmines++}
       } 
     }
-    console.log("nmines")
+    console.log(Nmines)
     
 }
