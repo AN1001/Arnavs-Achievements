@@ -42,12 +42,20 @@ function initGame3(gridSize){
       field[randX][randY] = "x";
     }
     
-    /*Count mines -sometimes mines can be overriden*/
+    /*iterate through all mines and add 1 all around them*/
     Nmines = 0;
     for (let i = 0; i < field.length; i++){
       for (let j = 0; j < field[i].length; j++){
-        if(field[i][j] == "x"){Nmines++}
+        if(field[i][j] == "x"){
+          Nmines++
+          try{
+            field[i+1][j] = (field[i+1][j])+1;   
+          }finally{}
+          
+          
+        }
       } 
     }
     
+    console.log(field)
 }
