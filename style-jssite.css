@@ -602,6 +602,15 @@ Games, container and styles
     background: rgb(192, 255, 192);
 }
 
+.minesweeperTile{
+    background: rgb(203, 208, 203);
+    color: blue;
+    font-size: 2.5em;
+    text-align: center;
+    line-height: 175%;
+    border: 2px solid rgb(133, 136, 133);
+}
+
 .landTile{
     background: var(--soft-green);
     border: 2px solid var(--soft-black);
