@@ -59,7 +59,7 @@ function initGame3(gridSize){
         const tile = document.createElement("div");
         tile.style.gridColumnStart = i+1;
         tile.style.gridRowStart = j+1;
-        if(!field[i][j] == 0){
+        if(!field[j][i] == 0){
           tile.classList.add("landTile");
           tile.classList.add("minesweeperTile");
         }else{
