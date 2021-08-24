@@ -137,8 +137,8 @@ function initGame3(gridSize){
           tile.classList.add("landTile");
           tile.classList.add("minesweeperTile");
           if(gridSize < 15){
-            tile.style.animationDelay = (j*i)/100+"s";
             tile.style.animation = "fadebackground 3s";
+            tile.style.animationDelay = (j*i)/100+"s";
           }
         }else{
           tile.classList.add("emptyTile");
