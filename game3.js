@@ -50,13 +50,10 @@ function initGame3(gridSize){
         game3MenuScreen.style.display = "flex";
         game3PlaySpace.style.display = "none";
     
-      } else if(typeof tileID == "number"){
+      } else if(typeof tileID == "number" || !0){
         clickedTile.classList.remove("landTile");
         clickedTile.textContent = tileID;
         switch(tileID){
-          case 0:  
-            break;
-            
           case 1:
             clickedTile.style.color = "blue";
             break;
