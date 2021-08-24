@@ -613,7 +613,7 @@ Games, container and styles
 }
 
 .landTile{
-    animation: fadebackground 6s infinite;
+    animation: fadebackground 3s;
     border: 2px solid var(--soft-black);
 }
 
