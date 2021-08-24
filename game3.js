@@ -54,19 +54,19 @@ function initGame3(gridSize){
         clickedTile.classList.remove("landTile");
         clickedTile.textContent = tileID;
         switch(tileID){
-          case:1
+          case 1:
             clickedTile.style.color = "blue";
             break;
           
-          case:2
+          case 2:
             clickedTile.style.color = "green";
             break;
             
-          case:3
+          case 3:
             clickedTile.style.color = "red";
             break;
             
-          case:4
+          case 4:
             clickedTile.style.color = "purple";
             break;
             
