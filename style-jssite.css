@@ -613,7 +613,7 @@ Games, container and styles
 }
 
 .landTile{
-    background: var(--soft-green);
+    animation: fadebackground 6s infinite;
     border: 2px solid var(--soft-black);
 }
 
@@ -642,4 +642,8 @@ Animations- All games
     100%{top: 140px;}
 }
 
+@keyframes fadebackground {
+  from {background-color: white;}
+  to {background-color: var(--soft-green)}
+}
 
