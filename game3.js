@@ -66,7 +66,6 @@ function initGame3(gridSize){
     for (let i = 0; i < Nmines; i++) {
       let randX = Math.floor(Math.random() * gridSize);
       let randY = Math.floor(Math.random() * gridSize);
-      console.log(randX,randY)
       field[randX][randY] = "x";
     }
     
@@ -121,29 +120,30 @@ function initGame3(gridSize){
           
         }
       }
-      
-      var flags = Nmines;
-      NumberFlags.textContent = flags+" Flags";
-      NumberMines.textContent = Nmines+" Mines";
-      root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
-      
-      /*Draws all tiles*/
-      for (let i = 0; i < field.length; i++){
-        for (let j = 0; j < field[i].length; j++){
-          const tile = document.createElement("div");
-          tile.style.gridColumnStart = i+1;
-          tile.style.gridRowStart = j+1;
-          if(!field[j][i] == 0){
-            tile.classList.add("landTile");
-            tile.classList.add("minesweeperTile");
-          }else{
-            tile.classList.add("emptyTile");
-          }
-          game3Grid.appendChild(tile);
-        }
-      }
-      
     }
+  
+    var flags = Nmines;
+    NumberFlags.textContent = flags+" Flags";
+    NumberMines.textContent = Nmines+" Mines";
+    root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
+      
+    /*Draws all tiles*/
+    for (let i = 0; i < field.length; i++){
+      for (let j = 0; j < field[i].length; j++){
+        const tile = document.createElement("div");
+        tile.style.gridColumnStart = i+1;
+        tile.style.gridRowStart = j+1;
+        if(!field[j][i] == 0){
+          tile.classList.add("landTile");
+          tile.classList.add("minesweeperTile");
+        }else{
+          tile.classList.add("emptyTile");
+        }
+          game3Grid.appendChild(tile);
+      }
+    }
+      
+    
     
     console.log(field)
 }
