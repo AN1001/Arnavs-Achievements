@@ -50,10 +50,33 @@ function initGame3(gridSize){
         game3MenuScreen.style.display = "flex";
         game3PlaySpace.style.display = "none";
     
-      } else if(tileID == 0){ } else {
+      } else if(typeof tileID == "number"){
         clickedTile.classList.remove("landTile");
         clickedTile.textContent = tileID;
+        switch(tileID){
+          case:1
+            clickedTile.style.color = "blue";
+            break;
+          
+          case:2
+            clickedTile.style.color = "green";
+            break;
+            
+          case:3
+            clickedTile.style.color = "red";
+            break;
+            
+          case:4
+            clickedTile.style.color = "purple";
+            break;
+            
+          default:
+            clickedTile.style.color = "maroon";
+        }
+          
       }
+      
+      
     });
   
     /*create grid*/
