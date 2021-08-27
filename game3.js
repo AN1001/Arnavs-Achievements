@@ -60,6 +60,7 @@ function initGame3(gridSize){
         game3PlaySpace.style.display = "none";
     
       } else if(typeof tileID == "number" && !tileID == 0){
+        console.log(shiftKeyPressed)
         clickedTile.classList.remove("landTile");
         clickedTile.textContent = tileID;
         switch(tileID){
