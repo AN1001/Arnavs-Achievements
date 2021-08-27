@@ -12,7 +12,7 @@ var field = []
 var shiftKeyPressed = false;
 
 /*Checks if shift key is pressed*/
-window.onkeydown = function(e) { shiftKeypressed = true; }
+window.onkeydown = function(e) { shiftKeypressed = true; console.log("Shift key was pressed");}
 window.onkeyup = function(e) { shiftKeypressed = false; }
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
