@@ -44,7 +44,7 @@ function initGame3(gridSize){
       let tileID = field[tileY-1][tileX-1]
       
       
-      if(True){
+      if(true){
         console.log(game3Grid.event.shiftKey)
         
       } else if(typeof tileID == "string"){
