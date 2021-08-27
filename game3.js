@@ -9,11 +9,11 @@ const game3GridSpace = document.getElementById("game3GridSpace");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 var field = []
-var pressedKeys = {};
+var shiftKeyPressed = false;
 
 /*Checks if shift key is pressed*/
-window.onkeyup = function(e) { console.log(e.keyCode) }
-window.onkeydown = function(e) { pressedKeys[e.keyCode] = true; }
+window.onkeydown = function(e) { shiftKeypressed = true; }
+window.onkeyup = function(e) { shiftKeypressed = false; }
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
 game3PlayBtn.addEventListener("click",function(){
@@ -49,8 +49,8 @@ function initGame3(gridSize){
       let tileID = field[tileY-1][tileX-1]
       
       
-      if(true){
-        console.log(e.keyCode, e.which)
+      if(shiftKeyPressed){
+        console.log("shift is DOWN")
         
       } else if(typeof tileID == "string"){
         /* Handle death occurence */
