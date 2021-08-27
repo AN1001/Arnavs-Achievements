@@ -9,6 +9,11 @@ const game3GridSpace = document.getElementById("game3GridSpace");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 var field = []
+var pressedKeys = {};
+
+/*Checks if shift key is pressed*/
+window.onkeyup = function(e) { console.log(e.keyCode) }
+window.onkeydown = function(e) { pressedKeys[e.keyCode] = true; }
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
 game3PlayBtn.addEventListener("click",function(){
