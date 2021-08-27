@@ -42,8 +42,12 @@ function initGame3(gridSize){
       let tileY = clickedTile.style.gridRowStart;
       let tileX = clickedTile.style.gridColumnStart;
       let tileID = field[tileY-1][tileX-1]
-  
-      if(typeof tileID == "string"){
+      
+      
+      if(True){
+        console.log(game3Grid.event.shiftKey)
+        
+      } else if(typeof tileID == "string"){
         /* Handle death occurence */
         console.log("Player died at ---> Game 3")
         game3ErrorField.textContent = "You Died";
