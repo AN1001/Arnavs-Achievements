@@ -9,11 +9,7 @@ const game3GridSpace = document.getElementById("game3GridSpace");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 var field = []
-var shiftKeyPressed = false;
 
-/*Checks if shift key is pressed*/
-window.onkeydown = function(e) { shiftKeypressed = true; console.log("Shift key was pressed");}
-window.onkeyup = function(e) { shiftKeypressed = true; }
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
 game3PlayBtn.addEventListener("click",function(){
@@ -40,6 +36,12 @@ function initGame3(gridSize){
     const game3Grid = document.createElement("div")
     game3Grid.setAttribute("id", "game3Grid");
     game3GridSpace.appendChild(game3Grid)
+  
+    var shiftKeyPressed = false;
+
+    /*Checks if shift key is pressed*/
+    window.onkeydown = function(e) { shiftKeypressed = true; console.log("Shift key was pressed");}
+    window.onkeyup = function(e) { shiftKeypressed = true; }
     
     /*Logic for when a tile is clicked*/
     game3Grid.addEventListener("click",function(e){
