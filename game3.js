@@ -45,7 +45,7 @@ function initGame3(gridSize){
       
       
       if(true){
-        console.log(game3Grid.event.shiftKey)
+        console.log(e.keyCode)
         
       } else if(typeof tileID == "string"){
         /* Handle death occurence */
