@@ -90,7 +90,6 @@ function initGame3(gridSize){
           NumberFlags.textContent = flags+" Flags";
           clickedTile.classList.add("containsFlag")
           field[tileY-1][tileX-1] = [tileID];
-          console.log(typeof field[tileY-1][tileX-1],field)
           
         }else if(clickedTile.classList.contains("containsFlag")){
           
@@ -99,7 +98,6 @@ function initGame3(gridSize){
           NumberFlags.textContent = flags+" Flags";
           clickedTile.classList.remove("containsFlag")
           field[tileY-1][tileX-1] = tileID[0];
-          console.log(field)
         }
         
         
