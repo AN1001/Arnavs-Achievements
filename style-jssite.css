@@ -662,6 +662,12 @@ Animations- All games
     100% {background-color:var(--soft-green);}
 }
 
+@keyframes revealLocation{
+    0% {border: 2px dotted grey;}
+    50% {border: 2px dotted red;}
+    100% {border: 2px dotted grey;}
+}
+
 @keyframes fadebackground {
   from {background-color: white;}
   to {background-color: var(--soft-green)}
