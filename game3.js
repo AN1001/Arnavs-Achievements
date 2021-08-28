@@ -58,7 +58,7 @@ function initGame3(gridSize){
           NumberFlags.textContent = flags+" Flags";
           clickedTile.classList.add("containsFlag")
           
-        }else{
+        }else if(clickedTile.classList.contains("containsFlag")){
           flags++
           NumberFlags.textContent = flags+" Flags";
           clickedTile.classList.remove("containsFlag")
