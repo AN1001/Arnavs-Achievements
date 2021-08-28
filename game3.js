@@ -71,8 +71,8 @@ function initGame3(gridSize){
   
   
     /*Checks if shift key is pressed*/
-    window.onkeydown = function(e) { shiftKeyPressed = true; }
-    window.onkeyup = function(e) { shiftKeyPressed = false; }
+    window.onkeydown = function(e) { if(e.keyCode == 88){shiftKeyPressed = true;} }
+    window.onkeyup = function(e) { if(e.keyCode == 88){shiftKeyPressed = false;} }
   
     /*Logic for when a tile is clicked*/
     game3Grid.addEventListener("click",function(e){
