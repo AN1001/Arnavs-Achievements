@@ -693,8 +693,8 @@ Animations- All games
 
 @keyframes revealLocation{
     0% {border: 2px dotted grey;}
-    10% {border: 2px dotted red;}
-    90% {border: 2px dotted red;}
+    7% {border: 2px dotted red;}
+    93% {border: 2px dotted red;}
     100% {border: 2px dotted grey;}
 }
 
