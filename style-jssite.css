@@ -649,6 +649,12 @@ Animations- All games
     100%{top: 140px;}
 }
 
+@keyframes reveal{
+    0%{background-color:var(--soft-green);}
+    50%{background-color:red; border: 2px solid var(--soft-black);}
+    100%{background-color:var(--soft-green);}
+}
+
 @keyframes fadebackground {
   from {background-color: white;}
   to {background-color: var(--soft-green)}
