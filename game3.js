@@ -15,7 +15,7 @@ var flags = 0;
 var noErrorsMade = true;
 var field = [];
 
-/*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
+/* Filter only whole numbers between 5 and 30-- raise exception if conditions not met */
 game3PlayBtn.addEventListener("click",function(){
   const game3Input =  parseInt( document.getElementById("game3Input").value );
   
@@ -29,7 +29,7 @@ game3PlayBtn.addEventListener("click",function(){
   
 });
 
-/*Handles what happens when game is ended*/
+/* Handles what happens when game is ended / end button in pressed */
 game3FinishBtn.addEventListener("click", function(){
   
   if(flags > 0){
@@ -110,6 +110,7 @@ function initGame3(gridSize){
     
       } else if(typeof tileID == "number" && !tileID == 0 && !clickedTile.classList.contains("containsFlag")){
         clickedTile.classList.remove("landTile");
+        clickedTile.style.animation = "";
         clickedTile.textContent = tileID;
         switch(tileID){
           case 1:
