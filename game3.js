@@ -11,8 +11,8 @@ const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 
 var shiftKeyPressed = false;
-var field = []
-
+var win = true;
+var field = [];
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
 game3PlayBtn.addEventListener("click",function(){
@@ -30,7 +30,29 @@ game3PlayBtn.addEventListener("click",function(){
 
 /*Handles what happens when game is ended*/
 game3FinishBtn.addEventListener("click", function(){
-  console.log("END")
+  
+  if(flags > 0){
+    console.log("failed: not all flags were placed");
+    win = false;
+  } else {
+    
+    for (let i = 0; i < field.length; i++){
+      for (let j = 0; j < field[i].length; j++){ 
+        const listElement = field[i][j];
+        if(typeof listElement == "object"){
+          if(typeof listElement[0] == "string"){
+          }else {console.log("fail: misplaced flag"); win=false;}
+        }
+        
+      } 
+    }
+      
+  }
+  
+  if(win){
+    console.log("WIN")
+  }
+  
 });
 
 
