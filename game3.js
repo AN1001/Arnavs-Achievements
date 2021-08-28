@@ -53,11 +53,15 @@ function initGame3(gridSize){
       
       
       if(shiftKeyPressed){
-        if(clickedTile.style.backgroundColor == "red"){
+        if(clickedTile.style.background == "red"){
           flags--
           NumberFlags.textContent = flags+" Flags";
-          clickedTile.style.backgroundColor = "red";
-        }else{console.log(clickedTile.style.backgroundColor)}
+          clickedTile.style.background = "red";
+        }else{
+          console.log(clickedTile.style.background)
+          clickedTile.style.background = "red";
+          console.log(clickedTile.style.background)
+        }
         
         
       } else if(typeof tileID == "string"){
