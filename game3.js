@@ -60,6 +60,7 @@ function initGame3(gridSize){
           
         }else{
           flags++
+          NumberFlags.textContent = flags+" Flags";
           clickedTile.classList.remove("containsFlag")
         }
         
