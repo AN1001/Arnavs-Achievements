@@ -38,7 +38,7 @@ game3FinishBtn.addEventListener("click", function(){
     showResults("Failed","Not all flags were placed")
     noErrorsMade = false;
     playingGame3 = false;
-    root.style.setProperty('--game3-mine-animation',"reveal 3.5s infinite");
+    root.style.setProperty('--game3-mine-animation',"reveal 20s infinite");
   } else {
     
     for (let i = 0; i < field.length; i++){
@@ -50,7 +50,7 @@ game3FinishBtn.addEventListener("click", function(){
             showResults("Failed","There were misplaced flags")
             noErrorsMade=false;
             playingGame3=false;
-            root.style.setProperty('--game3-mine-animation',"reveal 3.5s infinite");
+            root.style.setProperty('--game3-mine-animation',"reveal 20s infinite");
           }
         }
         
@@ -60,7 +60,7 @@ game3FinishBtn.addEventListener("click", function(){
   }
   
   if(noErrorsMade){
-    root.style.setProperty('--game3-mine-animation',"revealLocation 3.5s infinite");
+    root.style.setProperty('--game3-mine-animation',"revealLocation 20s infinite");
     playingGame3=false;
     showResults("You win!","All mines flagged correctly")
   }
@@ -130,7 +130,7 @@ function initGame3(gridSize){
       } else if(typeof tileID == "string" && !clickedTile.classList.contains("containsFlag") && playingGame3){
         /* Handle death occurence */
         showResults("Failed","You clicked on a mine")
-        root.style.setProperty('--game3-mine-animation',"reveal 3.5s infinite");
+        root.style.setProperty('--game3-mine-animation',"reveal 20s infinite");
         playingGame3 = false;
     
       } else if(typeof tileID == "number" && !tileID == 0 && !clickedTile.classList.contains("containsFlag") && playingGame3){
@@ -246,10 +246,10 @@ function initGame3(gridSize){
           tile.classList.add("minesweeperTile");
           if(typeof field[j][i] == "string"){
             tile.style.animation = "var(--game3-mine-animation)"
-            tile.style.animationDelay = (j*i)/100+"s";
+            tile.style.animationDelay = (i)/10+"s";
           }else if(gridSize < 19){
             tile.style.animation = "fadebackground 3s";
-            tile.style.animationDelay = (j*i)/100+"s";
+            tile.style.animationDelay = (i)/10+"s";
           }
           
         }else{
