@@ -630,14 +630,21 @@ Games, container and styles
     background-size: contain;
 }
 
+#game3ResultsAligner{
+    position: absolute;
+    margin-top: 250px;
+    width: 65%;
+}
+
 #game3Results{
     display:none;
-    position: absolute;
-    width: 85vmin;
-    left: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 250px;
+    
     color: whitesmoke;
     border: 2px solid var(--soft-black);
-    top: 40%;
+    
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
 }
