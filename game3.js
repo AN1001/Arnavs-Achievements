@@ -130,7 +130,7 @@ function initGame3(gridSize){
       } else if(typeof tileID == "string" && !clickedTile.classList.contains("containsFlag") && playingGame3){
         /* Handle death occurence */
         showResults("Failed","You clicked on a mine")
-        root.style.setProperty('--game3-mine-animation',"reveal 10s");
+        root.style.setProperty('--game3-mine-animation',"reveal 10s infinite");
         playingGame3 = false;
     
       } else if(typeof tileID == "number" && !tileID == 0 && !clickedTile.classList.contains("containsFlag") && playingGame3){
