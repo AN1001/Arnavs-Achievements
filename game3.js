@@ -145,20 +145,16 @@ function initGame3(gridSize){
     
     /*fill grid with mines*/
     field = (new Array(gridSize)).fill().map(function(){ return new Array(gridSize).fill(0);});
-    var Nmines = parseInt(0.15*(gridSize*gridSize));
-    for (let i = 0; i < Nmines; i++) {
+    var NIts = parseInt(0.15*(gridSize*gridSize));
+    for (let i = 0; i < NIts; i++) {
       let randX = Math.floor(Math.random() * gridSize);
       let randY = Math.floor(Math.random() * gridSize);
       field[randX][randY] = "x";
     }
       
-    flags = Nmines;
-    NumberFlags.textContent = flags+" Flags";
-    NumberMines.textContent = Nmines+" Mines";
-    root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
   
     /*iterate through all mines and adds 1 all around them as well as drawing the board*/
-    Nmines = 0;
+    var Nmines = 0;
     for (let i = 0; i < field.length; i++){
       for (let j = 0; j < field[i].length; j++){
           
@@ -209,7 +205,11 @@ function initGame3(gridSize){
         }
       }
     }
-  
+    
+    flags = Nmines;
+    NumberFlags.textContent = flags+" Flags";
+    NumberMines.textContent = Nmines+" Mines";
+    root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
       
     /*Draws all tiles*/
     for (let i = 0; i < field.length; i++){
