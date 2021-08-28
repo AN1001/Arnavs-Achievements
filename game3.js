@@ -38,12 +38,6 @@ function initGame3(gridSize){
     const game3Grid = document.createElement("div")
     game3Grid.setAttribute("id", "game3Grid");
     game3GridSpace.appendChild(game3Grid)
-    
-    var flags = Nmines;
-    NumberFlags.textContent = flags+" Flags";
-    NumberMines.textContent = Nmines+" Mines";
-    root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
-    
   
   
     /*Checks if shift key is pressed*/
@@ -115,7 +109,12 @@ function initGame3(gridSize){
       let randY = Math.floor(Math.random() * gridSize);
       field[randX][randY] = "x";
     }
-    
+      
+    var flags = Nmines;
+    NumberFlags.textContent = flags+" Flags";
+    NumberMines.textContent = Nmines+" Mines";
+    root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
+  
     /*iterate through all mines and adds 1 all around them as well as drawing the board*/
     Nmines = 0;
     for (let i = 0; i < field.length; i++){
