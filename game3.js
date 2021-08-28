@@ -68,6 +68,7 @@ game3FinishBtn.addEventListener("click", function(){
 });
 
 game3ResultsBtn.addEventListener("click",function(){
+    root.style.setProperty('--game3-mine-animation',"fadebackground 3s");
     console.log("Player died at ---> Game 3")
     document.getElementById("game3Results").style.display = "none";
     game3ErrorField.textContent = "Game ended"
@@ -245,6 +246,7 @@ function initGame3(gridSize){
           tile.classList.add("minesweeperTile");
           if(typeof field[j][i] == "string"){
             tile.style.animation = "var(--game3-mine-animation)"
+            tile.style.animationDelay = (j*i)/100+"s";
           }else if(gridSize < 19){
             tile.style.animation = "fadebackground 3s";
             tile.style.animationDelay = (j*i)/100+"s";
