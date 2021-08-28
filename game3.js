@@ -8,6 +8,8 @@ const game3PlaySpace = document.getElementById("game3MainPlaySpace");
 const game3GridSpace = document.getElementById("game3GridSpace");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
+
+var shiftKeyPressed = false;
 var field = []
 
 
@@ -36,12 +38,18 @@ function initGame3(gridSize){
     const game3Grid = document.createElement("div")
     game3Grid.setAttribute("id", "game3Grid");
     game3GridSpace.appendChild(game3Grid)
+    
+    var flags = Nmines;
+    NumberFlags.textContent = flags+" Flags";
+    NumberMines.textContent = Nmines+" Mines";
+    root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
+    
   
-    var shiftKeyPressed = false;
-
+  
     /*Checks if shift key is pressed*/
     window.onkeydown = function(e) { shiftKeyPressed = true; }
     window.onkeyup = function(e) { shiftKeyPressed = false; }
+  
     /*Logic for when a tile is clicked*/
     game3Grid.addEventListener("click",function(e){
       const clickedTile = e.target;
@@ -51,7 +59,12 @@ function initGame3(gridSize){
       
       
       if(shiftKeyPressed){
-        console.log("shift is DOWN")
+        if(clickedTile.style.backgroundColor == "red"){
+          flags--
+          NumberFlags.textContent = flags+" Flags";
+          clickedTile.style.backgroundColor = "red";
+        }else{console.log(clickedTile.style.backgroundColor)}
+        
         
       } else if(typeof tileID == "string"){
         /* Handle death occurence */
@@ -156,10 +169,6 @@ function initGame3(gridSize){
       }
     }
   
-    var flags = Nmines;
-    NumberFlags.textContent = flags+" Flags";
-    NumberMines.textContent = Nmines+" Mines";
-    root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
       
     /*Draws all tiles*/
     for (let i = 0; i < field.length; i++){
