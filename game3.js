@@ -129,6 +129,7 @@ function initGame3(gridSize){
       } else if(typeof tileID == "string" && !clickedTile.classList.contains("containsFlag") && playingGame3){
         /* Handle death occurence */
         showResults("Failed","You clicked on a mine")
+        playingGame3 = false;
     
       } else if(typeof tileID == "number" && !tileID == 0 && !clickedTile.classList.contains("containsFlag") && playingGame3){
         clickedTile.classList.remove("landTile");
