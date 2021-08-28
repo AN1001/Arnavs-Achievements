@@ -11,6 +11,7 @@ const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 
 var shiftKeyPressed = false;
+var flags = ;
 var win = true;
 var field = [];
 
@@ -150,7 +151,7 @@ function initGame3(gridSize){
       field[randX][randY] = "x";
     }
       
-    var flags = Nmines;
+    flags = Nmines;
     NumberFlags.textContent = flags+" Flags";
     NumberMines.textContent = Nmines+" Mines";
     root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
