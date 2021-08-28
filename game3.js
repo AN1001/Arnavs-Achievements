@@ -35,7 +35,7 @@ game3FinishBtn.addEventListener("click", function(){
   if(flags > 0){
     console.log("failed: not all flags were placed");
     noErrorsMade = false;
-    root.style.setProperty("fadebackground 3s, reveal 2s infinite");
+    root.style.setProperty('--game3-mine-animation',"fadebackground 3s, reveal 2s infinite");
   } else {
     
     for (let i = 0; i < field.length; i++){
@@ -46,7 +46,7 @@ game3FinishBtn.addEventListener("click", function(){
           }else {
             console.log("fail: misplaced flag"); 
             noErrorsMade=false;
-            root.style.setProperty("fadebackground 3s, reveal 2s infinite");
+            root.style.setProperty('--game3-mine-animation',"fadebackground 3s, reveal 2s infinite");
           }
         }
         
@@ -56,7 +56,7 @@ game3FinishBtn.addEventListener("click", function(){
   }
   
   if(noErrorsMade){
-    root.style.setProperty("fadebackground 3s, revealLocation 2s infinite");
+    root.style.setProperty('--game3-mine-animation',"fadebackground 3s, revealLocation 2s infinite");
     console.log("WIN")
   }
   
