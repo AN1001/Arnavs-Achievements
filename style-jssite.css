@@ -631,6 +631,7 @@ Games, container and styles
 }
 
 #game3Results{
+    display:none;
     position: absolute;
     width: 85vmin;
     left: 50%;
