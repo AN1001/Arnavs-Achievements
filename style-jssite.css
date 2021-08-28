@@ -687,15 +687,15 @@ Animations- All games
 
 @keyframes reveal{
     0% {background-color:var(--soft-green);}
-    5% {background-color:rgb(171, 55, 55); border: 2px dotted red;}
-    95% {background-color:rgb(171, 55, 55); border: 2px dotted red;}
+    10% {background-color:rgb(171, 55, 55); border: 2px dotted red;}
+    90% {background-color:rgb(171, 55, 55); border: 2px dotted red;}
     100% {background-color:var(--soft-green);}
 }
 
 @keyframes revealLocation{
     0% {border: 2px dotted grey;}
-    5% {border: 2px dotted red;}
-    95% {border: 2px dotted red;}
+    10% {border: 2px dotted red;}
+    90% {border: 2px dotted red;}
     100% {border: 2px dotted grey;}
 }
 
