@@ -6,6 +6,7 @@ const game3ErrorField = document.getElementById("errorDisplayField");
 /*gameboard variables*/
 const game3PlaySpace = document.getElementById("game3MainPlaySpace");
 const game3GridSpace = document.getElementById("game3GridSpace");
+const game3FinishBtn = document.getElementById("game3EndBtn");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 
@@ -25,6 +26,11 @@ game3PlayBtn.addEventListener("click",function(){
     initGame3(game3Input)
   }
   
+});
+
+/*Handles what happens when game is ended*/
+game3FinishBtn.addEventListener("click", function(){
+  console.log("END")
 });
 
 
@@ -54,14 +60,22 @@ function initGame3(gridSize){
       
       if(shiftKeyPressed){
         if(!clickedTile.classList.contains("containsFlag") && flags>0 && clickedTile.classList.contains("landTile")){
+          
+          /*Add a flag*/
           flags--
           NumberFlags.textContent = flags+" Flags";
           clickedTile.classList.add("containsFlag")
+          field[tileY-1][tileX-1] = [tileID];
+          console.log(typeof field[tileY-1][tileX-1],field)
           
         }else if(clickedTile.classList.contains("containsFlag")){
+          
+          /*Remove a flag*/
           flags++
           NumberFlags.textContent = flags+" Flags";
           clickedTile.classList.remove("containsFlag")
+          field[tileY-1][tileX-1] = [tileID][0];
+          console.log(field)
         }
         
         
