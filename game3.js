@@ -35,6 +35,7 @@ game3FinishBtn.addEventListener("click", function(){
   if(flags > 0){
     console.log("failed: not all flags were placed");
     noErrorsMade = false;
+    root.style.setProperty("fadebackground 3s, reveal 2s infinite");
   } else {
     
     for (let i = 0; i < field.length; i++){
@@ -42,7 +43,11 @@ game3FinishBtn.addEventListener("click", function(){
         const listElement = field[i][j];
         if(typeof listElement == "object"){
           if(typeof listElement[0] == "string"){
-          }else {console.log("fail: misplaced flag"); noErrorsMade=false;}
+          }else {
+            console.log("fail: misplaced flag"); 
+            noErrorsMade=false;
+            root.style.setProperty("fadebackground 3s, reveal 2s infinite");
+          }
         }
         
       } 
@@ -51,6 +56,7 @@ game3FinishBtn.addEventListener("click", function(){
   }
   
   if(noErrorsMade){
+    root.style.setProperty("fadebackground 3s, revealLocation 2s infinite");
     console.log("WIN")
   }
   
@@ -209,7 +215,7 @@ function initGame3(gridSize){
     NumberFlags.textContent = flags+" Flags";
     NumberMines.textContent = Nmines+" Mines";
     root.style.setProperty('--game3-adaptive-font-size', (20/gridSize) + "em");
-      
+       
     /*Draws all tiles*/
     for (let i = 0; i < field.length; i++){
       for (let j = 0; j < field[i].length; j++){
