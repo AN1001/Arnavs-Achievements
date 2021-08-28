@@ -12,7 +12,7 @@ const NumberMines = document.getElementById("NMines")
 
 var shiftKeyPressed = false;
 var flags = 0;
-var win = true;
+var noErrorsMade = true;
 var field = [];
 
 /*Filter only whole numbers between 5 and 30-- raise exception if conditions not met*/
@@ -34,7 +34,7 @@ game3FinishBtn.addEventListener("click", function(){
   
   if(flags > 0){
     console.log("failed: not all flags were placed");
-    win = false;
+    noErrorsMade = false;
   } else {
     
     for (let i = 0; i < field.length; i++){
@@ -42,7 +42,7 @@ game3FinishBtn.addEventListener("click", function(){
         const listElement = field[i][j];
         if(typeof listElement == "object"){
           if(typeof listElement[0] == "string"){
-          }else {console.log("fail: misplaced flag"); win=false;}
+          }else {console.log("fail: misplaced flag"); noErrorsMade=false;}
         }
         
       } 
@@ -50,7 +50,7 @@ game3FinishBtn.addEventListener("click", function(){
       
   }
   
-  if(win){
+  if(noErrorsMade){
     console.log("WIN")
   }
   
@@ -59,6 +59,7 @@ game3FinishBtn.addEventListener("click", function(){
 
 function initGame3(gridSize){
     /*Initialise start of game*/
+    noErrorsMade = true;
     game3ErrorField.textContent = "";
     game3MenuScreen.style.display = "none";
     game3PlaySpace.style.display = "flex";
