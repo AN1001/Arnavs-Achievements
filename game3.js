@@ -2,6 +2,7 @@
 const game3MenuScreen = document.getElementById("game3SelectionScreen");
 const game3PlayBtn =  document.getElementById("game3StartButton");
 const game3ErrorField = document.getElementById("errorDisplayField");
+const game3ResultsBtn = document.getElementById("game3ReturnBtn");
 
 /*gameboard variables*/
 const game3PlaySpace = document.getElementById("game3MainPlaySpace");
@@ -10,6 +11,7 @@ const game3FinishBtn = document.getElementById("game3EndBtn");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 
+var playingGame3 = false;
 var shiftKeyPressed = false;
 var flags = 0;
 var noErrorsMade = true;
@@ -31,10 +33,11 @@ game3PlayBtn.addEventListener("click",function(){
 
 /* Handles what happens when game is ended / end button in pressed */
 game3FinishBtn.addEventListener("click", function(){
-  
+
   if(flags > 0){
-    console.log("failed: not all flags were placed");
+    showResults("Failed","Not all flags were placed")
     noErrorsMade = false;
+    playingGame3 = false;
     root.style.setProperty('--game3-mine-animation',"fadebackground 3s, reveal 2s infinite");
   } else {
     
@@ -44,8 +47,9 @@ game3FinishBtn.addEventListener("click", function(){
         if(typeof listElement == "object"){
           if(typeof listElement[0] == "string"){
           }else {
-            console.log("fail: misplaced flag"); 
+            showResults("Failed","There were misplaced flags")
             noErrorsMade=false;
+            playingGame3=false;
             root.style.setProperty('--game3-mine-animation',"fadebackground 3s, reveal 2s infinite");
           }
         }
@@ -57,14 +61,29 @@ game3FinishBtn.addEventListener("click", function(){
   
   if(noErrorsMade){
     root.style.setProperty('--game3-mine-animation',"fadebackground 3s, revealLocation 2s infinite");
-    console.log("WIN")
+    playingGame3=false;
+    showResults("You win!","All mines flagged correctly")
   }
   
 });
 
+game3ResultsBtn.addEventListener("click",function(){
+    console.log("Player died at ---> Game 3")
+    document.getElementById("game3Results").style.display = "none";
+    game3ErrorField.textContent = "You Died"
+    game3MenuScreen.style.display = "flex";
+    game3PlaySpace.style.display = "none";
+});
+
+function showResults(result,message){
+    document.getElementById("game3Results").style.display = "block";
+    document.getElementById("resultsH1").textContent = result;
+    document.getElementById("resultsP").textContent = message;
+}
 
 function initGame3(gridSize){
     /*Initialise start of game*/
+    playingGame3 = true;
     noErrorsMade = true;
     game3ErrorField.textContent = "";
     game3MenuScreen.style.display = "none";
@@ -88,8 +107,8 @@ function initGame3(gridSize){
       let tileID = field[tileY-1][tileX-1]
       
       
-      if(shiftKeyPressed){
-        if(!clickedTile.classList.contains("containsFlag") && flags>0 && clickedTile.classList.contains("landTile")){
+      if(shiftKeyPressed && playingGame3){
+        if(!clickedTile.classList.contains("containsFlag") && flags>0 && clickedTile.classList.contains("landTile") && playingGame3){
           
           /*Add a flag*/
           flags--
@@ -97,7 +116,7 @@ function initGame3(gridSize){
           clickedTile.classList.add("containsFlag")
           field[tileY-1][tileX-1] = [tileID];
           
-        }else if(clickedTile.classList.contains("containsFlag")){
+        }else if(clickedTile.classList.contains("containsFlag") && playingGame3){
           
           /*Remove a flag*/
           flags++
@@ -107,14 +126,11 @@ function initGame3(gridSize){
         }
         
         
-      } else if(typeof tileID == "string" && !clickedTile.classList.contains("containsFlag")){
+      } else if(typeof tileID == "string" && !clickedTile.classList.contains("containsFlag") && playingGame3){
         /* Handle death occurence */
-        console.log("Player died at ---> Game 3")
-        game3ErrorField.textContent = "You Died";
-        game3MenuScreen.style.display = "flex";
-        game3PlaySpace.style.display = "none";
+        showResults("Failed","You clicked on a mine")
     
-      } else if(typeof tileID == "number" && !tileID == 0 && !clickedTile.classList.contains("containsFlag")){
+      } else if(typeof tileID == "number" && !tileID == 0 && !clickedTile.classList.contains("containsFlag") && playingGame3){
         clickedTile.classList.remove("landTile");
         clickedTile.style.animation = "";
         clickedTile.textContent = tileID;
