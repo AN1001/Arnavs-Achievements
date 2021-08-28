@@ -65,14 +65,14 @@ function initGame3(gridSize){
         }
         
         
-      } else if(typeof tileID == "string"){
+      } else if(typeof tileID == "string" && !clickedTile.classList.contains("containsFlag")){
         /* Handle death occurence */
         console.log("Player died at ---> Game 3")
         game3ErrorField.textContent = "You Died";
         game3MenuScreen.style.display = "flex";
         game3PlaySpace.style.display = "none";
     
-      } else if(typeof tileID == "number" && !tileID == 0){
+      } else if(typeof tileID == "number" && !tileID == 0 && !clickedTile.classList.contains("containsFlag")){
         console.log(shiftKeyPressed)
         clickedTile.classList.remove("landTile");
         clickedTile.textContent = tileID;
