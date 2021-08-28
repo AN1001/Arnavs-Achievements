@@ -38,7 +38,7 @@ game3FinishBtn.addEventListener("click", function(){
     showResults("Failed","Not all flags were placed")
     noErrorsMade = false;
     playingGame3 = false;
-    root.style.setProperty('--game3-mine-animation',"reveal 2s infinite");
+    root.style.setProperty('--game3-mine-animation',"reveal 2s linear 0s infinite");
   } else {
     
     for (let i = 0; i < field.length; i++){
@@ -50,7 +50,7 @@ game3FinishBtn.addEventListener("click", function(){
             showResults("Failed","There were misplaced flags")
             noErrorsMade=false;
             playingGame3=false;
-            root.style.setProperty('--game3-mine-animation',"reveal 2s infinite");
+            root.style.setProperty('--game3-mine-animation',"reveal 2s linear 0s infinite");
           }
         }
         
@@ -60,7 +60,7 @@ game3FinishBtn.addEventListener("click", function(){
   }
   
   if(noErrorsMade){
-    root.style.setProperty('--game3-mine-animation',"revealLocation 2s infinite");
+    root.style.setProperty('--game3-mine-animation',"revealLocation 2s linear 0s infinite");
     playingGame3=false;
     showResults("You win!","All mines flagged correctly")
   }
@@ -130,7 +130,7 @@ function initGame3(gridSize){
       } else if(typeof tileID == "string" && !clickedTile.classList.contains("containsFlag") && playingGame3){
         /* Handle death occurence */
         showResults("Failed","You clicked on a mine")
-        root.style.setProperty('--game3-mine-animation',"reveal 2s infinite");
+        root.style.setProperty('--game3-mine-animation',"reveal 2s linear 0s infinite");
         playingGame3 = false;
     
       } else if(typeof tileID == "number" && !tileID == 0 && !clickedTile.classList.contains("containsFlag") && playingGame3){
