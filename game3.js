@@ -74,7 +74,7 @@ function initGame3(gridSize){
           flags++
           NumberFlags.textContent = flags+" Flags";
           clickedTile.classList.remove("containsFlag")
-          field[tileY-1][tileX-1] = [tileID][0];
+          field[tileY-1][tileX-1] = tileID[0];
           console.log(field)
         }
         
