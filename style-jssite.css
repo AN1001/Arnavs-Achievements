@@ -630,6 +630,27 @@ Games, container and styles
     background-size: contain;
 }
 
+#game3Results{
+    position: absolute;
+    width: 85vmin;
+    left: 50%;
+    color: whitesmoke;
+    border: 2px solid var(--soft-black);
+    top: 40%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+#game3ReturnBtn{
+    padding: 2px;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1rem;
+    background: hsl(214, 13%, 75%);
+    letter-spacing: 0.15rem;
+}
+
 /*
 ======================
 Animations- All games
