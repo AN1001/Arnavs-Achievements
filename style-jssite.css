@@ -8,7 +8,7 @@
 	
     --border-rad: 0.25rem;
     --game3-adaptive-font-size: 1em;
-    --game3-mine-animation: reveal 2s infinite;
+    --game3-mine-animation: fadebackground 3s, reveal 2s infinite;
     --game-perc-1: 4%;
     --game-perc-2: 9%;
 }
