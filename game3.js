@@ -259,5 +259,5 @@ function initGame3(gridSize){
       
     
     
-    console.log(field)
+    
 }
