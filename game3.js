@@ -11,7 +11,7 @@ const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 
 var shiftKeyPressed = false;
-var flags = ;
+var flags = 0;
 var win = true;
 var field = [];
 
