@@ -70,7 +70,7 @@ game3FinishBtn.addEventListener("click", function(){
 game3ResultsBtn.addEventListener("click",function(){
     console.log("Player died at ---> Game 3")
     document.getElementById("game3Results").style.display = "none";
-    game3ErrorField.textContent = "You Died"
+    game3ErrorField.textContent = "Game ended"
     game3MenuScreen.style.display = "flex";
     game3PlaySpace.style.display = "none";
 });
