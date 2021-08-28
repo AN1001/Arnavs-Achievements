@@ -53,14 +53,15 @@ function initGame3(gridSize){
       
       
       if(shiftKeyPressed){
-        if(clickedTile.style.background == "red"){
+        if(true){
           flags--
           NumberFlags.textContent = flags+" Flags";
-          clickedTile.style.background = "red";
+          clickedTile.classList.add("containsFlag")
+          console.log(clickedTile.classList)
+          
         }else{
-          console.log(clickedTile.style.background)
-          clickedTile.style.background = "red";
-          console.log(clickedTile.style.background)
+          
+          
         }
         
         
