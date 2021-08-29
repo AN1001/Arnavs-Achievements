@@ -247,7 +247,7 @@ function initGame3(gridSize){
           if(typeof field[j][i] == "string"){
             tile.style.animation = "var(--game3-mine-animation)"
             tile.style.animationDelay = (j)/10+"s";
-          }else if(gridSize < 19){
+          }else if(gridSize < 31){
             tile.style.animation = "fadebackground 3s";
             tile.style.animationDelay = (j)/10+"s";
           }
