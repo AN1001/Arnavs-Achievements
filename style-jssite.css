@@ -590,14 +590,30 @@ Games, container and styles
     border-radius: var(--border-rad);
 }
 
+#game3Btns{
+    display: flex;
+    margin-right: 10px;
+   	width: 130px;
+    height: 70%;
+}
+
+#flagBtn{
+    width: 40px;
+    height: 100%;
+    margin-right: 10px;
+    border: none;
+ 
+    background: url("redFlag.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 #game3EndBtn{
-    margin-right: 20px;
     border: 2px solid var(--soft-black);
     border-radius: var(--border-rad);
     font-size: 1.3em;
     background: hsl(216, 48%, 92%);
-    height: 70%;
-    width: 10%;
 }
 
 #game3EndBtn:hover{
