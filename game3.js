@@ -8,12 +8,15 @@ const game3ResultsBtn = document.getElementById("game3ReturnBtn");
 const game3PlaySpace = document.getElementById("game3MainPlaySpace");
 const game3GridSpace = document.getElementById("game3GridSpace");
 const game3FinishBtn = document.getElementById("game3EndBtn");
+const flagBtn = document.getElementById("flagBtn");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 
 var playingGame3 = false;
 var shiftKeyPressed = false;
 var flags = 0;
+var flagBtnToggle = 0;
+var flagBtnPressed = false;
 var noErrorsMade = true;
 var field = [];
 
@@ -28,6 +31,18 @@ game3PlayBtn.addEventListener("click",function(){
   } else {
     initGame3(game3Input)
   }
+  
+});
+
+/* Handles the flag btn */
+flagBtn.addEventListener("click", function(){
+  flagBtnToggle++
+  if(flagBtnToggle % 2 == 0){
+    console.log("flagBTN is active")
+  } else {
+    console.log("flagBTN is inactive")
+  }
+  
   
 });
 
