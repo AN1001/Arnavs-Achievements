@@ -15,7 +15,7 @@ const NumberMines = document.getElementById("NMines")
 var playingGame3 = false;
 var shiftKeyPressed = false;
 var flags = 0;
-var flagBtnToggle = 0;
+var flagBtnToggle = 1;
 var flagBtnPressed = false;
 var noErrorsMade = true;
 var field = [];
@@ -38,9 +38,11 @@ game3PlayBtn.addEventListener("click",function(){
 flagBtn.addEventListener("click", function(){
   flagBtnToggle++
   if(flagBtnToggle % 2 == 0){
-    console.log("flagBTN is active")
+    flagBtnPressed = true;
+    flagBtn.style.border = "3px dashed grey";
   } else {
-    console.log("flagBTN is inactive")
+    flagBtnPressed = false;
+    flagBtn.style.border = "none";
   }
   
   
@@ -123,7 +125,7 @@ function initGame3(gridSize){
       let tileID = field[tileY-1][tileX-1]
       
       
-      if(shiftKeyPressed && playingGame3){
+      if((shiftKeyPressed || flagBtnPressed) && playingGame3){
         if(!clickedTile.classList.contains("containsFlag") && flags>0 && clickedTile.classList.contains("landTile") && playingGame3){
           
           /*Add a flag*/
