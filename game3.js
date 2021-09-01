@@ -92,10 +92,8 @@ game3FinishBtn.addEventListener("click", function(){
     root.style.setProperty('--game3-mine-animation',"revealLocation 20s infinite");
     playingGame3=false;
     showResults("You win!","All mines flagged correctly")
-    
-    console.log(records[len])
+
     if(typeof records[len]=="string" || time < records[len] ){
-      console.log("new record")
       records[len] = time;
     }
   }
@@ -136,7 +134,7 @@ function initGame3(gridSize){
     const pb = document.getElementById("pb");
     const wr = document.getElementById("wr");
   
-    pb.textContent = "personal best for "+gridSize+"X"+gridSize+" grid: "+records[gridSize];
+    pb.textContent = "personal best for "+gridSize+"X"+gridSize+" grid: "+records[gridSize]+"s";
   
     /*Checks if shift key is pressed*/
     window.onkeydown = function(e) { if(e.keyCode == 88){shiftKeyPressed = true;} }
