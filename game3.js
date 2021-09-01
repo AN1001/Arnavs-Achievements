@@ -87,7 +87,7 @@ game3FinishBtn.addEventListener("click", function(){
       
   }
   
-  if(!noErrorsMade){
+  if(noErrorsMade){
     root.style.setProperty('--game3-mine-animation',"revealLocation 20s infinite");
     playingGame3=false;
     showResults("You win!","All mines flagged correctly")
@@ -300,6 +300,6 @@ function initGame3(gridSize){
     }
       
     
-    
+    console.log(field)
     
 }
