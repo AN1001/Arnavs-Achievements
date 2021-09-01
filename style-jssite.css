@@ -558,6 +558,7 @@ Games, container and styles
 #game3Controls > h3{
 	text-decoration: underline;
 	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 #game3Controls > p{
