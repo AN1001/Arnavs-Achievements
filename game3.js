@@ -92,10 +92,10 @@ game3FinishBtn.addEventListener("click", function(){
     playingGame3=false;
     showResults("You win!","All mines flagged correctly")
     
-    console.log(records[length])
-    if(typeof records[length]=="string" || time < records[length] ){
+    console.log(records[len])
+    if(typeof records[len]=="string" || time < records[len] ){
       console.log("new record")
-      records[length] = time;
+      records[len] = time;
     }
   }
   
@@ -124,7 +124,7 @@ function initGame3(gridSize){
     game3ErrorField.textContent = "";
     game3MenuScreen.style.display = "none";
     game3PlaySpace.style.display = "flex";
-    var length = gridSize;
+    var len = gridSize;
     
     document.getElementById("game3Grid").remove()
     const game3Grid = document.createElement("div")
