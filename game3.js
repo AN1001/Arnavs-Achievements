@@ -95,6 +95,7 @@ game3FinishBtn.addEventListener("click", function(){
 
     if(typeof records[len]=="string" || time < records[len] ){
       records[len] = time;
+      pb.textContent = "personal best for "+gridSize+"X"+gridSize+" grid: "+records[gridSize]+"s";
     }
   }
   
