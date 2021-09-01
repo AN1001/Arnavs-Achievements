@@ -565,7 +565,8 @@ Games, container and styles
 }
 
 #game3Controls > span{
-    font-size: 1em;
+    font-size: 0.85rem;
+    color: darkblue;
     margin: 10px;
     text-align: left;
 }
