@@ -92,7 +92,7 @@ game3FinishBtn.addEventListener("click", function(){
     playingGame3=false;
     showResults("You win!","All mines flagged correctly")
     
-    if(time < records[length]){
+    if(time < records[length] || records[length]=="not set" ){
       records[length] = time;
     }
   }
