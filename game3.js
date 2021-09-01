@@ -14,6 +14,7 @@ const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 
 var time = 0;
+var records = {8:"not set",9:"not set",10:"not set",11:"not set",12:"not set"};
 var playingGame3 = false;
 var shiftKeyPressed = false;
 var flags = 0;
