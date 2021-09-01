@@ -8,10 +8,12 @@ const game3ResultsBtn = document.getElementById("game3ReturnBtn");
 const game3PlaySpace = document.getElementById("game3MainPlaySpace");
 const game3GridSpace = document.getElementById("game3GridSpace");
 const game3FinishBtn = document.getElementById("game3EndBtn");
+const timer = document.getElementById("timer");
 const flagBtn = document.getElementById("flagBtn");
 const NumberFlags = document.getElementById("NFlags")
 const NumberMines = document.getElementById("NMines")
 
+var time = 0;
 var playingGame3 = false;
 var shiftKeyPressed = false;
 var flags = 0;
@@ -19,6 +21,14 @@ var flagBtnToggle = 1;
 var flagBtnPressed = false;
 var noErrorsMade = true;
 var field = [];
+
+/* Handles timer */
+setInterval(function(){
+  if(playingGame3){
+    time++
+    timer.textContent = time+"s";
+  }
+},1000);
 
 /* Filter only whole numbers between 5 and 30-- raise exception if conditions not met */
 game3PlayBtn.addEventListener("click",function(){
@@ -101,6 +111,7 @@ function showResults(result,message){
 
 function initGame3(gridSize){
     /*Initialise start of game*/
+    time = 0;
     playingGame3 = true;
     noErrorsMade = true;
     game3ErrorField.textContent = "";
