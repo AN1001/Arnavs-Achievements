@@ -22,6 +22,7 @@ var flagBtnToggle = 1;
 var flagBtnPressed = false;
 var noErrorsMade = true;
 var field = [];
+var len = 0;
 
 /* Handles timer */
 setInterval(function(){
@@ -124,7 +125,7 @@ function initGame3(gridSize){
     game3ErrorField.textContent = "";
     game3MenuScreen.style.display = "none";
     game3PlaySpace.style.display = "flex";
-    var len = gridSize;
+    len = gridSize;
     
     document.getElementById("game3Grid").remove()
     const game3Grid = document.createElement("div")
