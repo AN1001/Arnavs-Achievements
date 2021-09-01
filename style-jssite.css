@@ -562,6 +562,12 @@ Games, container and styles
     font-size: 0.7em;
 }
 
+#game3Controls > span{
+    font-size: 1em;
+    margin: 10px;
+    text-align: left;
+}
+
 #game3Grid{
     margin: 2px auto 2px auto;
 	width: 62vw;
@@ -616,6 +622,7 @@ Games, container and styles
 }
 
 #game3EndBtn{
+    padding:0 10px 0 10px;
     border: 2px solid var(--soft-black);
     border-radius: var(--border-rad);
     font-size: 1.3em;
