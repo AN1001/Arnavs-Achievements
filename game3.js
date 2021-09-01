@@ -128,7 +128,7 @@ function initGame3(gridSize){
     const pb = document.getElementById("pb");
     const wr = document.getElementById("wr");
   
-    pb.textContent = "personal best for "+gridSize+"X"+gridSize+"grid:"+records[gridSize];
+    pb.textContent = "personal best for "+gridSize+"X"+gridSize+" grid: "+records[gridSize];
   
     /*Checks if shift key is pressed*/
     window.onkeydown = function(e) { if(e.keyCode == 88){shiftKeyPressed = true;} }
