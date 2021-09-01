@@ -91,6 +91,10 @@ game3FinishBtn.addEventListener("click", function(){
     root.style.setProperty('--game3-mine-animation',"revealLocation 20s infinite");
     playingGame3=false;
     showResults("You win!","All mines flagged correctly")
+    
+    if(time < records[length]){
+      records[length] = time;
+    }
   }
   
 });
@@ -118,6 +122,7 @@ function initGame3(gridSize){
     game3ErrorField.textContent = "";
     game3MenuScreen.style.display = "none";
     game3PlaySpace.style.display = "flex";
+    var length = gridSize;
     
     document.getElementById("game3Grid").remove()
     const game3Grid = document.createElement("div")
