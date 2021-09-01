@@ -94,8 +94,8 @@ game3FinishBtn.addEventListener("click", function(){
     showResults("You win!","All mines flagged correctly")
 
     if(typeof records[len]=="string" || time < records[len] ){
-      records[len] = time;
-      pb.textContent = "personal best for "+gridSize+"X"+gridSize+" grid: "+records[gridSize]+"s";
+      records[len] = time+"s";
+      pb.textContent = "personal best for "+gridSize+"X"+gridSize+" grid: "+records[gridSize];
     }
   }
   
@@ -135,7 +135,7 @@ function initGame3(gridSize){
     const pb = document.getElementById("pb");
     const wr = document.getElementById("wr");
   
-    pb.textContent = "personal best for "+gridSize+"X"+gridSize+" grid: "+records[gridSize]+"s";
+    pb.textContent = "personal best for "+gridSize+"X"+gridSize+" grid: "+records[gridSize];
   
     /*Checks if shift key is pressed*/
     window.onkeydown = function(e) { if(e.keyCode == 88){shiftKeyPressed = true;} }
