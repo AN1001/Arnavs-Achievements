@@ -87,12 +87,13 @@ game3FinishBtn.addEventListener("click", function(){
       
   }
   
-  if(noErrorsMade){
+  if(!noErrorsMade){
     root.style.setProperty('--game3-mine-animation',"revealLocation 20s infinite");
     playingGame3=false;
     showResults("You win!","All mines flagged correctly")
     
     if(time < records[length] || records[length]=="not set" ){
+      console.log("new record")
       records[length] = time;
     }
   }
