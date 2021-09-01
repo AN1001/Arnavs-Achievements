@@ -10,8 +10,8 @@ const game3GridSpace = document.getElementById("game3GridSpace");
 const game3FinishBtn = document.getElementById("game3EndBtn");
 const timer = document.getElementById("timer");
 const flagBtn = document.getElementById("flagBtn");
-const NumberFlags = document.getElementById("NFlags")
-const NumberMines = document.getElementById("NMines")
+const NumberFlags = document.getElementById("NFlags");
+const NumberMines = document.getElementById("NMines");
 
 var time = 0;
 var records = {8:"not set",9:"not set",10:"not set",11:"not set",12:"not set"};
@@ -124,6 +124,11 @@ function initGame3(gridSize){
     game3Grid.setAttribute("id", "game3Grid");
     game3GridSpace.appendChild(game3Grid)
   
+    /*Loads Records*/
+    const pb = document.getElementById("pb");
+    const wr = document.getElementById("wr");
+  
+    pb.textContent = "personal best for "+gridsize+"X"+gridsize+"grid:"+records[gridsize];
   
     /*Checks if shift key is pressed*/
     window.onkeydown = function(e) { if(e.keyCode == 88){shiftKeyPressed = true;} }
