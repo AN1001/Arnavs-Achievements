@@ -4,7 +4,6 @@ var width = window.innerWidth;
 var playingGame4 = true;
 var time = 0;
 
-console.log(width)
 
 setInterval(function(){
   if(playingGame4){time++;}
