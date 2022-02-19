@@ -718,6 +718,13 @@ Games, container and styles
 
 #decoyAimSpace{
     display: none;
+	
+    height: 30em;
+    width: auto;
+    
+    Background:rgba(40,40,150,0.1);
+    border: 2px solid black;
+    padding: 10px;
 }
 
 /*
