@@ -692,6 +692,20 @@ Games, container and styles
     letter-spacing: 0.15rem;
 }
 
+
+/*
+============ Game 4 ============
+*/
+
+#game4AimSpace{
+    height: auto;
+	width: 1000px;
+	Background:lightblue;
+		
+}
+
+
+
 /*
 ======================
 Animations- All games
