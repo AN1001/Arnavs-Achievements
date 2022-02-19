@@ -4,6 +4,8 @@ var width = window.innerWidth;
 var playingGame4 = true;
 var time = 0;
 
+aimSpace.style.display = "none";
+    errorSpace.style.display = "block";
 
 setInterval(function(){
   if(playingGame4){time++;}
