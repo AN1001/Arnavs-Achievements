@@ -706,6 +706,15 @@ Games, container and styles
     padding: 10px;
 }
 
+#passiveText{
+    position: absolute;
+    text-align: center ;
+    font-size: 5em;
+    color: rgba(0,0,50,0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 /*
