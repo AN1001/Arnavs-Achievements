@@ -723,8 +723,9 @@ Games, container and styles
     width: auto;
     
     Background:rgba(40,40,150,0.1);
-    border: 2px solid black;
+    border: 2px dotted black;
     padding: 10px;
+    font-size: 0.5em;
 }
 
 /*
