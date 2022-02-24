@@ -22,7 +22,10 @@ setInterval(function(){
   }
 },1000);
 
-const target = document.createElement("div")
-target.classList.add("target")
-aimSpace.appendChild(target)
-target.style.margin = `${randomInt(0,height)-100}px 0 0 ${randomInt(0,width)-100}px`;
+
+setInterval(function(){
+  var target = document.createElement("div")
+  target.classList.add("target")
+  aimSpace.appendChild(target)
+  target.style.margin = `${randomInt(0,height)-100}px 0 0 ${randomInt(0,width)-100}px`;
+},3000);
