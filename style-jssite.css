@@ -730,7 +730,7 @@ Games, container and styles
 }
 
 .target{
-    background: url("target1.png"), rgb(40,150,40);
+    background: url("target1.png");
     background-size: 100px;
     height: 100px;
     width: 100px;
