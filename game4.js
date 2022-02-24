@@ -25,4 +25,4 @@ setInterval(function(){
 const target = document.createElement("div")
 target.classList.add("target")
 aimSpace.appendChild(target)
-target.style.margin = randomInt(0,height)+'px 0 ' + randomInt(0,width)'px 0';
+target.style.margin = `${randomInt(0,height)}px 0 ${randomInt(0,width)}px 0`;
