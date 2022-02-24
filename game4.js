@@ -17,3 +17,7 @@ setInterval(function(){
     errorSpace.style.display = "none";
   }
 },500);
+
+const target = document.createElement("div")
+target.classList.add("target")
+aimSpace.appendChild(target)
