@@ -29,5 +29,5 @@ setInterval(function(){
   var target = document.createElement("div")
   target.classList.add("target")
   aimSpace.appendChild(target)
-  target.style.margin = `${randomInt(0,divHeight)-100}px 0 0 ${randomInt(0,divWidth)-100}px`;
+  target.style.transform = `translate(${randomInt(0,divHeight)-100}px,${randomInt(0,divWidth)-100}px)`;
 },3000);
