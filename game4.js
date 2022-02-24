@@ -24,8 +24,8 @@ setInterval(function(){
 
 
 setInterval(function(){
-  let divWidth = aimSpace.style.width;
-  let divHeight = aimSpace.style.height;
+  let divWidth = aimSpace.offsetWidth;
+  let divHeight = aimSpace.offsetHeight;
   var target = document.createElement("div")
   target.classList.add("target")
   aimSpace.appendChild(target)
