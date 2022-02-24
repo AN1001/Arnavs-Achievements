@@ -1,9 +1,13 @@
 const aimSpace = document.getElementById("game4AimSpace");
 const errorSpace = document.getElementById("decoyAimSpace");
+let playingGame4 = true;
 var width = window.innerWidth;
-var playingGame4 = true;
+var height = window.innerHeight;
 var game4time = 0;
 
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 setInterval(function(){
   if(playingGame4){game4time++;}
@@ -21,3 +25,4 @@ setInterval(function(){
 const target = document.createElement("div")
 target.classList.add("target")
 aimSpace.appendChild(target)
+target.style.margin = randomInt(0,height)+'px 0 ' + randomInt(0,width)'px 0';
