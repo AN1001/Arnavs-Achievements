@@ -2,11 +2,11 @@ const aimSpace = document.getElementById("game4AimSpace");
 const errorSpace = document.getElementById("decoyAimSpace");
 var width = window.innerWidth;
 var playingGame4 = true;
-var time = 0;
+var game4time = 0;
 
 
 setInterval(function(){
-  if(playingGame4){time++;}
+  if(playingGame4){game4time++;}
   if(width < 1000){
     width = window.innerWidth;
     aimSpace.style.display = "none";
@@ -16,7 +16,7 @@ setInterval(function(){
     aimSpace.style.display = "block";
     errorSpace.style.display = "none";
   }
-},500);
+},1000);
 
 const target = document.createElement("div")
 target.classList.add("target")
