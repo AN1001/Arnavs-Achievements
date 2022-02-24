@@ -27,8 +27,7 @@ setInterval(function(){
   var target = document.createElement("div")
   let divWidth = aimSpace.offsetWidth;
   let divHeight = aimSpace.offsetHeight;
-  console.log(divWidth,divHeight,randomInt(0,divWidth)-100)
   target.classList.add("target")
   aimSpace.appendChild(target)
-  target.style.transform = `translate(${randomInt(0,divWidth)-100}px,${randomInt(0,divHeight)-100}px)`;
+  target.style.transform = `translate(${randomInt(0,divWidth-100)}px,${randomInt(0,divHeight-100)}px)`;
 },3000);
