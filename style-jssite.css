@@ -730,7 +730,9 @@ Games, container and styles
 }
 
 .target{
-	background:blue;
+    background:background: url("target1.jpeg"), rgb(40,150,40);
+	height: 100px;
+	width: 100px;
 }
 
 /*
