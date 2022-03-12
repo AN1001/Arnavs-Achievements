@@ -13,13 +13,13 @@ function randomInt(min, max) {
 
 setInterval(function(){
   if(playingGame4){game4time++;}
-  if(width < 1000){
+  if(width < 1000 && playingGame4){
     width = window.innerWidth;
     aimSpace.style.display = "none";
     errorSpace.style.display = "block";
     shouldSpawn = false;
     
-  }else{
+  }else if(playingGame4){
     width = window.innerWidth;
     aimSpace.style.display = "block";
     errorSpace.style.display = "none";
