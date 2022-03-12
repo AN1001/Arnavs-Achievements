@@ -1,6 +1,6 @@
 const aimSpace = document.getElementById("game4AimSpace");
 const errorSpace = document.getElementById("decoyAimSpace");
-let playingGame4 = true;
+let playingGame4 = false;
 let shouldSpawn = false;
 var width = window.innerWidth;
 var height = window.innerHeight;
@@ -30,7 +30,7 @@ setInterval(function(){
 
 
 setInterval(function(){
-  if (shouldSpawn){
+  if (playingGame4){
     var target = document.createElement("div")
     let divWidth = aimSpace.offsetWidth;
     let divHeight = aimSpace.offsetHeight;
