@@ -699,6 +699,7 @@ Games, container and styles
 */
 
 #game4AimSpace{
+    diplay: none;
     height: 30em;
     width: auto;
     
