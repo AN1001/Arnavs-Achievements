@@ -37,6 +37,6 @@ setInterval(function(){
 
     target.classList.add("target")
     aimSpace.appendChild(target)
-    target.style.transform = `translate(${randomInt(0,divWidth-100)}px,${randomInt(0,divHeight-100)}px)`;
+    target.style.transform = `translate(${randomInt(0,divWidth-100)}px,${randomInt(0,divHeight-130)}px)`;
   }
 },3000);
