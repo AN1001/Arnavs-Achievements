@@ -16,6 +16,7 @@ setInterval(function(){
   if(width < 1000){
     width = window.innerWidth;
     aimSpace.style.display = "none";
+    errorSpace.style.display = "block";
     shouldSpawn = false;
     
   }else{
