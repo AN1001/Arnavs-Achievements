@@ -17,7 +17,7 @@ setInterval(function(){
     aimSpace.style.display = "none";
     errorSpace.style.display = "block";
     for (let i2 = 0; i2 < activeTargets.length; i2++) {
-      activeTargets[0].remove()
+      activeTargets[i].remove()
     };
     
   }else{
