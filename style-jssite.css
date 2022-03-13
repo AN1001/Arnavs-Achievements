@@ -741,6 +741,10 @@ Games, container and styles
     font-size: 0.5em;
 }
 
+#game4StartBtn{
+    
+}
+
 .target{
     background: url("target1.png");
     background-size: 100px;
