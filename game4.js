@@ -21,7 +21,7 @@ function startGame() {
   console.log("game started")
 }
 
-game4StartBtn.addEventListener("click", startGame());
+game4StartBtn.addEventListener("click", randomInt(1,4));
 
 
 
