@@ -16,8 +16,8 @@ function randomInt(min, max) {
 }
 
 function startGame() {
-  aimSpace.style.display = "block";
-  game4StartScreen.style.display = "none";  
+  aimSpace.style.display = "none";
+  game4StartScreen.style.display = "block";  
 }
 
 game4StartBtn.addEventListener("click", startGame());
