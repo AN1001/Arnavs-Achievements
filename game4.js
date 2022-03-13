@@ -1,7 +1,7 @@
 const aimSpace = document.getElementById("game4AimSpace");
 const errorSpace = document.getElementById("decoyAimSpace");
 const game4StartScreen = document.getElementById("game4StartScreen");
-const game4StartScreen = document.getElementById("game4StartBtn");
+const game4StartBtn = document.getElementById("game4StartBtn");
 let playingGame4 = false;
 let shouldSpawn = false;
 var width = window.innerWidth;
@@ -14,10 +14,13 @@ function randomInt(min, max) {
 }
 
 function startGame() {
-  aimSpace.style.display = "none";
-  
-  
+  aimSpace.style.display = "block";
+  game4StartScreen.style.display = "none";  
 }
+
+game4StartBtn.addEventListener("click", startGame());
+
+
 
 setInterval(function(){
   if(playingGame4){game4time++;}
