@@ -16,12 +16,14 @@ function randomInt(min, max) {
 }
 
 function startGame() {
-  aimSpace.style.display = "none";
-  game4StartScreen.style.display = "block";  
+  aimSpace.style.display = "block";
+  game4StartScreen.style.display = "none";  
   console.log("game started")
 }
 
-game4StartBtn.addEventListener("click", randomInt(1,4));
+game4StartBtn.addEventListener("click", function(){
+  startGame()
+});
 
 
 
