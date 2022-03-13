@@ -8,6 +8,8 @@ var width = window.innerWidth;
 var height = window.innerHeight;
 var game4time = 0;
 
+aimSpace.style.display = "none";
+game4StartScreen.style.display = "block";
 
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
