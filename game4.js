@@ -88,7 +88,7 @@ setInterval(function(){
    
   }
   repeats++
-  console.log(repeats)
+  console.log(repeats,repeats/neededRepeats)
 },200);
 
 
