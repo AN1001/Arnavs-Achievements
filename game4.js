@@ -60,7 +60,7 @@ setInterval(function(){
     target.classList.add("target")
     aimSpace.appendChild(target)
     target.style.transform = `translate(${randomInt(0,divWidth-100)}px,${randomInt(0,divHeight-130)}px)`;
-    target.addEventListener("click", removeTarget(target){});
+    target.addEventListener("click", removeTarget(target));
   }
 },3000);
 
