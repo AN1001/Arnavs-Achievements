@@ -61,7 +61,7 @@ setInterval(function(){
     aimSpace.appendChild(target)
     target.style.transform = `translate(${randomInt(0,divWidth-100)}px,${randomInt(0,divHeight-130)}px)`;
     target.onclick = function(){
-      console.log("no")
+      target.remove()
     };
   }
 },3000);
