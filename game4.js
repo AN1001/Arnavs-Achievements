@@ -65,11 +65,13 @@ function removeTarget(el) {
   }else if(targetsRemoved == 5){
     gameSpeed = 2000;
   }
-}
+  
+  console.log(currentTargetCount,targetsRemoved)
+};
 
 
 setInterval(function(){
-  if (playingGame4 && maxTargetCount >= currentTargetCount){
+  if (playingGame4 && maxTargetCount > currentTargetCount){
     currentTargetCount++
     var target = document.createElement("div")
     let divWidth = aimSpace.offsetWidth;
