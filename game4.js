@@ -56,3 +56,12 @@ setInterval(function(){
     target.style.transform = `translate(${randomInt(0,divWidth-100)}px,${randomInt(0,divHeight-130)}px)`;
   }
 },3000);
+
+
+document.addEventListener("click", function(e) {
+  var element = aimspace
+
+  if (e.target !== element && !element.contains(e.target)) {
+    element.parentNode.removeChild(element);
+  }
+});
