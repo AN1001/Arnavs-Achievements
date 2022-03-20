@@ -5,7 +5,7 @@ const game4StartBtn = document.getElementById("game4StartBtn");
 const maxTargetCount = 3;
 let currentTargetCount = 0;
 let targetsRemoved = 0;
-let repeats = 10;
+let repeats = 9;
 let neededRepeats = 10;
 let playingGame4 = false;
 let shouldSpawn = false;
@@ -88,6 +88,7 @@ setInterval(function(){
    
   }
   repeats++
+  console.log(repeats)
 },200);
 
 
