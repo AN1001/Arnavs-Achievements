@@ -59,7 +59,7 @@ setInterval(function(){
 
 
 document.addEventListener("click", function(e) {
-  var element = aimspace
+  var element = aimSpace
 
   if (e.target !== element && !element.contains(e.target)) {
     element.parentNode.removeChild(element);
