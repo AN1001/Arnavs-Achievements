@@ -62,6 +62,6 @@ document.addEventListener("click", function(e) {
   var element = aimSpace
 
   if (e.target.classList.contains('target')) {
-    e.parentNode.removeChild(e)
+    element.removeChild(e)
   }
 });
