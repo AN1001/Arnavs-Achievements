@@ -60,13 +60,10 @@ setInterval(function(){
     target.classList.add("target")
     aimSpace.appendChild(target)
     target.style.transform = `translate(${randomInt(0,divWidth-100)}px,${randomInt(0,divHeight-130)}px)`;
-    target.addEventListener("click", removeTarget(target));
+    target.onclick = function(){
+      console.log("no")
+    };
   }
 },3000);
 
 
-document.addEventListener("click", function(e) {
-  if (e.target.classList.contains('target')) {
-    e.style.display = "none";
-  }
-});
