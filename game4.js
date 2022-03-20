@@ -45,6 +45,12 @@ setInterval(function(){
 },1000);
 
 
+function removeTarget(el) {
+  var element = el;
+  element.remove();
+}
+
+
 setInterval(function(){
   if (playingGame4){
     var target = document.createElement("div")
@@ -54,6 +60,7 @@ setInterval(function(){
     target.classList.add("target")
     aimSpace.appendChild(target)
     target.style.transform = `translate(${randomInt(0,divWidth-100)}px,${randomInt(0,divHeight-130)}px)`;
+    target.addEventListener("click", removeTarget(target){});
   }
 },3000);
 
