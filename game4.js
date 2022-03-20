@@ -85,7 +85,9 @@ setInterval(function(){
     target.onclick = function(){
       removeTarget(target)
     };
+   
   }
+  repeats++
 },200);
 
 
