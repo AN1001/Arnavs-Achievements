@@ -2,7 +2,7 @@ const aimSpace = document.getElementById("game4AimSpace");
 const errorSpace = document.getElementById("decoyAimSpace");
 const game4StartScreen = document.getElementById("game4StartScreen");
 const game4StartBtn = document.getElementById("game4StartBtn");
-const maxTargetCount = 4;
+const maxTargetCount = 5;
 let currentTargetCount = 0;
 let targetsRemoved = 0;
 let repeats = 9;
@@ -58,7 +58,7 @@ function removeTarget(el) {
   targetsRemoved++
   
   if(targetsRemoved == 35){
-    console.log("END GAME 4");
+    neededRepeats = 1;
   }else if(targetsRemoved == 20){
     neededRepeats = 2;
   }else if(targetsRemoved == 15){
@@ -70,8 +70,16 @@ function removeTarget(el) {
   console.log(currentTargetCount,targetsRemoved)
 };
 
+function endGame4(){
+  playingGame4 = false;
+}
+
 
 setInterval(function(){
+  if (currentTargetCount == 5){
+    endGame4()
+    console.log(targetsRemoved,game4time)
+  }
   if (playingGame4 && maxTargetCount > currentTargetCount && repeats/neededRepeats > 1){
     repeats = 0;
     currentTargetCount++
