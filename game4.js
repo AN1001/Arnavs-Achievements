@@ -61,7 +61,7 @@ setInterval(function(){
 document.addEventListener("click", function(e) {
   var element = aimSpace
 
-  if (e.target !== element && !element.contains(e.target)) {
+  if (e.target.classList.contains('target')) {
     element.parentNode.removeChild(element);
   }
 });
