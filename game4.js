@@ -88,7 +88,6 @@ setInterval(function(){
    
   }
   repeats++
-  console.log(repeats,repeats/neededRepeats,playingGame4 && maxTargetCount > currentTargetCount && repeats/neededRepeats > 1)
 },200);
 
 
