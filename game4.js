@@ -72,7 +72,7 @@ function removeTarget(el) {
 
 
 setInterval(function(){
-  if (playingGame4 && maxTargetCount > currentTargetCount && repeats/neededRepeats == 1){
+  if (playingGame4 && maxTargetCount > currentTargetCount && repeats/neededRepeats > 1){
     repeats = 0;
     currentTargetCount++
     var target = document.createElement("div")
@@ -88,7 +88,7 @@ setInterval(function(){
    
   }
   repeats++
-  console.log(repeats,repeats/neededRepeats)
+  console.log(repeats,repeats/neededRepeats,playingGame4 && maxTargetCount > currentTargetCount && repeats/neededRepeats > 1)
 },200);
 
 
