@@ -5,7 +5,8 @@ const game4StartBtn = document.getElementById("game4StartBtn");
 const maxTargetCount = 3;
 let currentTargetCount = 0;
 let targetsRemoved = 0;
-let gameSpeed = 3000;
+let repeats = 10;
+let neededRepeats = 10;
 let playingGame4 = false;
 let shouldSpawn = false;
 var width = window.innerWidth;
@@ -59,11 +60,11 @@ function removeTarget(el) {
   if(targetsRemoved == 35){
     console.log("END GAME 4");
   }else if(targetsRemoved == 20){
-    gameSpeed = 500;
+    neededRepeats = 2;
   }else if(targetsRemoved == 15){
-    gameSpeed = 1000;
+    neededRepeats = 5;
   }else if(targetsRemoved == 5){
-    gameSpeed = 2000;
+    neededRepeats = 8;
   }
   
   console.log(currentTargetCount,targetsRemoved)
@@ -71,7 +72,8 @@ function removeTarget(el) {
 
 
 setInterval(function(){
-  if (playingGame4 && maxTargetCount > currentTargetCount){
+  if (playingGame4 && maxTargetCount > currentTargetCount && repeats/neededRepeats == 1){
+    repeats = 0;
     currentTargetCount++
     var target = document.createElement("div")
     let divWidth = aimSpace.offsetWidth;
@@ -84,6 +86,6 @@ setInterval(function(){
       removeTarget(target)
     };
   }
-},gameSpeed);
+},200);
 
 
